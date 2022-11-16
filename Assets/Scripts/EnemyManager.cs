@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -22,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField][Range(0,5)]
     private float m_offsetX, m_offsetY;
 
-    [Header("STEP")]
+    [Space(20)][Header("STEP")]
     [SerializeField]
     private int m_numberStep;
     private int m_currentStep;
@@ -37,37 +36,46 @@ public class EnemyManager : MonoBehaviour
 
     [Header("STEP ACCELERATOR")] [SerializeField] [Range(0,1)]
     private float m_initialDelayBetweenStep;
+    private bool m_canAccelerate;
+    [SerializeField] private float m_delayBetweenAccelerations;
+    private float m_timerAcceleration;
     [SerializeField] [Range(0.0001f,1)]
     private float m_minDelayValue;
     [SerializeField] 
     private float m_stepAcceleration;
-    private float m_currentTimeStep;
     private float m_currentDelayStep;
     private bool m_canStep;
 
+    [Space(20)] [Header("SHOOT")]
+    [SerializeField]
+    private float m_inititalDelayBetweenRandomShoot;
+
+    private float m_currentDelayBetweenRandomShoot;
+    [SerializeField] private float m_OffsetDelayRandomShoot;
+    private float m_currentShootTimer;
+    private bool m_isShootingEnabled;
 
     // Start is called before the first frame update
     void Start()
     {
         InitializeWave();
-        m_currentDelayStep = m_initialDelayBetweenStep;
+
         m_canStep = true;
+        m_currentDelayStep = m_initialDelayBetweenStep;
         m_currentDelayBetweenRow = m_initialDelayBetweenRow;
+        
+        m_isShootingEnabled = true;
+        m_currentDelayBetweenRandomShoot = m_inititalDelayBetweenRandomShoot;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (m_canStep)
-        {
-            m_currentTimeStep += Time.deltaTime;
-            if (m_currentTimeStep >= m_currentDelayStep)
-            {
-                m_canStep = false;
-                m_currentTimeStep -= m_currentDelayStep;
-                StartCoroutine(Step());
-            }
-        }
+        RunStepProcess();
+
+        RunShootProcess();
+        
+        RunAccelerationProcess();
     }
 
     private void InitializeWave()
@@ -86,10 +94,19 @@ public class EnemyManager : MonoBehaviour
                 m_enemies[i, j] = l_enemy;
             }
         }
-        
     }
 
     #region Step functions
+
+    private void RunStepProcess()
+    {
+        if (m_canStep)
+        {
+            m_canStep = false;
+            StartCoroutine(Step());
+        }
+    }
+    
     private IEnumerator Step()
     {
         int l_incrementor = (m_isReversed) ? -1 : 1;
@@ -126,8 +143,14 @@ public class EnemyManager : MonoBehaviour
                 }
             }
         }
-        AccelerateStep();
-        m_currentTimeStep = 0;
+
+        yield return new WaitForSeconds(m_currentDelayStep);
+        if (m_canAccelerate)
+        {
+            m_canAccelerate = false;
+            AccelerateStep();
+        }
+
         m_canStep = true;
     }
 
@@ -146,8 +169,20 @@ public class EnemyManager : MonoBehaviour
             m_enemies[j, column].Step(m_offsetStepX * p_incrementor, 0);
         }
     }
-    
-    #endregion
+
+
+    private void RunAccelerationProcess()
+    {
+        if (!m_canAccelerate)
+        {
+            m_timerAcceleration += Time.deltaTime;
+            if (m_timerAcceleration > m_delayBetweenAccelerations)
+            {
+                m_canAccelerate = true;
+                m_timerAcceleration = 0;
+            }
+        }
+    }
 
     private void AccelerateStep()
     {
@@ -172,4 +207,55 @@ public class EnemyManager : MonoBehaviour
 
         }
     }
+    #endregion
+
+
+    #region Shoot functions
+
+    private void RunShootProcess()
+    {
+        if (m_isShootingEnabled)
+        {
+            m_isShootingEnabled = false;
+            StartCoroutine(RandomShoot());
+        }
+    }
+
+    private IEnumerator RandomShoot()
+    {
+        GetRandomShooter().Shoot();
+        float l_delay = Random.Range(
+            m_currentDelayBetweenRandomShoot - m_OffsetDelayRandomShoot,
+            m_currentDelayBetweenRandomShoot + m_OffsetDelayRandomShoot
+        );
+        yield return new WaitForSeconds(l_delay);
+        m_isShootingEnabled = true;
+    }
+    
+    private Enemy GetRandomShooter()
+    {
+        int l_random = Random.Range(0, m_nbrColumns);
+
+        // Get random column to find shooter. If no enemy's alive -> try next column
+        for (int i = 0; i < m_nbrColumns; i++)
+        {
+            int a = (l_random + i) % m_nbrColumns;
+            for (int j = 0; j < m_nbrLines; j++)
+            {
+                if (m_enemies[j, a].gameObject.activeSelf)
+                {
+                    return m_enemies[j,a];
+                }
+            }
+        }
+        return null;
+    }
+
+    #endregion
+
+    // private Enemy GetClosestShooter()
+    // {
+    //     
+    // }
+    
 }
