@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("MOUVEMENT")]
     [SerializeField] private AnimationCurve m_curveMouvement;
     private bool m_isMoving;
 
@@ -19,12 +20,13 @@ public class Enemy : MonoBehaviour
         get => m_currentDurationMovement;
         set => m_currentDurationMovement = value;
     }
-
-
+    
     private float m_currentTime;
-
     private Vector3 m_initialPos;
     private Vector3 m_targetPos;
+
+    [Header("SHOOT")] [SerializeField] 
+    private GameObject m_bullet;
 
     private void Start()
     {
@@ -40,6 +42,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    #region Mouvement functions
+    
     public void Step(float offsetStepX, float offsetStepY)
     {
         m_initialPos = transform.position;
@@ -59,8 +63,18 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    #endregion
+    
+    
+    public void Shoot()
+    {
+        Instantiate(m_bullet, transform.position, Quaternion.identity);
+    }
+
     public void Death()
     {
         gameObject.SetActive(false);
     }
+    
+    
 }
