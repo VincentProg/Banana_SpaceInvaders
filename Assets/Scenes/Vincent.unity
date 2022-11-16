@@ -158,8 +158,8 @@ Camera:
   m_GameObject: {fileID: 626490488}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -174,9 +174,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  field of view: 62
+  orthographic: 1
+  orthographic size: 11.37
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -350,8 +350,10 @@ MonoBehaviour:
   m_nbrColumns: 11
   m_offsetX: 3
   m_offsetY: 2
-  m_timeStep: 3
   m_numberStep: 10
   m_offsetStepX: 0.7
   m_offsetStepY: -1
-  m_delayBetweenEnemy: 0.05
+  m_initialDelayBetweenRow: 0.05
+  m_initialDelayBetweenStep: 1
+  m_minDelayValue: 0.1
+  m_stepAcceleration: 1
