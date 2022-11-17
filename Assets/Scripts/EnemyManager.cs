@@ -275,15 +275,18 @@ public class EnemyManager : MonoBehaviour
     private Enemy GetRandomShooter()
     {
         int l_random = Random.Range(0, m_nbrColumns);
-
+        Enemy l_shooter = null;
         // Get random column to find shooter. If no enemy's alive -> try next column
         for (int i = 0; i < m_nbrColumns; i++)
         {
             int l_column = (l_random + i) % m_nbrColumns;
-            return GetFirstEnemyAliveInColumn(l_column);
-
+            l_shooter = GetFirstEnemyAliveInColumn(l_column);
+            if (l_shooter)
+            {
+                break;
+            }
         }
-        return null;
+        return l_shooter;
     }
 
     private Enemy GetClosestEnemy()
