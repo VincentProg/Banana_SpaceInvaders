@@ -17,16 +17,16 @@ public class Scoring : MonoBehaviour
     void Start()
     {
         
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             AddScoring(50);
-        }
+        }*/
     }
 
     public void AddScoring(float value)
