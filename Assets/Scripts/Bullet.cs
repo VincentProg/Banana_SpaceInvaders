@@ -38,12 +38,10 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        // Death
-        if (other.gameObject.layer == layerMask.value)
-        {
-            Destroy(gameObject);
-        }
+        ILivingEntity l_entity = other.transform.GetComponent(typeof(ILivingEntity)) as ILivingEntity;
+        l_entity?.Death();
+        Destroy(gameObject);
     }
 }

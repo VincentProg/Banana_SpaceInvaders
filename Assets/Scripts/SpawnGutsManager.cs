@@ -7,11 +7,6 @@ public class SpawnGutsManager : MonoBehaviour
     public List<GameObject> guts;
     public int nGust;
 
-    private void Start()
-    {
-        StartExplosion();
-    }
-
     public void StartExplosion ()
     {
         for(int i = 0;i<nGust; i++)
