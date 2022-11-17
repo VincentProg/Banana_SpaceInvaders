@@ -7,11 +7,11 @@ public class Bullet : MonoBehaviour
 {
 
     [SerializeField] private Vector2 movement;
-    [SerializeField] private float speed;
-    [SerializeField] private float lifeTime;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private float lifeTime;
 
 
+    private float _speed;
     private float _timer;
     
     // Start is called before the first frame update
@@ -20,11 +20,16 @@ public class Bullet : MonoBehaviour
         
     }
 
+    public void InitBullet(float speed)
+    {
+        _speed = speed;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3((movement.x * speed * Time.deltaTime) + transform.position.x,
-            (movement.y * speed * Time.deltaTime) + transform.position.y, transform.position.z);
+        transform.position = new Vector3((movement.x * _speed * Time.deltaTime) + transform.position.x,
+            (movement.y * _speed * Time.deltaTime) + transform.position.y, transform.position.z);
 
         _timer += Time.deltaTime;
         if (_timer >= lifeTime)

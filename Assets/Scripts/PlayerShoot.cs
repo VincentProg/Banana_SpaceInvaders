@@ -7,7 +7,11 @@ public class PlayerShoot : MonoBehaviour
 {
 
     [SerializeField] private Bullet bullet;
+    [SerializeField] private float bulletSpeed;
+    [SerializeField] private float shootCooldown;
 
+    private float _timer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +21,8 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_timer > 0)
+            _timer -= Time.deltaTime;
     }
 
     public void ShootInput(InputAction.CallbackContext ctx)
@@ -25,7 +30,12 @@ public class PlayerShoot : MonoBehaviour
         // Shoot once
         if (ctx.performed)
         {
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            if (_timer <= 0)
+            {
+                Bullet shootedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+                shootedBullet.InitBullet(bulletSpeed);
+                _timer += shootCooldown;
+            }
         }
     }
 }
