@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
-
+    
     [SerializeField]
     private Transform m_enemyPrefab;
 
@@ -46,14 +46,19 @@ public class EnemyManager : MonoBehaviour
     private float m_currentDelayStep;
     private bool m_canStep;
 
-    [Space(20)] [Header("SHOOT")]
+    [Space(20)] [Header("RANDOM SHOOT")]
     [SerializeField]
     private float m_inititalDelayBetweenRandomShoot;
-
     private float m_currentDelayBetweenRandomShoot;
     [SerializeField] private float m_OffsetDelayRandomShoot;
-    private float m_currentShootTimer;
-    private bool m_isShootingEnabled;
+    private bool m_isRandomShootingEnabled;
+
+    [Header("TARGET SHOOT")] [SerializeField]
+    private float m_initialDelayBetweenFocusedShoot;
+    private float m_currentDelayBetweenFocusedShoot;
+    [SerializeField] private float m_offsetDelayTargetShoot;
+    private bool m_isTargetShootingEnabled;
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,18 +69,20 @@ public class EnemyManager : MonoBehaviour
         m_currentDelayStep = m_initialDelayBetweenStep;
         m_currentDelayBetweenRow = m_initialDelayBetweenRow;
         
-        m_isShootingEnabled = true;
+        m_isRandomShootingEnabled = true;
         m_currentDelayBetweenRandomShoot = m_inititalDelayBetweenRandomShoot;
+        m_isTargetShootingEnabled = true;
+        m_currentDelayBetweenFocusedShoot = m_initialDelayBetweenFocusedShoot;
     }
 
     // Update is called once per frame
     void Update()
     {
         RunStepProcess();
-
-        RunShootProcess();
         
         RunAccelerationProcess();
+
+        RunShootProcess();
     }
 
     private void InitializeWave()
@@ -214,10 +221,16 @@ public class EnemyManager : MonoBehaviour
 
     private void RunShootProcess()
     {
-        if (m_isShootingEnabled)
+        if (m_isRandomShootingEnabled)
         {
-            m_isShootingEnabled = false;
+            m_isRandomShootingEnabled = false;
             StartCoroutine(RandomShoot());
+        }
+
+        if (m_isTargetShootingEnabled)
+        {
+            m_isTargetShootingEnabled = false;
+            StartCoroutine(TargetShoot());
         }
     }
 
@@ -229,9 +242,33 @@ public class EnemyManager : MonoBehaviour
             m_currentDelayBetweenRandomShoot + m_OffsetDelayRandomShoot
         );
         yield return new WaitForSeconds(l_delay);
-        m_isShootingEnabled = true;
+        m_isRandomShootingEnabled = true;
     }
-    
+
+    private IEnumerator TargetShoot()
+    {
+        GetClosestEnemy()?.Shoot();
+        float l_delay = Random.Range(
+            m_currentDelayBetweenFocusedShoot - m_offsetDelayTargetShoot,
+            m_currentDelayBetweenFocusedShoot + m_offsetDelayTargetShoot
+        );
+        yield return new WaitForSeconds(l_delay);
+        m_isTargetShootingEnabled = true;
+    }
+
+    private Enemy GetFirstEnemyAliveInColumn(int p_column)
+    {
+        for (int j = 0; j < m_nbrLines; j++)
+        {
+            if (m_enemies[j, p_column].gameObject.activeSelf)
+            {
+                return m_enemies[j,p_column];
+            }
+        }
+
+        return null;
+    }
+
     private Enemy GetRandomShooter()
     {
         int l_random = Random.Range(0, m_nbrColumns);
@@ -239,23 +276,32 @@ public class EnemyManager : MonoBehaviour
         // Get random column to find shooter. If no enemy's alive -> try next column
         for (int i = 0; i < m_nbrColumns; i++)
         {
-            int a = (l_random + i) % m_nbrColumns;
-            for (int j = 0; j < m_nbrLines; j++)
-            {
-                if (m_enemies[j, a].gameObject.activeSelf)
-                {
-                    return m_enemies[j,a];
-                }
-            }
+            int l_column = (l_random + i) % m_nbrColumns;
+            return GetFirstEnemyAliveInColumn(l_column);
+
         }
         return null;
     }
 
-    #endregion
+    private Enemy GetClosestEnemy()
+    {
+        Vector3 l_playerPos = Referencer.Instance.Player.position;
+        float l_shortestDistance = Mathf.Infinity;
+        int m_indexClosestColumn = 0;
+        for (int j = 0; j < m_nbrColumns; j++)
+        {
+            float l_distance = (m_enemies[0, j].transform.position - l_playerPos).sqrMagnitude;
+            if (l_distance < l_shortestDistance)
+            {
+                l_shortestDistance = l_distance;
+                m_indexClosestColumn = j;
+                
+            }
+        }
+        return GetFirstEnemyAliveInColumn(m_indexClosestColumn);
+    }
 
-    // private Enemy GetClosestShooter()
-    // {
-    //     
-    // }
+    #endregion
+    
     
 }
