@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9AFB15BE-148F-45EA-BF38-666F87A404D3}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{9AFB15BE-148F-45EA-BF38-666F87A404D3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="BeepTest" ID="{6C2BB7F7-5B8F-4D57-A42B-6B4FDE9F28D5}" ShortID="329876389">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BeepTest" ID="{A5361F8A-DECD-4590-82B3-608757082A85}">
+							<Language>SFX</Language>
+							<AudioFile>BeepTest.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="80714746"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BeepTest" ID="{A5361F8A-DECD-4590-82B3-608757082A85}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

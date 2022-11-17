@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3227834082	Play_BeepTest			\Default Work Unit\Play_BeepTest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	80714746	BeepTest	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\BeepTest_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BeepTest		9984
+
