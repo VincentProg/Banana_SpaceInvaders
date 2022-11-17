@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour
     [Header("ROWS")] 
     [SerializeField] [Range(3, 10)]
     private int m_nbrLines;
-    [SerializeField][Range(5,15)]
+    [SerializeField][Range(5,50)]
     private int m_nbrColumns;
     [SerializeField][Range(0,5)]
     private float m_offsetX, m_offsetY;
@@ -97,7 +97,10 @@ public class EnemyManager : MonoBehaviour
             {
                 GameObject l_enemyObject = (GameObject)PrefabUtility.InstantiatePrefab(m_enemyPrefab.gameObject, transform);
                 Enemy l_enemy = l_enemyObject.GetComponent<Enemy>();
-                l_enemy.transform.position = new Vector3(j * m_offsetX - l_initialOffsetX, i * m_offsetY - l_initialOffsetY, 0);
+                l_enemy.transform.position = new Vector3(
+                    j * m_offsetX - l_initialOffsetX,
+                    i * m_offsetY - l_initialOffsetY + transform.position.y,
+                    0);
                 m_enemies[i, j] = l_enemy;
             }
         }
