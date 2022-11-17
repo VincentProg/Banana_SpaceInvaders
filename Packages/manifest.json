@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.sidefx.vat": "file:C:/Users/Anass/Documents/houdini18.5/SideFXLabs/18.5.759/SideFXLabs18.5/unity/shaders/URP_VAT3",
+    "com.sidefx.vat": "file:../Assets/Houdini Package SHader/shaders/URP_VAT3",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.15",

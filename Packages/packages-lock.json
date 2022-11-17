@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.sidefx.vat": {
-      "version": "file:C:/Users/Anass/Documents/houdini18.5/SideFXLabs/18.5.759/SideFXLabs18.5/unity/shaders/URP_VAT3",
+      "version": "file:../Assets/Houdini Package SHader/shaders/URP_VAT3",
       "depth": 0,
       "source": "local",
       "dependencies": {
