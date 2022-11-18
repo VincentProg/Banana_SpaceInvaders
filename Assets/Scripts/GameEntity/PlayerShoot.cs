@@ -32,7 +32,7 @@ public class PlayerShoot : MonoBehaviour
         {
             if (_timer <= 0)
             {
-                Bullet shootedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+                Bullet shootedBullet = Instantiate(bullet, transform.position, Quaternion.Euler(90,0,0));
                 shootedBullet.InitBullet(bulletSpeed);
                 _timer += shootCooldown;
             }

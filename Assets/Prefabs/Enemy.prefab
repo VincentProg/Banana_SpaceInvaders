@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7516914723593529876}
   - component: {fileID: 7516914723593529883}
   - component: {fileID: 281107057134175190}
-  m_Layer: 0
+  - component: {fileID: 8716942275294079005}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,4 +136,21 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_initialDurationMovement: 0.5
-  m_bullet: {fileID: 8444433673034009861, guid: 3952a324a70976f4fa8855e5942e59f0, type: 3}
+  m_bullet: {fileID: 6221785980683646529, guid: 3952a324a70976f4fa8855e5942e59f0, type: 3}
+  m_speedBullet: 50
+  m_delayBetweenShoot: 0.2
+--- !u!114 &8716942275294079005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516914723593529882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487989e5e20468448b9da6741be2c536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guts:
+  - {fileID: 797183476717349374, guid: 732e93f35533e0f448cba6bdc40a98fc, type: 3}
+  nGust: 10

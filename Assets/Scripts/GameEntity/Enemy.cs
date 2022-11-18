@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, ILivingEntity
 {
     [Header("MOUVEMENT")]
     [SerializeField] private AnimationCurve m_curveMouvement;
@@ -26,15 +26,18 @@ public class Enemy : MonoBehaviour
     private Vector3 m_targetPos;
 
     [Header("SHOOT")] [SerializeField] 
-    private GameObject m_bullet;
-
+    private Bullet m_bullet;
     private bool m_canShoot;
+    [SerializeField] private float m_speedBullet;
     [SerializeField] private float m_delayBetweenShoot;
+    
+    private SpawnGutsManager m_spawnGuts;
 
     private void Start()
     {
         m_canShoot = true;
         m_currentDurationMovement = m_initialDurationMovement;
+        m_spawnGuts = GetComponent<SpawnGutsManager>();
     }
 
     // Update is called once per frame
@@ -48,10 +51,10 @@ public class Enemy : MonoBehaviour
 
     #region Mouvement functions
     
-    public void Step(float offsetStepX, float offsetStepY)
+    public void Step(float offsetStepX, float offsetStepZ)
     {
         m_initialPos = transform.position;
-        m_targetPos = transform.position + new Vector3(offsetStepX, offsetStepY);
+        m_targetPos = transform.position + new Vector3(offsetStepX,0, offsetStepZ);
         m_isMoving = true;
         m_currentTime = 0;
     }
@@ -72,19 +75,24 @@ public class Enemy : MonoBehaviour
     
     public void Shoot()
     {
-        m_canShoot = false;
-        StartCoroutine(iShoot());
+        if (m_canShoot)
+        {
+            m_canShoot = false;
+            StartCoroutine(iShoot());
+        }
     }
 
     public IEnumerator iShoot()
     {
-        Instantiate(m_bullet, transform.position, Quaternion.identity);
+        Bullet l_bullet = Instantiate(m_bullet, transform.position, Quaternion.Euler(90,0,0));
+        l_bullet.InitBullet(m_speedBullet);
         yield return new WaitForSeconds(m_delayBetweenShoot);
         m_canShoot = true;
     }
 
     public void Death()
     {
+        m_spawnGuts.StartExplosion();
         gameObject.SetActive(false);
     }
     
