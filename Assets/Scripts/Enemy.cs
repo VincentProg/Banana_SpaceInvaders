@@ -28,8 +28,12 @@ public class Enemy : MonoBehaviour
     [Header("SHOOT")] [SerializeField] 
     private GameObject m_bullet;
 
+    private bool m_canShoot;
+    [SerializeField] private float m_delayBetweenShoot;
+
     private void Start()
     {
+        m_canShoot = true;
         m_currentDurationMovement = m_initialDurationMovement;
     }
 
@@ -68,7 +72,15 @@ public class Enemy : MonoBehaviour
     
     public void Shoot()
     {
+        m_canShoot = false;
+        StartCoroutine(iShoot());
+    }
+
+    public IEnumerator iShoot()
+    {
         Instantiate(m_bullet, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(m_delayBetweenShoot);
+        m_canShoot = true;
     }
 
     public void Death()
