@@ -125,7 +125,7 @@ Material:
     - _B_LOAD_NORM_TEX: 0
     - _B_LOAD_POS_TWO_TEX: 0
     - _B_UNLOAD_ROT_TEX: 0
-    - _B_autoPlayback: 1
+    - _B_autoPlayback: 0
     - _B_surfaceNormals: 1
     - _B_twoSidedNorms: 0
     - _B_uvFromRG: 0
@@ -161,7 +161,7 @@ Material:
     - _boundMinX: -11.53
     - _boundMinY: -15.797999
     - _boundMinZ: -11.2
-    - _displayFrame: 1
+    - _displayFrame: 5
     - _frameCount: 45
     - _gameTimeAtFirstFrame: 0
     - _houdiniFPS: 60
