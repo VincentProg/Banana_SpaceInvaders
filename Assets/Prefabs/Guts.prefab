@@ -112,15 +112,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 2
-  timeToMoveUp: 1
-  rangeSpeed: {x: 2.5, y: 5}
-  desolve: {fileID: 0}
+  timeToMoveUp: 0.3
+  rangeSpeed: {x: 5, y: 10}
+  dissolve: {fileID: -6465566751694194690, guid: a3d7a71add6b1064db31f186bc15ad76, type: 3}
+  speedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0006085895
+      value: 2.1049724
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.018383607
+      value: 2.5963016
+      inSlope: 13.445399
+      outSlope: 13.445399
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.2481069
+      outWeight: 0.095106974
+    - serializedVersion: 3
+      time: 0.24506962
+      value: 3.5354128
+      inSlope: -1.0204517
+      outSlope: -1.0204517
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.54686815
+      outWeight: 0.3307931
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   points:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  dir: {x: 0, y: 0, z: 0}
 --- !u!54 &797183476717349316
 Rigidbody:
   m_ObjectHideFlags: 0

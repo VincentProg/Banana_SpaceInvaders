@@ -8,23 +8,26 @@ public class Guts : MonoBehaviour
     public float lifeTime;
     public float timeToMoveUp;
     public Vector2 rangeSpeed;
-    public Shader desolve;
-
+    public Shader dissolve;
+    public AnimationCurve speedCurve;
     [Header("point to stick cam")]
     public List<GameObject> points;
 
 
-    public Vector3 dir;
+    private Vector3 dir;
+    private Shader cloneDissolve;
     private Collider col;
     private Rigidbody rig;
     private Material cloneMat;
     private float speed;
+    private float advanceDissolve;
 
     private void Awake()
     {
         rig = gameObject.GetComponent<Rigidbody>();
         col = gameObject.GetComponent<Collider>();
         col.isTrigger = true;
+        cloneDissolve = dissolve;
     }
 
     // Start is called before the first frame update
@@ -39,7 +42,10 @@ public class Guts : MonoBehaviour
         cloneMat = gameObject.GetComponent<MeshRenderer>().material;
         gameObject.GetComponent<MeshRenderer>().material = cloneMat;
         speed = Random.Range(rangeSpeed.x, rangeSpeed.y);
-        
+
+        //rig.velocity = dir * speed ;
+
+
     }
 
     // Update is called once per frame
@@ -47,36 +53,30 @@ public class Guts : MonoBehaviour
     {
         if (timeToMoveUp <= 0)
         {
-            rig.velocity.Set(0, 0, 0);
-            rig.useGravity = true;
+            //rig.velocity.Set(0, 0, 0);
+            //rig.useGravity = true;
             col.isTrigger = false;
         }
         else
         {
             timeToMoveUp -= Time.deltaTime;
-            rig.velocity = dir * speed;
-            rig.useGravity = false;
+            //Debug.Log(dir * (speed * speedCurve.Evaluate(1 - timeToMoveUp)));
+            rig.velocity = dir * (speed*speedCurve.Evaluate(1- timeToMoveUp)) ;
+            //rig.useGravity = false;
 
         }
 
         if(rig.velocity.magnitude == 0)
-        { 
-            //Debug.Log("start desolve");
-            cloneMat.color = new Color(cloneMat.color.r, cloneMat.color.g, cloneMat.color.b, cloneMat.color.a-Time.deltaTime);
-            //cloneMat.shader = desolve;
-/*            lifeTime -= Time.deltaTime;
-            if(lifeTime<=0)
+        {
+            if(cloneMat.shader != cloneDissolve)
             {
-                while(cloneMat.color.a>0)
-                {
-                    
-                }
-
-            }*/
-            //Debug.Log(cloneMat.color.a);
+                cloneMat.shader = cloneDissolve;
+            }
+            advanceDissolve += Time.deltaTime;
+            cloneMat.SetFloat("_advanceDisolve", advanceDissolve);            
         }
 
-        if (cloneMat.color.a <= 0)
+        if (advanceDissolve >= 1)
         {
             Debug.Log("start desolve");
             Destroy(gameObject);

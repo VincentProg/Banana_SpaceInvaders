@@ -7,9 +7,21 @@ public class SpawnGutsManager : MonoBehaviour
     public List<GameObject> guts;
     public int nGust;
 
+    private float time;
     private void Start()
     {
-        StartExplosion();
+        
+    }
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+        if(time >3)
+        {
+            StartExplosion();
+            time = 0;
+        }
+
     }
 
     public void StartExplosion ()
