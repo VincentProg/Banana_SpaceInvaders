@@ -18,8 +18,8 @@ public class EnemyManager : MonoBehaviour
     private int m_nbrLines;
     [SerializeField][Range(5,50)]
     private int m_nbrColumns;
-    [SerializeField][Range(0,5)]
-    private float m_offsetX, m_offsetY;
+    [SerializeField][Range(0,50)]
+    private float m_offsetX, m_offsetZ;
 
     [Space(20)][Header("STEP")]
     [SerializeField]
@@ -28,8 +28,8 @@ public class EnemyManager : MonoBehaviour
     private bool m_isReversed;
     [SerializeField][Range(0,1)]
     private float m_offsetStepX;
-    [SerializeField][Range(-5,0)]
-    private float m_offsetStepY;
+    [SerializeField][Range(-50,0)]
+    private float m_offsetStepZ;
     [SerializeField] 
     private float m_initialDelayBetweenRow;
     private float m_currentDelayBetweenRow;
@@ -90,7 +90,7 @@ public class EnemyManager : MonoBehaviour
         m_enemies = new Enemy[m_nbrLines, m_nbrColumns];
 
         float l_initialOffsetX = (m_offsetX * m_nbrColumns)/2 - m_offsetX/2 + (m_offsetStepX * m_numberStep)/2; 
-        float l_initialOffsetY = (m_offsetY * m_nbrLines)/2 - m_offsetY/2;
+        float l_initialOffsetZ = (m_offsetZ * m_nbrLines)/2 - m_offsetZ/2;
         for(int i = 0; i < m_nbrLines; i++)
         {
             for(int j = 0; j < m_nbrColumns; j++)
@@ -99,8 +99,8 @@ public class EnemyManager : MonoBehaviour
                 Enemy l_enemy = l_enemyObject.GetComponent<Enemy>();
                 l_enemy.transform.position = new Vector3(
                     j * m_offsetX - l_initialOffsetX,
-                    i * m_offsetY - l_initialOffsetY + transform.position.y,
-                    0);
+                    0,
+                    i * m_offsetZ - l_initialOffsetZ + transform.position.z);
                 m_enemies[i, j] = l_enemy;
             }
         }
@@ -132,7 +132,7 @@ public class EnemyManager : MonoBehaviour
         {
             for (int i = 0; i < m_nbrLines; i++)
             {
-                VerticalStep(i);
+                DepthStep(i);
                 yield return new WaitForSeconds(m_currentDelayBetweenRow);
             }
         } else {
@@ -164,11 +164,11 @@ public class EnemyManager : MonoBehaviour
         m_canStep = true;
     }
 
-    private void VerticalStep(int line)
+    private void DepthStep(int line)
     {
         for (int j = 0; j < m_nbrColumns; j++)
         {
-            m_enemies[line, j].Step(0, m_offsetStepY);
+            m_enemies[line, j].Step(0, m_offsetStepZ);
         }
     }
 

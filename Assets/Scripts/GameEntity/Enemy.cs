@@ -30,8 +30,8 @@ public class Enemy : MonoBehaviour, ILivingEntity
     private bool m_canShoot;
     [SerializeField] private float m_speedBullet;
     [SerializeField] private float m_delayBetweenShoot;
-
-    [Header("DEATH")] [SerializeField] private SpawnGutsManager m_spawnGuts;
+    
+    private SpawnGutsManager m_spawnGuts;
 
     private void Start()
     {
@@ -51,10 +51,10 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     #region Mouvement functions
     
-    public void Step(float offsetStepX, float offsetStepY)
+    public void Step(float offsetStepX, float offsetStepZ)
     {
         m_initialPos = transform.position;
-        m_targetPos = transform.position + new Vector3(offsetStepX, offsetStepY);
+        m_targetPos = transform.position + new Vector3(offsetStepX,0, offsetStepZ);
         m_isMoving = true;
         m_currentTime = 0;
     }
@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     public IEnumerator iShoot()
     {
-        Bullet l_bullet = Instantiate(m_bullet, transform.position, Quaternion.identity);
+        Bullet l_bullet = Instantiate(m_bullet, transform.position, Quaternion.Euler(90,0,0));
         l_bullet.InitBullet(m_speedBullet);
         yield return new WaitForSeconds(m_delayBetweenShoot);
         m_canShoot = true;

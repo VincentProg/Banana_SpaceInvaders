@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    [SerializeField] private Vector2 movement;
+    [SerializeField] private Vector3 movement;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private float lifeTime;
 
@@ -28,8 +28,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3((movement.x * _speed * Time.deltaTime) + transform.position.x,
-            (movement.y * _speed * Time.deltaTime) + transform.position.y, transform.position.z);
+        transform.position += movement * _speed * Time.deltaTime;
 
         _timer += Time.deltaTime;
         if (_timer >= lifeTime)
