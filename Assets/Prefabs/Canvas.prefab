@@ -264,12 +264,12 @@ RectTransform:
   - {fileID: 5983831041330583697}
   - {fileID: 8598473872959958803}
   - {fileID: 1817176321738726412}
-  m_Father: {fileID: 2458656536528501948}
-  m_RootOrder: 2
+  m_Father: {fileID: 5446833059364416695}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -340.00003, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 80}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3003316446993720854
@@ -307,7 +307,7 @@ MonoBehaviour:
   lerpLimitMax: 1
   lerpLimitMin: 0
   enumType: 2
-  vecEnd: {x: 1.2, y: 1.2, z: 1.2}
+  vecEnd: {x: 1.5, y: 1.5, z: 1.5}
   colorStart: {r: 0, g: 0, b: 0, a: 0}
   colorEnd: {r: 0, g: 0, b: 0, a: 0}
   textDebug: {fileID: 0}
@@ -338,7 +338,7 @@ MonoBehaviour:
   lerpLimitMax: 1
   lerpLimitMin: 0
   enumType: 2
-  vecEnd: {x: 1.5, y: 1.5, z: 1.5}
+  vecEnd: {x: 1.8, y: 1.8, z: 1.8}
   colorStart: {r: 0, g: 0, b: 0, a: 0}
   colorEnd: {r: 0, g: 0, b: 0, a: 0}
   textDebug: {fileID: 0}
@@ -367,7 +367,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3718222349987583631}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
   myObj: {fileID: 3718222349987583631}
   beginDuration: 0
   duration: 0.2
-  numberOfLoops: 3
+  numberOfLoops: 5
   enumEasing: 12
   myCurve:
     serializedVersion: 2
@@ -416,7 +416,7 @@ MonoBehaviour:
   lerpLimitMax: 1
   lerpLimitMin: 0
   enumType: 1
-  vecEnd: {x: 0, y: 0, z: 2}
+  vecEnd: {x: 0, y: 0, z: 3}
   colorStart: {r: 0, g: 0, b: 0, a: 0}
   colorEnd: {r: 0, g: 0, b: 0, a: 0}
   textDebug: {fileID: 0}
@@ -451,7 +451,6 @@ RectTransform:
   m_Children:
   - {fileID: 5667855308827062841}
   - {fileID: 1731942284323201265}
-  - {fileID: 8070302241069741201}
   m_Father: {fileID: 5667855308950922040}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -523,10 +522,11 @@ MonoBehaviour:
   rondJauge: {fileID: 2119714352192785492}
   fakeJauge: {fileID: 1254122923209688495}
   comboTextValue: {fileID: 1554247295502802730}
-  coefJauge: 0.5
+  coefJauge: 0.2
   speedJauge: 3
-  speedRondJauge: 0.02
-  destroySpeedRond: 0.1
+  speedJaugeDisappear: 0.09
+  speedRondJauge: 0.09
+  destroySpeedRond: 0.8
   coefCombo: 1
   limitComboMax: 5
   bumpCombo:
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.33120298, b: 0, a: 1}
+  m_Color: {r: 0.12217872, g: 0.14438936, b: 0.20754719, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1376,7 +1376,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6326536784316324770}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1386,6 +1386,7 @@ RectTransform:
   - {fileID: 8247326271225036043}
   - {fileID: 2128105103998758592}
   - {fileID: 4588353689604339380}
+  - {fileID: 8070302241069741201}
   m_Father: {fileID: 1731942284323201265}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

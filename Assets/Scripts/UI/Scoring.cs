@@ -29,13 +29,18 @@ public class Scoring : MonoBehaviour
 
     private float coefRondJauge;
     private float currentValueRondJauge;
-    private float currentValueOnDisappear = 0f;
-    private bool canDisappear = false;
+    private float currentValueOnDisappearJauge = 0f;
+    private float currentValueOnDisappearRond = 0f;
+    
     private float originSpeedRondJauge;
+
+    private bool canDisappearJauge = false;
+    private bool canDisappearRond = false;
 
     [Header(" ")]
     [SerializeField] private float coefJauge;
     [SerializeField] private float speedJauge;
+    [SerializeField] private float speedJaugeDisappear;
     [SerializeField] private float speedRondJauge;
     [SerializeField] private float destroySpeedRond;
 
@@ -53,9 +58,9 @@ public class Scoring : MonoBehaviour
     void Start()
     {
         coefRondJauge = (100/limitComboMax)/100;
-        Debug.Log(coefRondJauge);
 
         originSpeedRondJauge = speedRondJauge;
+
     }
 
     // Update is called once per frame
@@ -67,10 +72,16 @@ public class Scoring : MonoBehaviour
             AddScoring(50);
         }
 
-        if (canDisappear) { RondJaugeDisappear(); }
         
 
+        if (canDisappearRond) { RondJaugeDisappear(); }
+
         if (onFullJauge) { FullJaugeAppear(); }
+
+        if (canDisappearJauge) { JaugeDisappear(); }
+        else { currentValueOnDisappearJauge = jaugeStep.fillAmount; }
+
+
     }
 
 
@@ -79,23 +90,25 @@ public class Scoring : MonoBehaviour
         currentScore += value;
         eventOnAddMonster.Invoke();
         StartCoroutine(WaitScoring());
+        parentJauge.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 1);
 
         if (currentValueCombo >= limitComboMax)
         {
             ResetJauge();
             CallFeedbackJauge();
+            canDisappearJauge = false;
             return;
         }
 
         ComboStrike();
-
+        
     }
 
     #region Combo
     private void AddValueCombo()
     {
-        canDisappear = true;
-        currentValueOnDisappear = 0;
+        canDisappearRond = true;
+        currentValueOnDisappearRond = 0;
 
         if (currentValueCombo < limitComboMax)
         {
@@ -110,12 +123,11 @@ public class Scoring : MonoBehaviour
     private void ComboStrike()
     {
 
-        currentValueJauge = jaugeStep.fillAmount;
-
         if (currentValueJauge < 1)
         {
             currentValueJauge += coefJauge;
             jaugeStep.fillAmount = currentValueJauge;
+            canDisappearJauge = true;
 
             CallFeedbackJauge();
         }
@@ -123,6 +135,7 @@ public class Scoring : MonoBehaviour
         {
             ResetJauge();
             ResetFullJauge();
+            canDisappearJauge = false;
 
             onFullJauge = true;
         }
@@ -161,15 +174,44 @@ public class Scoring : MonoBehaviour
         }
     }
 
+    private void JaugeDisappear()
+    {
+
+        float current = currentValueJauge;
+        currentValueOnDisappearJauge += (Time.deltaTime * speedJaugeDisappear);
+        float coef = current - currentValueOnDisappearJauge;
+
+        jaugeStep.fillAmount = coef;
+
+        if (coef <= 0)
+        {
+            currentValueOnDisappearJauge = 0;
+
+            currentValueFullJauge = 0;
+            fullJauge.fillAmount = 0;
+
+            
+            currentValueCombo = 0;
+            comboTextValue.text = "0";
+
+            currentValueJauge = 0;
+            jaugeStep.fillAmount = 0;
+
+            ResetRondJauge();
+
+            canDisappearJauge = false;
+        }
+
+    }
+
     private void RondJaugeDisappear()
     {
         float current = currentValueRondJauge;
-        currentValueOnDisappear += (Time.deltaTime * speedRondJauge);
-        float coef = current - currentValueOnDisappear; 
+        currentValueOnDisappearRond += (Time.deltaTime * speedRondJauge);
+        float coef = current - currentValueOnDisappearRond; 
 
         rondJauge.fillAmount = coef;
         
-
         if (coef <= 0)
         {
             ResetCombo();
@@ -190,7 +232,6 @@ public class Scoring : MonoBehaviour
 
     private void CallFeedbackCombo()
     {
-        parentJauge.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 1);
         megaBumpCombo.Invoke();
 
         newCombo.Invoke();
@@ -223,7 +264,7 @@ public class Scoring : MonoBehaviour
     {
         currentValueRondJauge = 0;
         rondJauge.fillAmount = 0;
-        canDisappear = false;
+        canDisappearRond = false;
         speedRondJauge = originSpeedRondJauge;
     }
     #endregion
