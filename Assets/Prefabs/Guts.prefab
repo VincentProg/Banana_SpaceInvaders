@@ -113,14 +113,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 2
   timeToMoveUp: 0.3
-  rangeSpeed: {x: 5, y: 10}
+  rangeSpeed: {x: 2.5, y: 5}
   dissolve: {fileID: -6465566751694194690, guid: a3d7a71add6b1064db31f186bc15ad76, type: 3}
   speedCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0006085895
-      value: 2.1049724
+      time: -0.001661446
+      value: 2.0593982
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -128,22 +128,22 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.018383607
-      value: 2.5963016
-      inSlope: 13.445399
-      outSlope: 13.445399
+      time: 0.0601494
+      value: 2.6785052
+      inSlope: -4.4896183
+      outSlope: -4.4896183
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.2481069
-      outWeight: 0.095106974
+      outWeight: 0.34273317
     - serializedVersion: 3
-      time: 0.24506962
-      value: 3.5354128
-      inSlope: -1.0204517
-      outSlope: -1.0204517
+      time: 0.11325765
+      value: 3.1456707
+      inSlope: 2.1620786
+      outSlope: 2.1620786
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.54686815
+      inWeight: 0.23639393
       outWeight: 0.3307931
     m_PreInfinity: 2
     m_PostInfinity: 2

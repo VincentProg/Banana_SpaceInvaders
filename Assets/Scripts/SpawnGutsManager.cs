@@ -7,7 +7,7 @@ public class SpawnGutsManager : MonoBehaviour
     public List<GameObject> guts;
     public int nGust;
 
-    private float time;
+    private float time =3 ;
     private void Start()
     {
         
