@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Haptics : MonoBehaviour
 {
     public static Haptics instance;
+
+    private Gamepad gamepad ;
+    static int count = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         if (instance == null)
             instance = this;
+        gamepad = Gamepad.current;
     }
 
     // Update is called once per frame
@@ -19,60 +24,24 @@ public class Haptics : MonoBehaviour
         
     }
 
-    public void HapticsRightHand(uint channel, float amplitude, float duration)
+    public void HapticsGameController(Vector2 amplitude, float duration)
     {
-        List<UnityEngine.XR.InputDevice> devices = new List<UnityEngine.XR.InputDevice>();
-
-        UnityEngine.XR.InputDevices.GetDevicesWithRole(UnityEngine.XR.InputDeviceRole.RightHanded, devices);
-
-        foreach (var device in devices)
+        StartCoroutine(ReturnHaptics(amplitude, duration));
+    }
+    private void StopRumble()
+    {
+        if (gamepad != null)
         {
-            UnityEngine.XR.HapticCapabilities capabilities;
-            if (device.TryGetHapticCapabilities(out capabilities))
-            {
-                if (capabilities.supportsImpulse)
-                {
-                    device.SendHapticImpulse(channel, amplitude, duration);
-                }
-            }
+            gamepad.ResetHaptics();
         }
     }
-
-    public void HapticsLeftHand(uint channel, float amplitude, float duration)
+    IEnumerator ReturnHaptics(Vector2 amplitude,float duration)
     {
-        List<UnityEngine.XR.InputDevice> devices = new List<UnityEngine.XR.InputDevice>();
-
-        UnityEngine.XR.InputDevices.GetDevicesWithRole(UnityEngine.XR.InputDeviceRole.LeftHanded, devices);
-
-        foreach (var device in devices)
-        {
-            UnityEngine.XR.HapticCapabilities capabilities;
-            if (device.TryGetHapticCapabilities(out capabilities))
-            {
-                if (capabilities.supportsImpulse)
-                {
-                    device.SendHapticImpulse(channel, amplitude, duration);
-                }
-            }
-        }
-    }
-
-    public void HapticsGameController(uint channel, float amplitude, float duration)
-    {
-        List<UnityEngine.XR.InputDevice> devices = new List<UnityEngine.XR.InputDevice>();
-
-        UnityEngine.XR.InputDevices.GetDevicesWithRole(UnityEngine.XR.InputDeviceRole.GameController, devices);
-
-        foreach (var device in devices)
-        {
-            UnityEngine.XR.HapticCapabilities capabilities;
-            if (device.TryGetHapticCapabilities(out capabilities))
-            {
-                if (capabilities.supportsImpulse)
-                {
-                    device.SendHapticImpulse(channel, amplitude, duration);
-                }
-            }
-        }
+        count++;
+        gamepad.SetMotorSpeeds(amplitude.x, amplitude.y);
+        yield return new WaitForSeconds(duration);
+        count--;
+        if(count == 0)
+            StopRumble();
     }
 }
