@@ -9,7 +9,7 @@
                     "name": "PlayerMovement",
                     "type": "PassThrough",
                     "id": "ad3055fb-e63e-497f-b2e2-7b4b11644b25",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -28,7 +28,7 @@
                 {
                     "name": "LeftRight",
                     "id": "7f450a2e-6f57-4268-b881-3c1c68f24bdd",
-                    "path": "1DAxis",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -37,7 +37,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "left",
                     "id": "2598e3e4-29c3-49f2-ab27-0702632dc9d5",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -48,7 +48,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
+                    "name": "right",
                     "id": "c52927cf-b5e0-4f9a-8af7-fab2cc9b6d37",
                     "path": "<Keyboard>/d",
                     "interactions": "",
@@ -59,9 +59,31 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "up",
+                    "id": "7ace0bc9-4ad2-49b7-bfd7-0cfe53a613e6",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "55bbc271-7171-4ed4-9fd5-56c077583e98",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "LeftRightManette",
                     "id": "5ff5f9b2-5069-471a-8623-a09096c060af",
-                    "path": "1DAxis",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -70,7 +92,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "left",
                     "id": "ee26cdd1-1dd3-4f6e-b687-e8b31de33878",
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
@@ -81,7 +103,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
+                    "name": "right",
                     "id": "bd57b2f2-bc71-4a5c-9633-582ccfc2532f",
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
@@ -92,9 +114,53 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "up",
+                    "id": "3901dd3f-b848-4fbf-879a-408750f78730",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "0d2a9dd3-b2af-4a25-bf0f-ea1ecbb48485",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b2ee2704-974a-4061-bf34-93d78aa894bb",
+                    "path": "*/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "",
                     "id": "6697f8ba-bb13-41d4-8088-e770ace195c7",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5fd7beb1-f49a-42ae-b522-b0066bfd2856",
+                    "path": "*/{TriggerButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

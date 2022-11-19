@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
 
-    private float movementX;
+    private Vector2 movement;
     [SerializeField] private float movementSpeed;
     
     // Start is called before the first frame update
@@ -18,11 +18,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + (movementSpeed * movementX * Time.deltaTime), transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x + (movementSpeed * movement.x * Time.deltaTime), transform.position.y, transform.position.z);
     }
 
     public void PlayerMovementInput(InputAction.CallbackContext ctx)
     {
-        movementX = ctx.ReadValue<float>();
+        movement = ctx.ReadValue<Vector2>();
     }
 }
