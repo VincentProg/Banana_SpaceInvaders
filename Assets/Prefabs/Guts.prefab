@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 797183476717349312}
   - component: {fileID: 797183476717349375}
   - component: {fileID: 797183476717349316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Guts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,39 +112,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 2
-  timeToMoveUp: 0.3
-  rangeSpeed: {x: 2.5, y: 5}
+  durationCurve: 0.2
+  rangeSpeed: {x: 1, y: 5}
   dissolve: {fileID: -6465566751694194690, guid: a3d7a71add6b1064db31f186bc15ad76, type: 3}
   speedCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.001661446
-      value: 2.0593982
+      time: 0.0026543466
+      value: 14.598263
+      inSlope: -30.461094
+      outSlope: -30.461094
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04692381
+    - serializedVersion: 3
+      time: 0.992906
+      value: 1.413902
       inSlope: 0
       outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.0601494
-      value: 2.6785052
-      inSlope: -4.4896183
-      outSlope: -4.4896183
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.2481069
-      outWeight: 0.34273317
-    - serializedVersion: 3
-      time: 0.11325765
-      value: 3.1456707
-      inSlope: 2.1620786
-      outSlope: 2.1620786
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.23639393
-      outWeight: 0.3307931
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

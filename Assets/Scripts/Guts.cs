@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class Guts : MonoBehaviour
 {
     
     public float lifeTime;
-    public float timeToMoveUp;
+    private float currentTimeCurve;
+    public float durationCurve;
     public Vector2 rangeSpeed;
     public Shader dissolve;
     public AnimationCurve speedCurve;
@@ -43,7 +47,7 @@ public class Guts : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().material = cloneMat;
         speed = Random.Range(rangeSpeed.x, rangeSpeed.y);
 
-        //rig.velocity = dir * speed ;
+        rig.velocity = dir * speed ;
 
 
     }
@@ -51,19 +55,14 @@ public class Guts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeToMoveUp <= 0)
-        {
-            //rig.velocity.Set(0, 0, 0);
-            //rig.useGravity = true;
-            col.isTrigger = false;
-        }
-        else
-        {
-            timeToMoveUp -= Time.deltaTime;
-            //Debug.Log(dir * (speed * speedCurve.Evaluate(1 - timeToMoveUp)));
-            rig.velocity = dir * (speed*speedCurve.Evaluate(1- timeToMoveUp)) ;
-            //rig.useGravity = false;
 
+        currentTimeCurve += Time.deltaTime/durationCurve;
+        if (currentTimeCurve <= 1)
+        {
+            //Debug.Log(dir * (speed * speedCurve.Evaluate(1 - timeToMoveUp)));
+            float l_speedY = (speed * speedCurve.Evaluate(currentTimeCurve));
+            rig.velocity = rig.velocity.normalized * l_speedY;
+            //rig.useGravity = false;
         }
 
         if(rig.velocity.magnitude == 0)
@@ -82,6 +81,11 @@ public class Guts : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        col.isTrigger = false;
     }
 
     public void RandomDir()
