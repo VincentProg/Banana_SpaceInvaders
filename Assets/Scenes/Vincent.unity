@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274232245004942489, guid: 1f64097f8a78d5a4b92dbe918a9f852f, type: 3}
       propertyPath: shootCooldown
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4274232245004942489, guid: 1f64097f8a78d5a4b92dbe918a9f852f, type: 3}
       propertyPath: m_strengthRecoil
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4274232245004942489, guid: 1f64097f8a78d5a4b92dbe918a9f852f, type: 3}
       propertyPath: m_recoilCurve.m_Curve.Array.size
@@ -919,7 +919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182606984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 40}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
