@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, ILivingEntity
@@ -32,6 +33,7 @@ public class Enemy : MonoBehaviour, ILivingEntity
     [SerializeField] private float m_delayBetweenShoot;
     
     private SpawnGutsManager m_spawnGuts;
+    [SerializeField] GameObject m_bloodParticles;
 
     private void Start()
     {
@@ -92,7 +94,8 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     public void Death()
     {
-        m_spawnGuts.StartExplosion();
+        //m_spawnGuts.StartExplosion();
+        Instantiate(m_bloodParticles, transform.position, quaternion.identity);
         gameObject.SetActive(false);
     }
     
