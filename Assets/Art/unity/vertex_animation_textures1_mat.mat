@@ -161,11 +161,11 @@ Material:
     - _boundMinX: -11.53
     - _boundMinY: -15.797999
     - _boundMinZ: -11.2
-    - _displayFrame: 5
+    - _displayFrame: 1
     - _frameCount: 45
     - _gameTimeAtFirstFrame: 0
-    - _houdiniFPS: 60
-    - _playbackSpeed: 1
+    - _houdiniFPS: 24
+    - _playbackSpeed: 2
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
