@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour
     [Header("ROWS")] 
     [SerializeField] [Range(3, 10)]
     private int m_nbrLines;
-    [SerializeField][Range(5,50)]
+    [SerializeField][Range(2,50)]
     private int m_nbrColumns;
     [SerializeField][Range(0,50)]
     private float m_offsetX, m_offsetZ;
@@ -26,7 +26,7 @@ public class EnemyManager : MonoBehaviour
     private int m_numberStep;
     private int m_currentStep;
     private bool m_isReversed;
-    [SerializeField][Range(0,1)]
+    [SerializeField][Range(0, 10)]
     private float m_offsetStepX;
     [SerializeField][Range(-50,0)]
     private float m_offsetStepZ;
@@ -133,7 +133,7 @@ public class EnemyManager : MonoBehaviour
             for (int i = 0; i < m_nbrLines; i++)
             {
                 DepthStep(i);
-                yield return new WaitForSeconds(m_currentDelayBetweenRow);
+                //yield return new WaitForSeconds(m_currentDelayBetweenRow);
             }
         } else {
             if (l_incrementor > 0)
@@ -141,7 +141,7 @@ public class EnemyManager : MonoBehaviour
                 for (int i = m_nbrColumns - 1; i >= 0; i--)
                 {
                     HorizontalStep(i, l_incrementor);
-                    yield return new WaitForSeconds(m_currentDelayBetweenRow);
+                    //yield return new WaitForSeconds(m_currentDelayBetweenRow);
                 }
             }
             else
@@ -149,7 +149,7 @@ public class EnemyManager : MonoBehaviour
                 for (int i = 0; i < m_nbrColumns; i++)
                 {
                     HorizontalStep(i, l_incrementor);
-                    yield return new WaitForSeconds(m_currentDelayBetweenRow);
+                    //yield return new WaitForSeconds(m_currentDelayBetweenRow);
                 }
             }
         }
@@ -239,7 +239,7 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator RandomShoot()
     {
-        GetRandomShooter().Shoot();
+        GetRandomShooter()?.Shoot();
         float l_delay = Random.Range(
             m_currentDelayBetweenRandomShoot - m_OffsetDelayRandomShoot,
             m_currentDelayBetweenRandomShoot + m_OffsetDelayRandomShoot
