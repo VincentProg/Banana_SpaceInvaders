@@ -44,17 +44,22 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerMovementInput(InputAction.CallbackContext p_ctx)
     {
-        int value = (int)p_ctx.ReadValue<float>();
+        Vector2 input = p_ctx.ReadValue<Vector2>();
+        int value = Mathf.RoundToInt(input.x);
         if (value != 0)
         {
-            m_currentTimeMovement = 0;
-            m_movementX = value;
-            m_initialX = transform.position.x;
-            m_targetX = m_initialX + m_offsetMovement * m_movementX;
-            m_isMoving = true;
+            if (p_ctx.performed)
+            {
+                Debug.Log(value);
+                m_currentTimeMovement = 0;
+                m_movementX = value;
+                m_initialX = transform.position.x;
+                m_targetX = m_initialX + m_offsetMovement * m_movementX;
+                m_isMoving = true;
+            }
         }
     }
-    
+
     private void Move()
     {
         m_currentTimeMovement += Time.deltaTime * m_movementSpeed;

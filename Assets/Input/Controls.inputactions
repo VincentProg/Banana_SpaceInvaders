@@ -136,15 +136,59 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "b2ee2704-974a-4061-bf34-93d78aa894bb",
-                    "path": "*/{Primary2DAxis}",
+                    "name": "LeftRightXR",
+                    "id": "46fc9529-eab8-45b3-8058-348979f7ec8d",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "3654a6f3-bc81-4817-90b7-7831c0a3a0b4",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "PlayerMovement",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "79c16d03-0bfe-497c-99b7-cdefafb798ce",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "69115b0a-5a7a-4acc-978e-7f3aa34805ea",
+                    "path": "<XRController>{LeftHand}/triggerButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "5e90d046-d043-4f6d-9c4d-34012d669315",
+                    "path": "<XRController>{RightHand}/triggerButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -160,7 +204,7 @@
                 {
                     "name": "",
                     "id": "5fd7beb1-f49a-42ae-b522-b0066bfd2856",
-                    "path": "*/{TriggerButton}",
+                    "path": "<XRController>/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
