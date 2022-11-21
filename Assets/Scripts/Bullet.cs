@@ -7,7 +7,6 @@ public class Bullet : MonoBehaviour
 {
 
     [SerializeField] private Vector3 movement;
-    [SerializeField] private LayerMask layerMask;
     [SerializeField] private float lifeTime;
 
 
