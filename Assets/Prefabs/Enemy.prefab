@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3bd0a2921a8a31646a8fa3fa6c0d5b13, type: 2}
+  - {fileID: 2100000, guid: f3da12bbe77c03c46b38ae0c7af633f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_bullet: {fileID: 6221785980683646529, guid: 3952a324a70976f4fa8855e5942e59f0, type: 3}
   m_speedBullet: 50
   m_delayBetweenShoot: 0.2
+  m_bloodParticles: {fileID: 3617732387176708192, guid: 35ef560d65245b64ab6d167082ff617f, type: 3}
 --- !u!114 &8716942275294079005
 MonoBehaviour:
   m_ObjectHideFlags: 0
