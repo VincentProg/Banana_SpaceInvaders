@@ -229,17 +229,17 @@ MonoBehaviour:
   enumAnim: 2
   myObj: {fileID: 7986757760945948867}
   beginDuration: 0
-  duration: 0.8
+  duration: 0.6
   numberOfLoops: 1
-  enumEasing: 4
+  enumEasing: 6
   myCurve:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  lerpLimitMax: 1
-  lerpLimitMin: 0
+  lerpLimitMax: 0.9
+  lerpLimitMin: 0.1
   enumType: 3
   vecEnd: {x: 0, y: 0, z: 0}
   colorStart: {r: 1, g: 1, b: 1, a: 0}
@@ -257,20 +257,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e250ab0c3414f48a296ade336e1212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enumAnim: 2
+  enumAnim: 1
   myObj: {fileID: 7986757760945948867}
   beginDuration: 0
-  duration: 0.8
+  duration: 0.6
   numberOfLoops: 1
-  enumEasing: 4
+  enumEasing: 6
   myCurve:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  lerpLimitMax: 1
-  lerpLimitMin: 0
+  lerpLimitMax: 0.9
+  lerpLimitMin: 0.1
   enumType: 2
   vecEnd: {x: 0.02, y: 0.02, z: 0.02}
   colorStart: {r: 0, g: 0, b: 0, a: 0}
