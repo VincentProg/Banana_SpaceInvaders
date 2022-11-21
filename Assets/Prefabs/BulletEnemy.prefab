@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2021625650996751259}
   - component: {fileID: 152870428320659308}
   - component: {fileID: 6221785980683646529}
-  - component: {fileID: 6204917747503740440}
+  - component: {fileID: -1670190122445532151}
   m_Layer: 8
   m_Name: BulletEnemy
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8444433673034009861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.28827053, y: 0.9858473, z: -3.408389}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -94,7 +94,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8444433673034009861}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -113,11 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {x: 0, y: 0, z: -1}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
   lifeTime: 10
---- !u!54 &6204917747503740440
+--- !u!54 &-1670190122445532151
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

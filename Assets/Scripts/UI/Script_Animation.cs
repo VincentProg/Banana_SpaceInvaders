@@ -797,6 +797,7 @@ public class Script_Animation : MonoBehaviour
     }
     IEnumerator WaitLaunch()
     {
+        etat = false;
         yield return new WaitForSeconds(beginDuration);
         etat = true;
     }
