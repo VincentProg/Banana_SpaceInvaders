@@ -9,41 +9,21 @@ public class EnemyManager : MonoBehaviour
 {
     
     [SerializeField]
-    private Transform m_enemyPrefab;
+    private Enemy m_enemyPrefab;
 
-    private Enemy[,] m_enemies;
+    private List<Enemy> m_enemies = new List<Enemy>();
 
-    [Header("ROWS")] 
-    [SerializeField] [Range(3, 10)]
-    private int m_nbrLines;
+    [Header("ROWS")]
     [SerializeField][Range(2,50)]
     private int m_nbrColumns;
     [SerializeField][Range(0,50)]
     private float m_offsetX, m_offsetZ;
 
-    [Space(20)][Header("STEP")]
-    [SerializeField]
-    private int m_numberStep;
-    private int m_currentStep;
-    private bool m_isReversed;
-    [SerializeField][Range(0, 10)]
-    private float m_offsetStepX;
-    [SerializeField][Range(-50,0)]
-    private float m_offsetStepZ;
     [SerializeField] 
-    private float m_initialDelayBetweenRow;
-    private float m_currentDelayBetweenRow;
+    private int m_BPM;
 
-    [Header("STEP ACCELERATOR")] [SerializeField] [Range(0,1)]
-    private float m_initialDelayBetweenStep;
-    private bool m_canAccelerate;
-    [SerializeField] private float m_delayBetweenAccelerations;
-    private float m_timerAcceleration;
-    [SerializeField] [Range(0.0001f,1)]
-    private float m_minDelayValue;
-    [SerializeField] 
-    private float m_stepAcceleration;
-    private float m_currentDelayStep;
+    private float m_delayStep;
+    
     private bool m_canStep;
 
     [Space(20)] [Header("RANDOM SHOOT")]
@@ -55,55 +35,61 @@ public class EnemyManager : MonoBehaviour
 
     [Header("TARGET SHOOT")] [SerializeField]
     private float m_initialDelayBetweenFocusedShoot;
-    private float m_currentDelayBetweenFocusedShoot;
-    [SerializeField] private float m_offsetDelayTargetShoot;
-    private bool m_isTargetShootingEnabled;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        InitializeWave();
 
         m_canStep = true;
-        m_currentDelayStep = m_initialDelayBetweenStep;
-        m_currentDelayBetweenRow = m_initialDelayBetweenRow;
-        
+        m_delayStep = 60.0f / m_BPM;
         m_isRandomShootingEnabled = true;
         m_currentDelayBetweenRandomShoot = m_inititalDelayBetweenRandomShoot;
-        m_isTargetShootingEnabled = true;
-        m_currentDelayBetweenFocusedShoot = m_initialDelayBetweenFocusedShoot;
+
+        Referencer.Instance.Player.OffsetMovement = m_offsetX;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         RunStepProcess();
-        
-        RunAccelerationProcess();
 
         RunShootProcess();
     }
 
-    private void InitializeWave()
+    private void SpawnEnemies()
     {
-        m_enemies = new Enemy[m_nbrLines, m_nbrColumns];
+        int l_randNbrEnemies = Random.Range(1,3);
+        int l_randIndex = Random.Range(-1, 1);
 
-        float l_initialOffsetX = (m_offsetX * m_nbrColumns)/2 - m_offsetX/2 + (m_offsetStepX * m_numberStep)/2; 
-        float l_initialOffsetZ = (m_offsetZ * m_nbrLines)/2 - m_offsetZ/2;
-        for(int i = 0; i < m_nbrLines; i++)
+        switch (l_randNbrEnemies)
         {
-            for(int j = 0; j < m_nbrColumns; j++)
-            {
-                GameObject l_enemyObject = (GameObject)PrefabUtility.InstantiatePrefab(m_enemyPrefab.gameObject, transform);
-                Enemy l_enemy = l_enemyObject.GetComponent<Enemy>();
-                l_enemy.transform.position = new Vector3(
-                    j * m_offsetX - l_initialOffsetX,
-                    0,
-                    i * m_offsetZ - l_initialOffsetZ + transform.position.z);
-                m_enemies[i, j] = l_enemy;
-            }
+            case 1 :
+                SpawnEnemy(l_randIndex);
+                break;
+            case 2:
+                SpawnEnemy(l_randIndex + 1);
+                SpawnEnemy(l_randIndex + 2);
+                break;
+            case 3:
+                SpawnEnemy(l_randIndex);
+                SpawnEnemy(l_randIndex + 1);
+                SpawnEnemy(l_randIndex + 2);
+                break;
         }
+        
+    }
+
+    private Enemy SpawnEnemy(int p_index)
+    {
+        int l_indexPos =  (p_index + 3) % 3;
+        int l_indexPosValue = p_index - 1;
+        Enemy l_enemy = Instantiate(m_enemyPrefab,transform);
+        l_enemy.transform.position = new Vector3(m_offsetX * l_indexPosValue, transform.position.y, transform.position.z);
+        l_enemy.SetIndex(l_indexPos);
+        m_enemies.Add(l_enemy);
+        return l_enemy;
     }
 
     #region Step functions
@@ -113,110 +99,23 @@ public class EnemyManager : MonoBehaviour
         if (m_canStep)
         {
             m_canStep = false;
+            SpawnEnemies();
             StartCoroutine(Step());
         }
     }
     
     private IEnumerator Step()
     {
-        int l_incrementor = (m_isReversed) ? -1 : 1;
-        m_currentStep += l_incrementor;
-        bool l_isClampReached = false;
-        if (m_currentStep == 0 || m_currentStep == m_numberStep)
+        foreach (Enemy l_enemy in m_enemies)
         {
-            m_isReversed = !m_isReversed;
-            l_isClampReached = true;
-        }
-        
-        if (l_isClampReached)
-        {
-            for (int i = 0; i < m_nbrLines; i++)
-            {
-                DepthStep(i);
-                //yield return new WaitForSeconds(m_currentDelayBetweenRow);
-            }
-        } else {
-            if (l_incrementor > 0)
-            {
-                for (int i = m_nbrColumns - 1; i >= 0; i--)
-                {
-                    HorizontalStep(i, l_incrementor);
-                    //yield return new WaitForSeconds(m_currentDelayBetweenRow);
-                }
-            }
-            else
-            {
-                for (int i = 0; i < m_nbrColumns; i++)
-                {
-                    HorizontalStep(i, l_incrementor);
-                    //yield return new WaitForSeconds(m_currentDelayBetweenRow);
-                }
-            }
+            l_enemy.Step(m_offsetX, -m_offsetZ);
         }
 
-        yield return new WaitForSeconds(m_currentDelayStep);
-        if (m_canAccelerate)
-        {
-            m_canAccelerate = false;
-            AccelerateStep();
-        }
+        yield return new WaitForSeconds(m_delayStep);
 
         m_canStep = true;
     }
-
-    private void DepthStep(int line)
-    {
-        for (int j = 0; j < m_nbrColumns; j++)
-        {
-            m_enemies[line, j].Step(0, m_offsetStepZ);
-        }
-    }
-
-    private void HorizontalStep(int column, int p_incrementor)
-    {
-        for (int j = 0; j < m_nbrLines; j++)
-        {
-            m_enemies[j, column].Step(m_offsetStepX * p_incrementor, 0);
-        }
-    }
-
-
-    private void RunAccelerationProcess()
-    {
-        if (!m_canAccelerate)
-        {
-            m_timerAcceleration += Time.deltaTime;
-            if (m_timerAcceleration > m_delayBetweenAccelerations)
-            {
-                m_canAccelerate = true;
-                m_timerAcceleration = 0;
-            }
-        }
-    }
-
-    private void AccelerateStep()
-    {
-        if (m_currentDelayStep > m_minDelayValue)
-        {
-            m_currentDelayStep -= (m_stepAcceleration) / 100.0f;
-            if (m_currentDelayStep < m_minDelayValue)
-            {
-                m_currentDelayStep = m_minDelayValue;
-            }
-            
-            float l_factor = m_currentDelayStep / m_initialDelayBetweenStep;
-            for(int i = 0; i < m_nbrLines; i++)
-            {
-                for(int j = 0; j < m_nbrColumns; j++)
-                {
-                    m_enemies[i, j].m_DurationMovement = m_enemies[i,j].m_InitialDurationMovement * l_factor;
-                }
-            }
-
-            m_currentDelayBetweenRow = m_initialDelayBetweenRow * l_factor;
-
-        }
-    }
+    
     #endregion
 
 
@@ -229,17 +128,15 @@ public class EnemyManager : MonoBehaviour
             m_isRandomShootingEnabled = false;
             StartCoroutine(RandomShoot());
         }
-
-        if (m_isTargetShootingEnabled)
-        {
-            m_isTargetShootingEnabled = false;
-            StartCoroutine(TargetShoot());
-        }
     }
 
     private IEnumerator RandomShoot()
     {
-        GetRandomShooter()?.Shoot();
+        float l_randX = Random.Range(-1, 1) * m_offsetX;
+        RaycastHit l_hit;
+        Physics.Raycast(new Vector3(l_randX, transform.position.x, -Mathf.Infinity), Vector3.forward, out l_hit, Mathf.Infinity);
+        l_hit.transform?.GetComponent<Enemy>()?.Shoot();
+        
         float l_delay = Random.Range(
             m_currentDelayBetweenRandomShoot - m_OffsetDelayRandomShoot,
             m_currentDelayBetweenRandomShoot + m_OffsetDelayRandomShoot
@@ -248,64 +145,6 @@ public class EnemyManager : MonoBehaviour
         m_isRandomShootingEnabled = true;
     }
 
-    private IEnumerator TargetShoot()
-    {
-        GetClosestEnemy()?.Shoot();
-        float l_delay = Random.Range(
-            m_currentDelayBetweenFocusedShoot - m_offsetDelayTargetShoot,
-            m_currentDelayBetweenFocusedShoot + m_offsetDelayTargetShoot
-        );
-        yield return new WaitForSeconds(l_delay);
-        m_isTargetShootingEnabled = true;
-    }
-
-    private Enemy GetFirstEnemyAliveInColumn(int p_column)
-    {
-        for (int j = 0; j < m_nbrLines; j++)
-        {
-            if (m_enemies[j, p_column].gameObject.activeSelf)
-            {
-                return m_enemies[j,p_column];
-            }
-        }
-
-        return null;
-    }
-
-    private Enemy GetRandomShooter()
-    {
-        int l_random = Random.Range(0, m_nbrColumns);
-        Enemy l_shooter = null;
-        // Get random column to find shooter. If no enemy's alive -> try next column
-        for (int i = 0; i < m_nbrColumns; i++)
-        {
-            int l_column = (l_random + i) % m_nbrColumns;
-            l_shooter = GetFirstEnemyAliveInColumn(l_column);
-            if (l_shooter)
-            {
-                break;
-            }
-        }
-        return l_shooter;
-    }
-
-    private Enemy GetClosestEnemy()
-    {
-        Vector3 l_playerPos = Referencer.Instance.Player.position;
-        float l_shortestDistance = Mathf.Infinity;
-        int m_indexClosestColumn = 0;
-        for (int j = 0; j < m_nbrColumns; j++)
-        {
-            float l_distance = (m_enemies[0, j].transform.position - l_playerPos).sqrMagnitude;
-            if (l_distance < l_shortestDistance)
-            {
-                l_shortestDistance = l_distance;
-                m_indexClosestColumn = j;
-                
-            }
-        }
-        return GetFirstEnemyAliveInColumn(m_indexClosestColumn);
-    }
 
     #endregion
     

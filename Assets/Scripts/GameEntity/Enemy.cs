@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour, ILivingEntity
     [Header("MOUVEMENT")]
     [SerializeField] private AnimationCurve m_curveMouvement;
     private bool m_isMoving;
+    private int m_indexMovement { get; set; }
+    private int m_directionX;
 
     [SerializeField]
     private float m_initialDurationMovement;
@@ -34,12 +36,15 @@ public class Enemy : MonoBehaviour, ILivingEntity
     
     private SpawnGutsManager m_spawnGuts;
     [SerializeField] GameObject m_bloodParticles;
+    
+    
 
     private void Start()
     {
         m_canShoot = true;
         m_currentDurationMovement = m_initialDurationMovement;
         m_spawnGuts = GetComponent<SpawnGutsManager>();
+        m_directionX = 1;
     }
 
     // Update is called once per frame
@@ -56,9 +61,26 @@ public class Enemy : MonoBehaviour, ILivingEntity
     public void Step(float offsetStepX, float offsetStepZ)
     {
         m_initialPos = transform.position;
-        m_targetPos = transform.position + new Vector3(offsetStepX,0, offsetStepZ);
+        
+        if (m_indexMovement >= 2)
+        {
+            m_indexMovement = 0;
+            m_directionX = -m_directionX;
+            m_targetPos = transform.position + new Vector3(0, 0, offsetStepZ);
+        }
+        else
+        {
+            SetIndex(++m_indexMovement);
+            m_targetPos = transform.position + new Vector3(offsetStepX * m_directionX,0, 0);
+        }
+
         m_isMoving = true;
         m_currentTime = 0;
+    }
+
+    public void SetIndex(int p_index)
+    {
+        m_indexMovement = p_index;
     }
 
     public void Move()
@@ -98,6 +120,7 @@ public class Enemy : MonoBehaviour, ILivingEntity
         Instantiate(m_bloodParticles, transform.position, quaternion.identity);
         gameObject.SetActive(false);
     }
+    
     
     
 }

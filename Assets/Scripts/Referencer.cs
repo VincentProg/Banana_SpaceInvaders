@@ -7,15 +7,15 @@ public class Referencer : MonoBehaviour
 {
     public static Referencer Instance;
 
-    private Transform m_player;
+    private PlayerMovement m_player;
 
-    public Transform Player
+    public PlayerMovement Player
     {
         get
         {
             if (m_player == null)
             {
-                m_player = FindObjectOfType<PlayerMovement>().transform;
+                m_player = FindObjectOfType<PlayerMovement>();
             }
             return m_player;
         }

@@ -11,10 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private Controls controls;
 
-    [Header("MOUVEMENT")] [SerializeField] private float m_movementSpeed;
+    [Header("MOUVEMENT")] 
+    public float m_movementSpeed;
     private bool m_isMoving;
     private float m_movementX;
-    [SerializeField] private float m_offsetMovement;
+    public float OffsetMovement { get; set; }
     [SerializeField] private AnimationCurve m_mouvementCurve;
 
     [Header("ROTATION")] [SerializeField] private float m_rotationIntensity;
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             m_currentTimeMovement = 0;
             m_movementX = value;
             m_initialX = transform.position.x;
-            m_targetX = m_initialX + m_offsetMovement * m_movementX;
+            m_targetX = m_initialX + OffsetMovement * m_movementX;
             m_isMoving = true;
         }
     }
