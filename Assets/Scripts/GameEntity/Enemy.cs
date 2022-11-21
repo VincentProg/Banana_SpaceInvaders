@@ -3,14 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class EnemyEvent : UnityEvent<Enemy>{}
 
 public class Enemy : MonoBehaviour, ILivingEntity
 {
+    public bool IsActivated { get; private set; }
+
+    [Header("SPAWN")]
+    [SerializeField] private AnimationCurve m_spawnCurve;
+    public float TimeUp { get; set;}
+    private float m_currentTimeUp;
+   
+    
     [Header("MOUVEMENT")]
     [SerializeField] private AnimationCurve m_curveMouvement;
     private bool m_isMoving;
-    private int m_indexMovement { get; set; }
-    private int m_directionX;
+    int m_indexMovement;
+    int m_directionX;
 
     [SerializeField]
     private float m_initialDurationMovement;
@@ -36,23 +48,46 @@ public class Enemy : MonoBehaviour, ILivingEntity
     
     private SpawnGutsManager m_spawnGuts;
     [SerializeField] GameObject m_bloodParticles;
-    
+    public EnemyEvent DeathEvent;
     
 
-    private void Start()
+    private void Awake()
     {
+        IsActivated = false;
         m_canShoot = true;
         m_currentDurationMovement = m_initialDurationMovement;
         m_spawnGuts = GetComponent<SpawnGutsManager>();
         m_directionX = 1;
     }
 
+    private void Start()
+    {
+        m_initialPos = transform.position;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (!IsActivated)
+        {
+            GoingDown();
+            return;
+        }
+        
         if (m_isMoving)
         {
             Move();
+        }
+    }
+
+    private void GoingDown()
+    {
+        m_currentTimeUp += Time.deltaTime / TimeUp;
+        float l_y = m_spawnCurve.Evaluate(m_currentTimeUp);
+        transform.position = Vector3.Lerp(m_initialPos, new Vector3(transform.position.x, 0, transform.position.z), l_y);
+        if (m_currentTimeUp >= 1)
+        {
+            IsActivated = true;
         }
     }
 
@@ -61,7 +96,6 @@ public class Enemy : MonoBehaviour, ILivingEntity
     public void Step(float offsetStepX, float offsetStepZ)
     {
         m_initialPos = transform.position;
-        
         if (m_indexMovement >= 2)
         {
             m_indexMovement = 0;
@@ -118,7 +152,8 @@ public class Enemy : MonoBehaviour, ILivingEntity
     {
         //m_spawnGuts.StartExplosion();
         Instantiate(m_bloodParticles, transform.position, quaternion.identity);
-        gameObject.SetActive(false);
+        DeathEvent.Invoke(this);
+        Destroy(gameObject);
     }
     
     

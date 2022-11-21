@@ -4,50 +4,47 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.Events;
+
 
 public class EnemyManager : MonoBehaviour
 {
-    
-    [SerializeField]
-    private Enemy m_enemyPrefab;
+    [SerializeField] private Enemy m_enemyPrefab;
 
     private List<Enemy> m_enemies = new List<Enemy>();
 
-    [Header("ROWS")]
-    [SerializeField][Range(2,50)]
+    [Header("ROWS")] [SerializeField] [Range(2, 50)]
     private int m_nbrColumns;
-    [SerializeField][Range(0,50)]
-    private float m_offsetX, m_offsetZ;
 
-    [SerializeField] 
-    private int m_BPM;
+    [SerializeField] [Range(0, 50)] private float m_offsetX, m_offsetZ;
+    [SerializeField] private float m_startPosY;
+    [SerializeField] private int m_BPM;
 
     private float m_delayStep;
-    
+    private float m_currentNbrStepBeforeSpawn;
+
     private bool m_canStep;
 
-    [Space(20)] [Header("RANDOM SHOOT")]
-    [SerializeField]
-    private float m_inititalDelayBetweenRandomShoot;
-    private float m_currentDelayBetweenRandomShoot;
-    [SerializeField] private float m_OffsetDelayRandomShoot;
     private bool m_isRandomShootingEnabled;
 
-    [Header("TARGET SHOOT")] [SerializeField]
-    private float m_initialDelayBetweenFocusedShoot;
+    private bool m_isBassStarted;
+    private float m_initialDelay;
+
+    private bool m_isProcessDeactivated;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        m_isBassStarted = false;
         m_canStep = true;
         m_delayStep = 60.0f / m_BPM;
+        m_initialDelay = m_delayStep * 4;
         m_isRandomShootingEnabled = true;
-        m_currentDelayBetweenRandomShoot = m_inititalDelayBetweenRandomShoot;
 
         Referencer.Instance.Player.OffsetMovement = m_offsetX;
 
+        StartCoroutine(StartBass());
     }
 
     // Update is called once per frame
@@ -58,14 +55,23 @@ public class EnemyManager : MonoBehaviour
         RunShootProcess();
     }
 
+    private IEnumerator StartBass()
+    {
+        yield return new WaitForSeconds(12f);
+        m_isProcessDeactivated = true;
+        yield return new WaitForSeconds(1.4f);
+        m_isProcessDeactivated = false;
+        m_isBassStarted = true;
+    }
+
     private void SpawnEnemies()
     {
-        int l_randNbrEnemies = Random.Range(1,3);
+        int l_randNbrEnemies = Random.Range(1, 4);
         int l_randIndex = Random.Range(-1, 1);
 
         switch (l_randNbrEnemies)
         {
-            case 1 :
+            case 1:
                 SpawnEnemy(l_randIndex);
                 break;
             case 2:
@@ -78,44 +84,58 @@ public class EnemyManager : MonoBehaviour
                 SpawnEnemy(l_randIndex + 2);
                 break;
         }
-        
     }
 
-    private Enemy SpawnEnemy(int p_index)
+    private void SpawnEnemy(int p_index)
     {
-        int l_indexPos =  (p_index + 3) % 3;
-        int l_indexPosValue = p_index - 1;
-        Enemy l_enemy = Instantiate(m_enemyPrefab,transform);
-        l_enemy.transform.position = new Vector3(m_offsetX * l_indexPosValue, transform.position.y, transform.position.z);
+        int l_indexPos = (p_index + 3) % 3;
+        int l_indexPosValue = l_indexPos - 1;
+        Enemy l_enemy = Instantiate(m_enemyPrefab, transform);
+        l_enemy.transform.position =
+            new Vector3(m_offsetX * l_indexPosValue, m_startPosY, transform.position.z);
         l_enemy.SetIndex(l_indexPos);
+        l_enemy.TimeUp = m_isBassStarted ? m_delayStep - 0.1f : m_initialDelay - 0.2f;
+        l_enemy.DeathEvent.AddListener(RemoveEnemyFromList);
         m_enemies.Add(l_enemy);
-        return l_enemy;
     }
 
     #region Step functions
 
     private void RunStepProcess()
     {
+        if (m_isProcessDeactivated) return;
         if (m_canStep)
         {
             m_canStep = false;
-            SpawnEnemies();
-            StartCoroutine(Step());
+            if (m_currentNbrStepBeforeSpawn > 0)
+            {
+                m_currentNbrStepBeforeSpawn--;
+            }
+            else
+            {
+                m_currentNbrStepBeforeSpawn = m_nbrColumns;
+                SpawnEnemies();
+            }
+
+            StartCoroutine(Step((m_isBassStarted) ? m_delayStep : m_initialDelay));
         }
     }
-    
-    private IEnumerator Step()
+
+    private IEnumerator Step(float p_delay)
     {
         foreach (Enemy l_enemy in m_enemies)
         {
-            l_enemy.Step(m_offsetX, -m_offsetZ);
+            if (l_enemy.IsActivated)
+            {
+                l_enemy.Step(m_offsetX, -m_offsetZ);
+            }
         }
 
-        yield return new WaitForSeconds(m_delayStep);
+        yield return new WaitForSeconds(p_delay);
 
         m_canStep = true;
     }
-    
+
     #endregion
 
 
@@ -132,21 +152,30 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator RandomShoot()
     {
-        float l_randX = Random.Range(-1, 1) * m_offsetX;
+        float l_randX = Random.Range(-1, 2) * m_offsetX;
         RaycastHit l_hit;
-        Physics.Raycast(new Vector3(l_randX, transform.position.x, -Mathf.Infinity), Vector3.forward, out l_hit, Mathf.Infinity);
-        l_hit.transform?.GetComponent<Enemy>()?.Shoot();
+        if (Physics.Raycast(new Vector3(l_randX, transform.position.y, -50),
+                Vector3.forward,
+                out l_hit,
+                500,
+        1 << 6)
+                )
+        {
+            Enemy l_enemy = l_hit.transform.GetComponent<Enemy>();
+            if (l_enemy is { IsActivated: true })
+            {
+                l_enemy.Shoot();
+            }
+        }
         
-        float l_delay = Random.Range(
-            m_currentDelayBetweenRandomShoot - m_OffsetDelayRandomShoot,
-            m_currentDelayBetweenRandomShoot + m_OffsetDelayRandomShoot
-        );
-        yield return new WaitForSeconds(l_delay);
+        yield return new WaitForSeconds(m_isBassStarted ? m_delayStep : m_initialDelay);
         m_isRandomShootingEnabled = true;
     }
 
+    private void RemoveEnemyFromList(Enemy p_enemy)
+    {
+        m_enemies.Remove(p_enemy);
+    }
 
     #endregion
-    
-    
 }

@@ -8,6 +8,7 @@ public class Referencer : MonoBehaviour
     public static Referencer Instance;
 
     private PlayerMovement m_player;
+    private EnemyManager m_enemymanager;
 
     public PlayerMovement Player
     {
@@ -20,6 +21,7 @@ public class Referencer : MonoBehaviour
             return m_player;
         }
     }
+    
 
     private void Awake()
     {
