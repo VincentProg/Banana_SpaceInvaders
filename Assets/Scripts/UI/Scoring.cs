@@ -48,11 +48,19 @@ public class Scoring : MonoBehaviour
     [SerializeField] private float limitComboMax = 10;
     private bool onFullJauge = false;
 
+    [Header("PARTICLES")]
+    [SerializeField] private GameObject myObjPart;
+    [SerializeField] private ParticleSystem myParticles;
+
     [Header(" ")]
     [SerializeField] private UnityEvent bumpCombo;
     [SerializeField] private UnityEvent megaBumpCombo;
     [SerializeField] private UnityEvent newCombo;
     [SerializeField] private UnityEvent shakeJauge;
+
+
+    float width;
+    Vector3 tempV;
 
     // Start is called before the first frame update
     void Start()
@@ -61,18 +69,27 @@ public class Scoring : MonoBehaviour
 
         originSpeedRondJauge = speedRondJauge;
 
+        width = jaugeStep.GetComponent<RectTransform>().rect.width;
+        tempV = jaugeStep.GetComponent<RectTransform>().anchoredPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        
+        tempV.x = -width / 2;
+        tempV.x += width * jaugeStep.fillAmount;
+        //jaugeStep.GetComponent<RectTransform>().anchoredPosition = tempV;
+
+        myObjPart.transform.position = new Vector3(tempV.x,-100,0);
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             AddScoring(50);
+            myParticles.Play();
         }
-
-        
 
         if (canDisappearRond) { RondJaugeDisappear(); }
 
@@ -80,7 +97,6 @@ public class Scoring : MonoBehaviour
 
         if (canDisappearJauge) { JaugeDisappear(); }
         else { currentValueOnDisappearJauge = jaugeStep.fillAmount; }
-
 
     }
 
@@ -90,7 +106,8 @@ public class Scoring : MonoBehaviour
         currentScore += value;
         eventOnAddMonster.Invoke();
         StartCoroutine(WaitScoring());
-        parentJauge.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 1);
+
+        parentJauge.GetComponent<RectTransform>().rotation = new Quaternion(0,0,0,0);
 
         if (currentValueCombo >= limitComboMax)
         {
@@ -161,6 +178,7 @@ public class Scoring : MonoBehaviour
             fakeJauge.gameObject.SetActive(false);
             ResetFullJauge();
             AddValueCombo();
+            
 
             if (currentValueCombo != limitComboMax)
             {
