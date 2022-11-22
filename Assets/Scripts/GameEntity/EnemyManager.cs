@@ -49,7 +49,7 @@ public class EnemyManager : MonoBehaviour
         m_delaySpawnFastEnemy = m_delayFirstSpawnFast;
         m_isRandomShootingEnabled = true;
 
-        Referencer.Instance.Player.OffsetMovement = m_offsetX;
+        Referencer.Instance.PlayerInstance.OffsetMovement = m_offsetX;
 
         StartCoroutine(StartBass());
     }
