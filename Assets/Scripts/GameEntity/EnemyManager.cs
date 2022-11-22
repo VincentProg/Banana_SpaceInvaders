@@ -26,6 +26,11 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float m_startPosY;
     [SerializeField] private int m_BPM;
 
+    public float OffsetMovement
+    {
+        get => m_offsetX;
+    }
+    
     private float m_delayStep;
     private float m_currentNbrStepBeforeSpawn;
 
@@ -49,7 +54,7 @@ public class EnemyManager : MonoBehaviour
         m_delaySpawnFastEnemy = m_delayFirstSpawnFast;
         m_isRandomShootingEnabled = true;
 
-        Referencer.Instance.PlayerInstance.OffsetMovement = m_offsetX;
+        // Referencer.Instance.PlayerInstance.OffsetMovement = m_offsetX;
 
         StartCoroutine(StartBass());
     }
