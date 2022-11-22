@@ -11,7 +11,7 @@ public class EnemyEvent : UnityEvent<Enemy>{}
 public class Enemy : MonoBehaviour, ILivingEntity
 {
     public bool IsActivated { get; private set; }
-
+    [SerializeField] private bool isFast;
     [Header("SPAWN")]
     [SerializeField] private AnimationCurve m_spawnCurve;
     public float TimeUp { get; set;}
@@ -104,8 +104,16 @@ public class Enemy : MonoBehaviour, ILivingEntity
         }
         else
         {
-            SetIndex(++m_indexMovement);
-            m_targetPos = transform.position + new Vector3(offsetStepX * m_directionX,0, 0);
+            if (!isFast)
+            {
+                SetIndex(++m_indexMovement);
+                m_targetPos = transform.position + new Vector3(offsetStepX * m_directionX,0, 0);
+            }
+            else
+            {
+                m_targetPos = transform.position + new Vector3(0,0, offsetStepZ);
+            }
+            
         }
 
         m_isMoving = true;

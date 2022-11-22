@@ -10,6 +10,12 @@ using UnityEngine.Events;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private Enemy m_enemyPrefab;
+    [SerializeField] private Enemy m_fastEnemyPrefab;
+    [SerializeField] private int m_delayFirstSpawnFast;
+    [SerializeField] private int m_minDelaySpawnFast;
+    [SerializeField] private int m_maxDelaySpawnFast;
+    
+    private int m_delaySpawnFastEnemy;
 
     private List<Enemy> m_enemies = new List<Enemy>();
 
@@ -40,6 +46,7 @@ public class EnemyManager : MonoBehaviour
         m_canStep = true;
         m_delayStep = 60.0f / m_BPM;
         m_initialDelay = m_delayStep * 4;
+        m_delaySpawnFastEnemy = m_delayFirstSpawnFast;
         m_isRandomShootingEnabled = true;
 
         Referencer.Instance.Player.OffsetMovement = m_offsetX;
@@ -86,6 +93,17 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    private void SpawnFastEnemy()
+    {
+        int l_indexPosValue = Random.Range(0, 2);
+        Enemy l_enemy = Instantiate(m_fastEnemyPrefab, transform);
+        l_enemy.transform.position =
+            new Vector3(m_offsetX * 2 * (l_indexPosValue > 0 ? 1 : -1), m_startPosY, transform.position.z);
+        l_enemy.TimeUp = m_delayStep - 0.1f;
+        l_enemy.DeathEvent.AddListener(RemoveEnemyFromList);
+        m_enemies.Add(l_enemy);
+    }
+
     private void SpawnEnemy(int p_index)
     {
         int l_indexPos = (p_index + 3) % 3;
@@ -115,8 +133,16 @@ public class EnemyManager : MonoBehaviour
             {
                 m_currentNbrStepBeforeSpawn = m_nbrColumns;
                 SpawnEnemies();
+                if (m_delaySpawnFastEnemy <= 0)
+                {
+                    SpawnFastEnemy();
+                    m_delaySpawnFastEnemy = Random.Range(m_minDelaySpawnFast, m_maxDelaySpawnFast + 1);
+                }
+                else
+                {
+                    m_delaySpawnFastEnemy--;
+                }
             }
-
             StartCoroutine(Step((m_isBassStarted) ? m_delayStep : m_initialDelay));
         }
     }
@@ -132,7 +158,6 @@ public class EnemyManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(p_delay);
-
         m_canStep = true;
     }
 

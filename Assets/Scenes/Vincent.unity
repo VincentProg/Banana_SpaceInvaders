@@ -1134,6 +1134,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enemyPrefab: {fileID: 281107057134175190, guid: a908e83df267c5841b2ea74b2e69d860, type: 3}
+  m_fastEnemyPrefab: {fileID: 281107057134175190, guid: 4f1ed136363365141beebf46642cbd9c, type: 3}
+  m_delayFirstSpawnFast: 6
+  m_minDelaySpawnFast: 1
+  m_maxDelaySpawnFast: 4
   m_nbrColumns: 3
   m_offsetX: 5
   m_offsetZ: 10
