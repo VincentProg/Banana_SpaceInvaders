@@ -11,10 +11,12 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private Controls controls;
 
-    [Header("MOUVEMENT")] [SerializeField] private float m_movementSpeed;
+    [Header("MOUVEMENT")] 
+    public float m_movementSpeed;
     private bool m_isMoving;
     private float m_movementX;
-    [SerializeField] private float m_offsetMovement;
+    private int m_indexMovement;
+    public float OffsetMovement { get; set; }
     [SerializeField] private AnimationCurve m_mouvementCurve;
 
     [Header("ROTATION")] [SerializeField] private float m_rotationIntensity;
@@ -44,19 +46,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerMovementInput(InputAction.CallbackContext p_ctx)
     {
-        Vector2 input = p_ctx.ReadValue<Vector2>();
-        int value = Mathf.RoundToInt(input.x);
-        if (value != 0)
+        int l_value = (int)p_ctx.ReadValue<float>();
+        if (l_value != 0)
         {
-            if (p_ctx.performed)
+            m_movementX = l_value;
+            m_indexMovement += l_value;
+            if (Mathf.Abs(m_indexMovement) > 2)
             {
-                Debug.Log(value);
-                m_currentTimeMovement = 0;
-                m_movementX = value;
-                m_initialX = transform.position.x;
-                m_targetX = m_initialX + m_offsetMovement * m_movementX;
-                m_isMoving = true;
+                m_indexMovement = m_indexMovement > 0 ? 2 : -2;
             }
+            m_currentTimeMovement = 0;
+            m_initialX = m_targetX;
+            m_targetX = OffsetMovement * m_indexMovement;
+            m_isMoving = true;
         }
     }
 
