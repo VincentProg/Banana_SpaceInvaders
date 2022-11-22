@@ -2,7 +2,7 @@
     "name": "Controls",
     "maps": [
         {
-            "name": "Game",
+            "name": "Player",
             "id": "11d0be5c-ea72-4627-9f93-5683682203a9",
             "actions": [
                 {
@@ -94,7 +94,7 @@
                 {
                     "name": "",
                     "id": "6697f8ba-bb13-41d4-8088-e770ace195c7",
-                    "path": "<Keyboard>/space",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

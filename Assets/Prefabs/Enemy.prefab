@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7516914723593529876}
   - component: {fileID: 7516914723593529883}
   - component: {fileID: 281107057134175190}
-  m_Layer: 0
+  - component: {fileID: 8716942275294079005}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3bd0a2921a8a31646a8fa3fa6c0d5b13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,23 +117,49 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 7.3723865
+      outSlope: 7.3723865
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.025026068
+    - serializedVersion: 3
+      time: 0.24137747
+      value: 0.9467198
+      inSlope: 0.30576974
+      outSlope: 0.30576974
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.0965897
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0.12202566
+      outSlope: 0.12202566
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.06047964
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_initialDurationMovement: 0.5
-  m_bullet: {fileID: 8444433673034009861, guid: 3952a324a70976f4fa8855e5942e59f0, type: 3}
+  m_initialDurationMovement: 0.39
+  m_bullet: {fileID: 6221785980683646529, guid: 3952a324a70976f4fa8855e5942e59f0, type: 3}
+  m_speedBullet: 50
+  m_delayBetweenShoot: 0.2
+--- !u!114 &8716942275294079005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516914723593529882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487989e5e20468448b9da6741be2c536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guts:
+  - {fileID: 797183476717349374, guid: 732e93f35533e0f448cba6bdc40a98fc, type: 3}
+  nGust: 10

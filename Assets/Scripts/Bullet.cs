@@ -6,12 +6,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    [SerializeField] private Vector2 movement;
-    [SerializeField] private float speed;
+    [SerializeField] private Vector3 movement;
     [SerializeField] private float lifeTime;
-    [SerializeField] private LayerMask layerMask;
 
 
+    private float _speed;
     private float _timer;
     
     // Start is called before the first frame update
@@ -20,11 +19,15 @@ public class Bullet : MonoBehaviour
         
     }
 
+    public void InitBullet(float speed)
+    {
+        _speed = speed;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3((movement.x * speed * Time.deltaTime) + transform.position.x,
-            (movement.y * speed * Time.deltaTime) + transform.position.y, transform.position.z);
+        transform.position += movement * _speed * Time.deltaTime;
 
         _timer += Time.deltaTime;
         if (_timer >= lifeTime)
@@ -33,12 +36,10 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        // Death
-        if (other.gameObject.layer == layerMask.value)
-        {
-            Destroy(gameObject);
-        }
+        ILivingEntity l_entity = other.transform.GetComponent(typeof(ILivingEntity)) as ILivingEntity;
+        l_entity?.Death();
+        Destroy(gameObject);
     }
 }
