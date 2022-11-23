@@ -63,13 +63,13 @@ public class Music_Manager : MonoBehaviour
     private void CurrentVolume()
     {
         //VOLUME
-        currentVolStep01 = LerpRTPC(currentVolStep01, 100f);
+        currentVolStep01 = LerpRTPC(currentVolStep01, 0f);
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step01", currentVolStep01);
 
         currentVolStep02 = LerpRTPC(currentVolStep02, 0f);
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step02", currentVolStep02);
 
-        currentVolBass01 = LerpRTPC(currentVolBass01, 50f);
+        currentVolBass01 = LerpRTPC(currentVolBass01, 25f);
         AkSoundEngine.SetRTPCValue("Fade_VolBass_Step03", currentVolBass01);
 
         currentVolBass02 = LerpRTPC(currentVolBass02, 0f);
@@ -93,8 +93,11 @@ public class Music_Manager : MonoBehaviour
     #region COMBO MUSIC
     public void Combo1() 
     {
-        currentVolStep02 = LerpRTPC(currentVolStep02,100f);
         
+        currentVolStep01 = LerpRTPC(currentVolStep01, 0f);
+        AkSoundEngine.SetRTPCValue("Fade_Vol_Step01", currentVolStep01);
+        
+        currentVolStep02 = LerpRTPC(currentVolStep02,100f);
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step02", currentVolStep02);
 
         once = true;
@@ -102,8 +105,6 @@ public class Music_Manager : MonoBehaviour
 
     public void Combo2()
     {
-        currentVolStep01 = LerpRTPC(currentVolStep01, 0f);
-        AkSoundEngine.SetRTPCValue("Fade_Vol_Step01", currentVolStep01);
 
         currentVolBass01 = LerpRTPC(currentVolBass01, 100f);
         AkSoundEngine.SetRTPCValue("Fade_VolBass_Step03", currentVolBass01);
