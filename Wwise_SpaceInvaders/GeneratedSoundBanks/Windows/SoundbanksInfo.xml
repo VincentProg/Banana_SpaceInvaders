@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{3F38FFD8-7080-8E08-5D76-B765C7EEB6CE}">
+			<ShortName>SB_UI</ShortName>
+			<Path>SB_UI.bnk</Path>
+			<Media>
+				<File Id="24691141" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combo_4.wav</ShortName>
+					<CachePath>SFX/Combo_4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="81372707" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combo_2.wav</ShortName>
+					<CachePath>SFX/Combo_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="137529554" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combo_5.wav</ShortName>
+					<CachePath>SFX/Combo_5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="269742009" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combo_3.wav</ShortName>
+					<CachePath>SFX/Combo_3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="597548237" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Score_1.wav</ShortName>
+					<CachePath>SFX/Score_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="641957728" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combo_1.wav</ShortName>
+					<CachePath>SFX/Combo_1_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1764480534" Name="Play_Combo_01" DurationType="OneShot" DurationMin="1.8949434" DurationMax="1.8949434">
+					<MediaRefs>
+						<MediaRef Id="641957728"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1764480533" Name="Play_Combo_02" DurationType="OneShot" DurationMin="2.0778005" DurationMax="2.0778005">
+					<MediaRefs>
+						<MediaRef Id="81372707"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1764480532" Name="Play_Combo_03" DurationType="OneShot" DurationMin="1.9210658" DurationMax="1.9210658">
+					<MediaRefs>
+						<MediaRef Id="269742009"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1764480531" Name="Play_Combo_04" DurationType="OneShot" DurationMin="2.0255556" DurationMax="2.0255556">
+					<MediaRefs>
+						<MediaRef Id="24691141"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1764480530" Name="Play_Combo_05" DurationType="OneShot" DurationMin="4.454943" DurationMax="4.454943">
+					<MediaRefs>
+						<MediaRef Id="137529554"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2278692287" Name="Play_Score_Hit_Jauge" DurationType="OneShot" DurationMin="0.45267573" DurationMax="0.45267573">
+					<MediaRefs>
+						<MediaRef Id="597548237"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3366501106" Name="Play_Score_Hit_Rond" DurationType="OneShot" DurationMin="0.45267573" DurationMax="0.45267573">
+					<MediaRefs>
+						<MediaRef Id="597548237"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<Busses>
+				<Bus Id="213475909" Name="SFX_Bus"/>
+				<Bus Id="2680856269" Name="Music_Bus"/>
+				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="690783697" Type="User" Language="SFX" Hash="{A5400944-7F08-EDBE-A0DD-9A6AC095A667}">
+			<ShortName>SB_Test</ShortName>
+			<Path>SB_Test.bnk</Path>
+			<Media>
+				<File Id="80714746" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BeepTest.wav</ShortName>
+					<CachePath>SFX/BeepTest_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3227834082" Name="Play_BeepTest" DurationType="OneShot" DurationMin="0.11210884" DurationMax="0.11210884">
+					<MediaRefs>
+						<MediaRef Id="80714746"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<Busses>
+				<Bus Id="213475909" Name="SFX_Bus"/>
+				<Bus Id="2680856269" Name="Music_Bus"/>
+				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{1A3B53D4-7111-3410-A773-D5E2431F144B}">
+			<ShortName>SB_Music</ShortName>
+			<Path>SB_Music.bnk</Path>
+			<Media>
+				<File Id="333443995" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bass_Banana_v3.wav</ShortName>
+					<CachePath>SFX/Bass_Banana_v3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="509581019" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bass_Step2_Banana_v1.wav</ShortName>
+					<CachePath>SFX/Bass_Step2_Banana_v1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="895361484" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SecondStep_Banana_v2.wav</ShortName>
+					<CachePath>SFX/SecondStep_Banana_v2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="931446705" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FirstStep_Banana_v2.wav</ShortName>
+					<CachePath>SFX/FirstStep_Banana_v2_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="968691197" Name="Play_BananaMusic_01_02" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="895361484"/>
+						<MediaRef Id="931446705"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2845497272" Name="Play_BassMusic_03" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="333443995"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2845497279" Name="Play_BassMusic_04" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="509581019"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4199445895" Name="Stop_BananaMusic_01_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2968713298" Name="Stop_BassMusic_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2968713301" Name="Stop_BassMusic_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<Busses>
+				<Bus Id="213475909" Name="SFX_Bus"/>
+				<Bus Id="2680856269" Name="Music_Bus"/>
+				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="1677504759" Name="Fade_VolBass02_Step04"/>
+				<GameParameter Id="1977195214" Name="Fade_VolBass_Step03"/>
+				<GameParameter Id="2836587888" Name="Fade_LowPassBass_Step03"/>
+				<GameParameter Id="3167393820" Name="Fade_Vol_Step02"/>
+				<GameParameter Id="3167393823" Name="Fade_Vol_Step01"/>
+				<GameParameter Id="3308746329" Name="Fade_LowPassBass02_Step04"/>
+				<GameParameter Id="4041028786" Name="Fade_LowPass_Step02"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F9D431A5-8448-C49E-B6A1-982D16F9F872}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="213475909" Name="SFX_Bus"/>
+				<Bus Id="2680856269" Name="Music_Bus"/>
+				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="1677504759" Name="Fade_VolBass02_Step04"/>
+				<GameParameter Id="1977195214" Name="Fade_VolBass_Step03"/>
+				<GameParameter Id="2836587888" Name="Fade_LowPassBass_Step03"/>
+				<GameParameter Id="3167393820" Name="Fade_Vol_Step02"/>
+				<GameParameter Id="3167393823" Name="Fade_Vol_Step01"/>
+				<GameParameter Id="3308746329" Name="Fade_LowPassBass02_Step04"/>
+				<GameParameter Id="4041028786" Name="Fade_LowPass_Step02"/>
+			</GameParameters>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{77EE4174-27A1-1CDF-4408-B64B1FD83B7B}</FileHash>
+</SoundBanksInfo>

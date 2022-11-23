@@ -1,0 +1,23 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1764480530	Play_Combo_05			\Default Work Unit\UI\Scoring\Play_Combo_05	
+	1764480531	Play_Combo_04			\Default Work Unit\UI\Scoring\Play_Combo_04	
+	1764480532	Play_Combo_03			\Default Work Unit\UI\Scoring\Play_Combo_03	
+	1764480533	Play_Combo_02			\Default Work Unit\UI\Scoring\Play_Combo_02	
+	1764480534	Play_Combo_01			\Default Work Unit\UI\Scoring\Play_Combo_01	
+	2278692287	Play_Score_Hit_Jauge			\Default Work Unit\UI\Scoring\Play_Score_Hit_Jauge	
+	3366501106	Play_Score_Hit_Rond			\Default Work Unit\UI\Scoring\Play_Score_Hit_Rond	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	24691141	Combo_4	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_4_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_04\Combo_4		357404
+	81372707	Combo_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_2_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_02\Combo_2		366620
+	137529554	Combo_5	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_5_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_05\Combo_5		785948
+	269742009	Combo_3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_3_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_03\Combo_3		338972
+	597548237	Score_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Score_1_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Score_Hit_Jauge\Score_1		79948
+	641957728	Combo_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_1_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_01\Combo_1		334364
+

@@ -50,7 +50,7 @@ public class Script_Animation : MonoBehaviour
     [SerializeField] private myEnumEasing enumEasing;
     [SerializeField] private AnimationCurve myCurve;
     private int iterationEasing = 0;
-    [Header("Quadratic => Max = 0.99, Min = 0.01")]
+    [Header("Quadratic => Max = 0.99, Min = 0.1")]
     [Range(0.0f, 1.0f)]
     [SerializeField] private float lerpLimitMax = 0.99f;
     [Range(0.0f, 1f)]
@@ -798,6 +798,7 @@ public class Script_Animation : MonoBehaviour
     IEnumerator WaitLaunch()
     {
         etat = false;
+        coef = 0f; coefEasing = 0f;
         yield return new WaitForSeconds(beginDuration);
         etat = true;
     }

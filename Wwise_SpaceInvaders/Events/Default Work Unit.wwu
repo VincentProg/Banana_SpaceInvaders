@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_BeepTest" ID="{74C9D2C0-9A05-46E4-9351-8C8D710A0B10}">
+					<ChildrenList>
+						<Action Name="" ID="{B9090C2A-B456-419D-B99F-54E5416F8C75}" ShortID="968311818">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BeepTest" ID="{6C2BB7F7-5B8F-4D57-A42B-6B4FDE9F28D5}" WorkUnitID="{9AFB15BE-148F-45EA-BF38-666F87A404D3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Music" ID="{81E6648C-BEA8-44C6-AC94-212FFE2548F2}" ShortID="829128933">
+					<ChildrenList>
+						<Folder Name="Play" ID="{CBCCD2D8-F16D-4931-95A7-463199B23EC4}" ShortID="240323847">
+							<ChildrenList>
+								<Event Name="Play_BassMusic_04" ID="{DC9F28C5-5DE8-432F-801A-9573C645BFF4}">
+									<ChildrenList>
+										<Action Name="" ID="{EE4A9C8F-3A8A-412B-ADFA-783902573C97}" ShortID="1063806796">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BassMusic_04" ID="{AEF45FD5-C480-49B4-9360-37DF8207B820}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_BassMusic_03" ID="{09C97D92-9B2F-40CA-80AE-5BA7C13BC4E5}">
+									<ChildrenList>
+										<Action Name="" ID="{BC52E550-7739-4E58-B8CB-3D10930236EE}" ShortID="39973115">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BassMusic_03" ID="{648FEF7C-578D-4FB0-A352-97EC88766ABE}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_BananaMusic_01_02" ID="{A92DD01B-5983-4EC6-9156-FEF097B092AA}">
+									<ChildrenList>
+										<Action Name="" ID="{B1745C8F-0D44-4083-BB4A-DC5A28980945}" ShortID="946918555">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BananaMusic_01_02" ID="{021BEAC2-F6CB-45CA-B907-7B1EC4803AD0}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Stop" ID="{E552639F-2C23-4268-8AC0-CF6B5577DFBA}" ShortID="235290869">
+							<ChildrenList>
+								<Event Name="Stop_BassMusic_04" ID="{B95691A6-BAC8-4BDD-BB1E-46266F898D25}">
+									<ChildrenList>
+										<Action Name="" ID="{6E7B6BBD-4CB2-4208-BE26-235E5152EEC6}" ShortID="455768438">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BassMusic_04" ID="{AEF45FD5-C480-49B4-9360-37DF8207B820}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_BananaMusic_01_02" ID="{A0D5B5D2-19CD-46DE-9C26-573B3F26F087}">
+									<ChildrenList>
+										<Action Name="" ID="{7824C3D5-470A-4493-9E06-11E7888D6340}" ShortID="31119925">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BananaMusic_01_02" ID="{021BEAC2-F6CB-45CA-B907-7B1EC4803AD0}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_BassMusic_03" ID="{26C5E317-38FF-46C4-B115-3C3391057F82}">
+									<ChildrenList>
+										<Action Name="" ID="{1620374F-0C25-4297-949B-3859E9F749BF}" ShortID="334155080">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BassMusic_03" ID="{648FEF7C-578D-4FB0-A352-97EC88766ABE}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{D5CB1AF5-EC83-4DE7-92A8-FAD6F99163B3}" ShortID="706051472">
+					<ChildrenList>
+						<Folder Name="Scoring" ID="{A3155D00-781E-465C-A2BE-42BA1A312287}" ShortID="193313714">
+							<ChildrenList>
+								<Event Name="Play_Combo_03" ID="{6A99B10D-7DCC-416F-84E5-CF5F5DDE9107}">
+									<ChildrenList>
+										<Action Name="" ID="{55B7B5D5-5B29-4356-B44F-38F39C4785BA}" ShortID="408555897">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Combo_03" ID="{05A25A9E-6FEE-4401-A48F-4BF8891194B8}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Combo_04" ID="{40AE1170-8A98-497D-9D84-86B594592103}">
+									<ChildrenList>
+										<Action Name="" ID="{9204C39A-6F87-4B75-A4DF-AA083A1CDCDB}" ShortID="22818379">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Combo_04" ID="{582DBEBF-3F10-4A6B-9DFD-C87C2338CF15}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Combo_01" ID="{0B89A78B-1C21-4B7C-9D9E-8B94C28D273E}">
+									<ChildrenList>
+										<Action Name="" ID="{9C95D097-EE55-4FAC-8F40-82A11F51646D}" ShortID="1058723120">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Combo_01" ID="{8F46193E-E4F9-4C5B-BB8D-C7416C4EE717}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Combo_02" ID="{5A5AC81E-42A4-4AFD-85EB-F2364FF23CC5}">
+									<ChildrenList>
+										<Action Name="" ID="{ABAF13F5-7817-4AEF-8BF2-484F6ADBB754}" ShortID="583467470">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Combo_02" ID="{406FB98B-74CA-4B71-B016-463F5B2B785F}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Combo_05" ID="{4A7B2510-9858-4703-9AED-5D9B031AB06E}">
+									<ChildrenList>
+										<Action Name="" ID="{AD9174ED-8022-44F7-99FE-97E99D6DDF6C}" ShortID="666144635">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Combo_05" ID="{7898A7DF-A921-4C5F-9D13-A9E4972EE67B}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Score_Hit_Jauge" ID="{026F0F90-D582-439B-A663-F5D4A2DE3ED4}">
+									<ChildrenList>
+										<Action Name="" ID="{9F51F986-485E-43D9-A447-A904C7CA489B}" ShortID="1044999898">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Score_Hit_Jauge" ID="{86502435-2385-484B-AC59-F2DA8C1E6458}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Score_Hit_Rond" ID="{F4AB718E-8F45-4B87-96B4-C39D9C84A65F}">
+									<ChildrenList>
+										<Action Name="" ID="{92998235-B4F6-40AA-9153-BE25C57F0B91}" ShortID="273188000">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Score_Hit_Rond" ID="{E09598CB-C409-409F-9F58-94944BD5EBAD}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
