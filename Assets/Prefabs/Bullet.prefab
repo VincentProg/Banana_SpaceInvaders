@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 152870428320659308}
   - component: {fileID: 6221785980683646529}
   - component: {fileID: -2903128291619290145}
-  - component: {fileID: 5769712518538948192}
+  - component: {fileID: 3616382065491282683}
   m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
@@ -131,7 +131,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5769712518538948192
+--- !u!114 &3616382065491282683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,10 +144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeTime: 2
-  meshRefreshRate: 0.1
-  meshDestroyDelay: 3
+  meshRefreshRate: 0.05
+  meshDestroyDelay: 0.5
   positionToSpawn: {fileID: 6871377909161798998}
-  mat: {fileID: 0}
-  sharderVarRef: Toxic shader
-  shaderVarRate: 2
-  shaderVarRefreshRate: 0.1
+  mat: {fileID: 2100000, guid: 24741ea081b61114c836e5030e440bdf, type: 2}
+  sharderVarRef: 
+  shaderVarRate: 0
+  shaderVarRefreshRate: 0

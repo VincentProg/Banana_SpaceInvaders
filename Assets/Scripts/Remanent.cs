@@ -17,8 +17,9 @@ public class Remanent : MonoBehaviour
     public float shaderVarRate;
     public float shaderVarRefreshRate;
 
-    private MeshRenderer[] MeshRenderers;
+    private MeshRenderer MeshRenderers;
     private Transform positionParent;
+    private bool active = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,36 +29,44 @@ public class Remanent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(ActiveTrail(activeTime));
+        if(!active)
+            StartCoroutine(ActiveTrail(activeTime));
     }
 
     IEnumerator ActiveTrail(float activeTime)
     {
+        active = true;
         while(activeTime>0)
         {
+            Debug.Log("je spawn");
             activeTime -= meshRefreshRate;
 
             if (MeshRenderers == null)
-                MeshRenderers = GetComponentsInChildren<MeshRenderer>();
+                MeshRenderers = GetComponentInChildren<MeshRenderer>();
 
-            for(int i = 0;i<MeshRenderers.Length;i++)
-            {
-                GameObject gObj = new GameObject();
-                gObj.transform.SetPositionAndRotation(positionToSpawn.position, positionToSpawn.rotation);
-               
-                MeshRenderer mr = gObj.AddComponent<MeshRenderer>();
-                MeshFilter mf = gObj.AddComponent<MeshFilter>();
+            GameObject gObj = new GameObject();
 
-                Mesh mesh = new Mesh();
-                mr.material = mat;
+            gObj.transform.SetPositionAndRotation(positionToSpawn.position, positionToSpawn.rotation);
+            gObj.transform.localScale = gameObject.transform.localScale;
+            MeshRenderer mr = gObj.AddComponent<MeshRenderer>();
+            MeshFilter mf = gObj.AddComponent<MeshFilter>();
 
-                StartCoroutine(AnimateMaterialFloat(mr.material, 0, shaderVarRate, shaderVarRefreshRate));
+            gObj.GetComponent<MeshRenderer>().material = mat;
+            gObj.GetComponent<MeshFilter>().mesh = gameObject.GetComponent<MeshFilter>().mesh;
+            
+            Mesh mesh = new Mesh();
+            mf.mesh = gameObject.GetComponent<MeshFilter>().mesh;
+            mr.material = mat;
 
-                Destroy(gObj, meshDestroyDelay);
-            }
+            //mf.mesh = mesh;
 
+            //StartCoroutine(AnimateMaterialFloat(mr.material, 0, shaderVarRate, shaderVarRefreshRate));
+
+            Destroy(gObj, meshDestroyDelay);
+            
             yield return new WaitForSeconds(meshRefreshRate);
-        }        
+        }
+        active = false;
     }
 
     IEnumerator AnimateMaterialFloat(Material mat,float goal,float rate, float refreshRate)
