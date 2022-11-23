@@ -13,7 +13,6 @@ public class Music_Manager : MonoBehaviour
     [SerializeField] private string bass01Stop;
     [SerializeField] private string bass02Stop;*/
 
-    private bool once = false;
     private float timer = 0;
     private int currentCombo = -1;
     [SerializeField] private float duration = 1f;
@@ -55,7 +54,6 @@ public class Music_Manager : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        Debug.Log(currentLPBass02);
         SwitchMusicOnCombo();
     }
 
@@ -100,7 +98,6 @@ public class Music_Manager : MonoBehaviour
         currentVolStep02 = LerpRTPC(currentVolStep02,100f);
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step02", currentVolStep02);
 
-        once = true;
     }
 
     public void Combo2()

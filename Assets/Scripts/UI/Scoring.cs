@@ -98,7 +98,6 @@ public class Scoring : MonoBehaviour
 
         myObjPart.transform.position = new Vector3(tempV.x,-100,0);*/
 
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             AddScoring(50);
@@ -177,15 +176,35 @@ public class Scoring : MonoBehaviour
     }
     private void ComboStrike()
     {
-        
-
         if (currentValueJauge < 1)
         {
+            if (jaugeStep.fillAmount <= 0f)
+            {
+                currentValueJauge = 0f;
+            }
+            else if (jaugeStep.fillAmount <= 0.2f)
+            {
+                currentValueJauge = 0.2f;
+            }
+            else if (jaugeStep.fillAmount <= 0.4f)
+            {
+                currentValueJauge = 0.4f;
+            }
+            else if (jaugeStep.fillAmount <= 0.6f)
+            {
+                currentValueJauge = 0.6f;
+            }
+            else if (jaugeStep.fillAmount <= 0.8f)
+            {
+                currentValueJauge = 0.8f;
+            }
+
             currentValueJauge += coefJauge;
+
+            currentValueOnDisappearJauge = 0;
+
             jaugeStep.fillAmount = currentValueJauge;
             canDisappearJauge = true;
-
-            
 
             CallFeedbackJauge();
         }
@@ -193,6 +212,7 @@ public class Scoring : MonoBehaviour
         {
             ResetJauge();
             ResetFullJauge();
+
             canDisappearJauge = false;
 
             onFullJauge = true;
@@ -236,11 +256,10 @@ public class Scoring : MonoBehaviour
 
     private void JaugeDisappear()
     {
-        
         if(currentValueCombo >= 5) { return; }
         
-
         float current = currentValueJauge;
+       
         currentValueOnDisappearJauge += (Time.deltaTime * speedJaugeDisappear);
         float coef = current - currentValueOnDisappearJauge;
 
