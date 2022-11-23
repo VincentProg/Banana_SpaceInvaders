@@ -22,12 +22,13 @@ public class Bullet : MonoBehaviour
     public void InitBullet(float speed)
     {
         _speed = speed;
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, _speed);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += movement * _speed * Time.deltaTime;
+       // transform.position += movement * _speed * Time.deltaTime;
 
         _timer += Time.deltaTime;
         if (_timer >= lifeTime)

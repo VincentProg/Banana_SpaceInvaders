@@ -16,7 +16,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float m_strengthRecoil;
     [SerializeField] private AnimationCurve m_recoilCurve;
     private float m_initialZ;
-    
+
+    [SerializeField] private float m_perfectShootTime, m_goodShootTime;
     
     // Start is called before the first frame update
     void Start()
@@ -41,14 +42,40 @@ public class PlayerShoot : MonoBehaviour
         // Shoot once
         if (ctx.performed)
         {
-            if (_timer <= 0)
+            float l_timeBeforeBeat = Referencer.Instance.RythmManagerInstance.GetRemainingTimeBeforeBeat();
+
+            if (l_timeBeforeBeat <= m_goodShootTime)
             {
-                Bullet shootedBullet = Instantiate(bullet, transform.position, Quaternion.Euler(90,0,0));
-                shootedBullet.InitBullet(bulletSpeed);
-                _timer += shootCooldown;
-                m_isRecoil = true;
+                if (_timer <= 0)
+                {
+                    Shoot();
+                }
+
+                if (l_timeBeforeBeat <= m_perfectShootTime)
+                {
+                    // Show Perfect Shoot
+                }
+                else
+                {
+                    // Show Good Shoot
+                }
+            }
+            else
+            {
+                //  Shoot failed
             }
         }
+    }
+
+    private void Shoot()
+    {
+        Vector3 l_pos = new Vector3(Referencer.Instance.PlayerInstance.IndexMovement *
+                       Referencer.Instance.EnemyManagerInstance.OffsetX,
+                transform.position.y, transform.position.z + 5);
+        Bullet shootedBullet = Instantiate(bullet, l_pos, Quaternion.Euler(90,0,0));
+        shootedBullet.InitBullet(bulletSpeed);
+        _timer += shootCooldown;
+        m_isRecoil = true;
     }
 
     private void Recoil()

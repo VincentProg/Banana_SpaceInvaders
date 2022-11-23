@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
     private float m_movementX;
     private int m_indexMovement;
     private float m_offsetMovement;
+    public int IndexMovement => m_indexMovement;
     [SerializeField] private AnimationCurve m_mouvementCurve;
 
     [Header("ROTATION")] [SerializeField] private float m_rotationIntensity;
