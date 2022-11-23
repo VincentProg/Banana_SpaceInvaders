@@ -175,7 +175,7 @@ Material:
     - _boundMinX: -11.53
     - _boundMinY: -15.797999
     - _boundMinZ: -11.2
-    - _displayFrame: 44.98
+    - _displayFrame: 0
     - _frameCount: 45
     - _gameTimeAtFirstFrame: 0
     - _houdiniFPS: 24

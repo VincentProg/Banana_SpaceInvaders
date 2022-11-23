@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 152870428320659308}
   - component: {fileID: 6221785980683646529}
   - component: {fileID: -2903128291619290145}
+  - component: {fileID: 3616382065491282683}
   m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bad0d421d39e06d46813d7ecbd526d9c, type: 2}
+  - {fileID: 2100000, guid: 24741ea081b61114c836e5030e440bdf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,3 +131,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3616382065491282683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8444433673034009861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b2bdeefb0cf514992d61c82f865b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeTime: 2
+  meshRefreshRate: 0.05
+  meshDestroyDelay: 0.5
+  positionToSpawn: {fileID: 6871377909161798998}
+  mat: {fileID: 2100000, guid: 24741ea081b61114c836e5030e440bdf, type: 2}
+  sharderVarRef: 
+  shaderVarRate: 0
+  shaderVarRefreshRate: 0

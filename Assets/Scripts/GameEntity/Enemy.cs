@@ -160,6 +160,7 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     public void Death()
     {
+     
         //m_spawnGuts.StartExplosion();
         Instantiate(m_bloodParticles, transform.position, quaternion.identity);
         DeathEvent.Invoke(this);
