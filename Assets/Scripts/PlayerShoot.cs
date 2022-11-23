@@ -35,6 +35,7 @@ public class PlayerShoot : MonoBehaviour
                 Bullet shootedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
                 shootedBullet.InitBullet(bulletSpeed);
                 _timer += shootCooldown;
+                Haptics.instance.HapticsGameController(new Vector2(1,1),1);
             }
         }
     }
