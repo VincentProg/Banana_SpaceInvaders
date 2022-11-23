@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
     private bool m_isMoving;
     private float m_movementX;
     private int m_indexMovement;
-    
+    private float m_offsetMovement;
     [SerializeField] private AnimationCurve m_mouvementCurve;
 
     [Header("ROTATION")] [SerializeField] private float m_rotationIntensity;
@@ -33,6 +33,11 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
         controls = new Controls();
         controls.Player.Enable();
         controls.Player.PlayerMovement.performed += PlayerMovementInput;
+    }
+
+    private void Start()
+    {
+        m_offsetMovement = Referencer.Instance.EnemyManagerInstance.OffsetX;
     }
 
     private void OnDestroy()
@@ -64,7 +69,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
             }
             m_currentTimeMovement = 0;
             m_initialX = m_targetX;
-            m_targetX = Referencer.Instance.EnemyManagerInstance.OffsetMovement * m_indexMovement;
+            m_targetX = m_offsetMovement * m_indexMovement;
             m_isMoving = true;
         }
     }

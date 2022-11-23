@@ -14,7 +14,8 @@ public class Enemy : MonoBehaviour, ILivingEntity
     [SerializeField] private bool isFast;
     [Header("SPAWN")]
     [SerializeField] private AnimationCurve m_spawnCurve;
-    public float TimeUp { get; set;}
+
+    public float m_timeUp;
     private float m_currentTimeUp;
    
     
@@ -53,6 +54,7 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     private void Awake()
     {
+        m_timeUp = Referencer.Instance.RythmManagerInstance.m_delayStep;
         IsActivated = false;
         m_canShoot = true;
         m_currentDurationMovement = m_initialDurationMovement;
@@ -82,7 +84,7 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     private void GoingDown()
     {
-        m_currentTimeUp += Time.deltaTime / TimeUp;
+        m_currentTimeUp += Time.deltaTime / m_timeUp;
         float l_y = m_spawnCurve.Evaluate(m_currentTimeUp);
         transform.position = Vector3.Lerp(m_initialPos, new Vector3(transform.position.x, 0, transform.position.z), l_y);
         if (m_currentTimeUp >= 1)
