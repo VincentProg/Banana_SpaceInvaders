@@ -7,13 +7,15 @@ using UnityEngine.Audio;
 
 public class RythmManager : MonoBehaviour
 {
-    public UnityEvent Beat;
-    public UnityEvent FourBeats;
-    public UnityEvent HeightBeats;
+    [HideInInspector]
+    public UnityEvent Beat, FourBeats, HeightBeats;
     private int currentNbrBeat;
 
     [SerializeField] private int m_BPM;
     private float m_delayBeat;
+
+    private bool m_isStarted;
+    [SerializeField] private float m_delayBeforeStart;
 
     public float m_delayStep
     {
@@ -31,16 +33,25 @@ public class RythmManager : MonoBehaviour
     private void Start()
     {
         m_delayBeat = 60.0f / m_BPM;
+        StartCoroutine(iDelayStart());
     }
 
     private void Update()
     {
+        if (!m_isStarted) return;
+        
         m_currentTime += Time.deltaTime * m_speedRythm;
         if (m_currentTime > m_delayStep)
         {
             m_currentTime -= m_delayStep;
             CallBeat();
         }
+    }
+
+    private IEnumerator iDelayStart()
+    {
+        yield return new WaitForSeconds(m_delayBeforeStart);
+        m_isStarted = true;
     }
 
     private void CallBeat()
@@ -75,5 +86,10 @@ public class RythmManager : MonoBehaviour
     {
         m_isNewRythm = true;
         m_speedRythm = p_speedRythm;
+    }
+
+    public float GetRemainingTimeBeforeBeat()
+    {
+        return m_delayStep - m_currentTime;
     }
 }
