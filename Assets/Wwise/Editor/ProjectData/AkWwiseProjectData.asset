@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 95e03345ed558f4ab74447c4601c3268
     GuidInternal: 
-    m_lastTime: -8585325011173525370
+    m_lastTime: -8585324163989010389
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585325011173290914
+    m_lastTime: -8585324163988770442
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 6c8b1f0e04ee464ba903648c18e405e6
     GuidInternal: 
-    m_lastTime: -8585324449475688181
+    m_lastTime: -8585324164011242173
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 7152a76dcab16c4ebbe0cb2cc1ba9861
     GuidInternal: 
-    m_lastTime: -8585324444643433639
+    m_lastTime: -8585324163989456298
     List:
     - name: SB_Music
       guid: 22e0d4400b2e0747a19f6d616e8f9d8f
@@ -438,7 +438,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: bf7866a8d9ce0049b6fa6639d05d9244
     GuidInternal: 
-    m_lastTime: -8585324444643518019
+    m_lastTime: -8585324164018039473
     List:
     - name: Music
       guid: 8c64e681a8bec644ac94212ffe2548f2
@@ -862,7 +862,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f610de20668bbb4481cdb4ba07e2836b
     GuidInternal: 
-    m_lastTime: -8585325011174848064
+    m_lastTime: -8585324164017894858
     List: []
   - PhysicalPath: Game Parameters\RTPC.wwu
     PathAndIcons:
@@ -875,7 +875,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\RTPC
     guid: ef1660203e7ef74d9dad7048a654deae
     GuidInternal: 
-    m_lastTime: -8585324573528810930
+    m_lastTime: -8585324164017842729
     List:
     - name: Fade_LowPass_Step02
       guid: 89fb80ad3d639a41bba07c7f8e21d9db
@@ -1064,7 +1064,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7e3d513cde252b4ab3b8fbb9d353d1a0
     GuidInternal: 
-    m_lastTime: -8585325011173655469
+    m_lastTime: -8585324163989284376
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1078,7 +1078,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: ffae7199446ec041b75bd5bbe58f9664
     GuidInternal: 
-    m_lastTime: -8585325011173615459
+    m_lastTime: -8585324163989243893
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1092,11 +1092,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 7924686ca5642d44ae5225a50be2dd68
     GuidInternal: 
-    m_lastTime: -8585325011173575450
+    m_lastTime: -8585324163989061254
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000003000000050000000600000007000000080000000a0000000b0000000c0000000d0000000e00000011000000140000001600000018000000190000001a0000001b0000001c0000001e000000220000002c000000
-  AutoSyncSelection: 1
+  ExpandedWaapiItemIds: 
+  AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 

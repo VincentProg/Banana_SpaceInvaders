@@ -1222,7 +1222,7 @@ MonoBehaviour:
   music01Play: Play_BananaMusic_01_02
   bass01Play: Play_BassMusic_03
   bass02Play: Play_BassMusic_04
-  duration: 2
+  duration: 3
 --- !u!1 &1459067089
 GameObject:
   m_ObjectHideFlags: 0
