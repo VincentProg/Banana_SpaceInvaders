@@ -101,6 +101,17 @@
                     "action": "PlayerShoot",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4d27982-cd7f-4169-bb1e-52e9cad3cabb",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
