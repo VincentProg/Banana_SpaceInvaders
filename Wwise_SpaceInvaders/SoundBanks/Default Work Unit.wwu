@@ -5,7 +5,35 @@
 			<ChildrenList>
 				<SoundBank Name="SB_Test" ID="{73016661-5C5A-402D-9355-8272F837D15B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BeepTest" ID="{74C9D2C0-9A05-46E4-9351-8C8D710A0B10}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="SB_Music" ID="{40D4E022-2E0B-4707-A19F-6D616E8F9D8F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_BassMusic_03" ID="{09C97D92-9B2F-40CA-80AE-5BA7C13BC4E5}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BassMusic_04" ID="{DC9F28C5-5DE8-432F-801A-9573C645BFF4}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BassMusic_03" ID="{26C5E317-38FF-46C4-B115-3C3391057F82}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BananaMusic_01_02" ID="{A0D5B5D2-19CD-46DE-9C26-573B3F26F087}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BassMusic_04" ID="{B95691A6-BAC8-4BDD-BB1E-46266F898D25}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BananaMusic_01_02" ID="{A92DD01B-5983-4EC6-9156-FEF097B092AA}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="SB_UI" ID="{A91C2553-6FF9-44FE-A8DD-5512DDAB1796}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Combo_03" ID="{6A99B10D-7DCC-416F-84E5-CF5F5DDE9107}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Score_Hit_Jauge" ID="{026F0F90-D582-439B-A663-F5D4A2DE3ED4}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Combo_05" ID="{4A7B2510-9858-4703-9AED-5D9B031AB06E}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Combo_04" ID="{40AE1170-8A98-497D-9D84-86B594592103}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Combo_02" ID="{5A5AC81E-42A4-4AFD-85EB-F2364FF23CC5}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Combo_01" ID="{0B89A78B-1C21-4B7C-9D9E-8B94C28D273E}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Score_Hit_Rond" ID="{F4AB718E-8F45-4B87-96B4-C39D9C84A65F}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

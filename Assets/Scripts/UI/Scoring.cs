@@ -12,7 +12,6 @@ public class Scoring : MonoBehaviour
     [Header("// SCORING //")]
     [SerializeField] TextMeshProUGUI myText;
     [SerializeField] private UnityEvent eventOnAdd;
-    [SerializeField] private UnityEvent eventOnAddMonster;
     [SerializeField] private float currentScore;
     [SerializeField] private float durationAppearScore;
 
@@ -48,11 +47,26 @@ public class Scoring : MonoBehaviour
     [SerializeField] private float limitComboMax = 10;
     private bool onFullJauge = false;
 
+    [Header("// AUDIO //")]
+    [SerializeField] private string[] hitSound;
+    [SerializeField] private string[] comboSound;
+
+    [Header("// EVENTS AUDIO //")]
+    [SerializeField] private UnityEvent resetTimer;
+    [SerializeField] private UnityEvent combo1;
+    [SerializeField] private UnityEvent combo2;
+    [SerializeField] private UnityEvent combo3;
+    [SerializeField] private UnityEvent combo4;
+    [SerializeField] private UnityEvent combo5;
+    [SerializeField] private UnityEvent resetCombo;
+
     [Header("PARTICLES")]
+    /*
     [SerializeField] private GameObject myObjPart;
-    [SerializeField] private ParticleSystem myParticles;
+    [SerializeField] private ParticleSystem myParticles;*/
 
     [Header(" ")]
+    [Header("// EVENTS ANIMATIONS //")]
     [SerializeField] private UnityEvent bumpCombo;
     [SerializeField] private UnityEvent megaBumpCombo;
     [SerializeField] private UnityEvent newCombo;
@@ -77,18 +91,19 @@ public class Scoring : MonoBehaviour
     void Update()
     {
 
-        
+        /*
         tempV.x = -width / 2;
         tempV.x += width * jaugeStep.fillAmount;
-        //jaugeStep.GetComponent<RectTransform>().anchoredPosition = tempV;
+        jaugeStep.GetComponent<RectTransform>().anchoredPosition = tempV;
 
-        myObjPart.transform.position = new Vector3(tempV.x,-100,0);
+        myObjPart.transform.position = new Vector3(tempV.x,-100,0);*/
 
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             AddScoring(50);
-            myParticles.Play();
+
+            //myParticles.Play();
         }
 
         if (canDisappearRond) { RondJaugeDisappear(); }
@@ -104,8 +119,9 @@ public class Scoring : MonoBehaviour
     public void AddScoring(float value)
     {
         currentScore += value;
-        eventOnAddMonster.Invoke();
         StartCoroutine(WaitScoring());
+
+        AkSoundEngine.PostEvent(hitSound[0], this.gameObject);
 
         parentJauge.GetComponent<RectTransform>().rotation = new Quaternion(0,0,0,0);
 
@@ -132,19 +148,44 @@ public class Scoring : MonoBehaviour
             currentValueCombo += coefCombo;
             comboTextValue.text = currentValueCombo.ToString();
 
-            CallFeedbackCombo();
+            AkSoundEngine.PostEvent(hitSound[1], this.gameObject);
 
+            CallFeedbackCombo();
             AddRondJauge();
+
+            //MUSIC
+            resetTimer.Invoke();
+            switch (currentValueCombo)
+            {
+                case 1: combo1.Invoke();
+                    AkSoundEngine.PostEvent(comboSound[0], this.gameObject);
+                    break;
+                case 2: combo2.Invoke();
+                    AkSoundEngine.PostEvent(comboSound[1], this.gameObject);
+                    break;
+                case 3: combo3.Invoke();
+                    AkSoundEngine.PostEvent(comboSound[2], this.gameObject);
+                    break;
+                case 4: combo4.Invoke();
+                    AkSoundEngine.PostEvent(comboSound[3], this.gameObject);
+                    break;
+                case 5: combo5.Invoke();
+                    AkSoundEngine.PostEvent(comboSound[4], this.gameObject);
+                    break;
+            }
         }
     }
     private void ComboStrike()
     {
+        
 
         if (currentValueJauge < 1)
         {
             currentValueJauge += coefJauge;
             jaugeStep.fillAmount = currentValueJauge;
             canDisappearJauge = true;
+
+            
 
             CallFeedbackJauge();
         }
@@ -176,6 +217,7 @@ public class Scoring : MonoBehaviour
         if (coef >= 1)
         {
             fakeJauge.gameObject.SetActive(false);
+
             ResetFullJauge();
             AddValueCombo();
             
@@ -194,6 +236,9 @@ public class Scoring : MonoBehaviour
 
     private void JaugeDisappear()
     {
+        
+        if(currentValueCombo >= 5) { return; }
+        
 
         float current = currentValueJauge;
         currentValueOnDisappearJauge += (Time.deltaTime * speedJaugeDisappear);
@@ -215,7 +260,11 @@ public class Scoring : MonoBehaviour
             currentValueJauge = 0;
             jaugeStep.fillAmount = 0;
 
+            Debug.Log("Jauge");
             ResetRondJauge();
+
+            resetTimer.Invoke();
+            resetCombo.Invoke();
 
             canDisappearJauge = false;
         }
@@ -232,6 +281,7 @@ public class Scoring : MonoBehaviour
         
         if (coef <= 0)
         {
+            Debug.Log("Rond");
             ResetCombo();
             ResetRondJauge();
         }
@@ -262,6 +312,9 @@ public class Scoring : MonoBehaviour
         currentValueCombo = 0;
         comboTextValue.text = "0";
         fakeJauge.gameObject.SetActive(false);
+
+        resetTimer.Invoke();
+        resetCombo.Invoke();
     }
 
     private void ResetFullJauge()

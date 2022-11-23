@@ -1,6 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3227834082	Play_BeepTest			\Default Work Unit\Play_BeepTest	
 
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	80714746	BeepTest	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\BeepTest_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BeepTest		9984
 
