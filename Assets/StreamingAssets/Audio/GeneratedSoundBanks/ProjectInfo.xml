@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Wwise_SpaceInvaders" GUID="{C3B81155-274B-4D4A-929D-13442AB21436}" Generator="2022.1.0.8070"/>
+	<CacheRoot>../../../../Wwise_SpaceInvaders/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Windows" GUID="{A0FB2E02-9C1F-412E-A653-88B722E296E1}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../Wwise_SpaceInvaders/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{429D4CD2-9CB9-4F0E-AD50-40BE092081DB}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{1B3D1AF9-D822-0CE1-5D7A-8F36C3A9D6DE}</FileHash>
+</ProjectInfo>

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, ILivingEntity
 {
     private PlayerInput playerInput;
     private Controls controls;
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private bool m_isMoving;
     private float m_movementX;
     private int m_indexMovement;
-    public float OffsetMovement { get; set; }
+    
     [SerializeField] private AnimationCurve m_mouvementCurve;
 
     [Header("ROTATION")] [SerializeField] private float m_rotationIntensity;
@@ -33,6 +33,13 @@ public class PlayerMovement : MonoBehaviour
         controls = new Controls();
         controls.Player.Enable();
         controls.Player.PlayerMovement.performed += PlayerMovementInput;
+    }
+
+    private void OnDestroy()
+    {
+        controls.Player.PlayerMovement.performed -= PlayerMovementInput;
+        controls.Player.Disable();
+       
     }
 
     // Update is called once per frame
@@ -57,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             }
             m_currentTimeMovement = 0;
             m_initialX = m_targetX;
-            m_targetX = OffsetMovement * m_indexMovement;
+            m_targetX = Referencer.Instance.EnemyManagerInstance.OffsetMovement * m_indexMovement;
             m_isMoving = true;
         }
     }
@@ -77,5 +84,12 @@ public class PlayerMovement : MonoBehaviour
         {
             m_isMoving = false;
         }
+    }
+
+    public void Death()
+    {
+        Debug.Log("Death");
+        PlayerDeathManager.Instance.Death();
+        Destroy(gameObject);
     }
 }

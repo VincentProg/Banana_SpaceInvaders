@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{206016EF-7E3E-4DF7-9DAD-7048A654DEAE}" SchemaVersion="110">
+	<GameParameters>
+		<WorkUnit Name="RTPC" ID="{206016EF-7E3E-4DF7-9DAD-7048A654DEAE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Step01" ID="{ADDFBEBE-661A-4B13-9EA2-ED4DB7525F09}" ShortID="944258090">
+					<ChildrenList>
+						<GameParameter Name="Fade_Vol_Step01" ID="{523B97FE-86B0-4FA2-BAB8-3B3B82B1E4C6}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Step02" ID="{0FEEA50C-FA05-45FB-8A6F-D50A192C11B4}" ShortID="512931756">
+					<ChildrenList>
+						<GameParameter Name="Fade_LowPass_Step02" ID="{AD80FB89-633D-419A-BBA0-7C7F8E21D9DB}"/>
+						<GameParameter Name="Fade_Vol_Step02" ID="{F6355107-8DB2-48A5-9AAB-4EEB133EF5A1}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Step_03_Bass" ID="{964B5E2E-413F-4211-8348-86671AB5C201}" ShortID="307531870">
+					<ChildrenList>
+						<GameParameter Name="Fade_LowPassBass_Step03" ID="{5C6CA82F-E9C7-4D09-87C3-BB9D0B67EDF6}"/>
+						<GameParameter Name="Fade_VolBass_Step03" ID="{004A6316-80DE-4A37-B3A5-9EB1A4DE165B}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Step_04_Bass_02" ID="{FFA02EC6-3765-40AF-AF00-E6DB6817DFB3}" ShortID="185867934">
+					<ChildrenList>
+						<GameParameter Name="Fade_LowPassBass02_Step04" ID="{76416D67-A50F-424C-8AA1-21FA55BC34B7}"/>
+						<GameParameter Name="Fade_VolBass02_Step04" ID="{CD3B9F7B-6DF0-4637-8882-061816C249C1}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

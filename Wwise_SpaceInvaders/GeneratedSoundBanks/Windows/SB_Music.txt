@@ -1,0 +1,29 @@
+Event	ID	Name			Wwise Object Path	Notes
+	968691197	Play_BananaMusic_01_02			\Default Work Unit\Music\Play\Play_BananaMusic_01_02	
+	2845497272	Play_BassMusic_03			\Default Work Unit\Music\Play\Play_BassMusic_03	
+	2845497279	Play_BassMusic_04			\Default Work Unit\Music\Play\Play_BassMusic_04	
+	2968713298	Stop_BassMusic_03			\Default Work Unit\Music\Stop\Stop_BassMusic_03	
+	2968713301	Stop_BassMusic_04			\Default Work Unit\Music\Stop\Stop_BassMusic_04	
+	4199445895	Stop_BananaMusic_01_02			\Default Work Unit\Music\Stop\Stop_BananaMusic_01_02	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1677504759	Fade_VolBass02_Step04			\RTPC\Step_04_Bass_02\Fade_VolBass02_Step04	
+	1977195214	Fade_VolBass_Step03			\RTPC\Step_03_Bass\Fade_VolBass_Step03	
+	2836587888	Fade_LowPassBass_Step03			\RTPC\Step_03_Bass\Fade_LowPassBass_Step03	
+	3167393820	Fade_Vol_Step02			\RTPC\Step02\Fade_Vol_Step02	
+	3167393823	Fade_Vol_Step01			\RTPC\Step01\Fade_Vol_Step01	
+	3308746329	Fade_LowPassBass02_Step04			\RTPC\Step_04_Bass_02\Fade_LowPassBass02_Step04	
+	4041028786	Fade_LowPass_Step02			\RTPC\Step02\Fade_LowPass_Step02	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	333443995	Bass_Banana_v3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Bass_Banana_v3_D79FB2B7.wem		\Interactive Music Hierarchy\Music\BassMusic_03\Bass_Banana\Bass_Banana_v3		1714252
+	509581019	Bass_Step2_Banana_v1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Bass_Step2_Banana_v1_D79FB2B7.wem		\Interactive Music Hierarchy\Music\BassMusic_04\Bass02_Banana\Bass_Step2_Banana_v1		1168840
+	895361484	SecondStep_Banana_v2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\SecondStep_Banana_v2_D79FB2B7.wem		\Interactive Music Hierarchy\Music\BananaMusic_01_02\SparklingSystem\SecondStep_Banana_v2		1757540
+	931446705	FirstStep_Banana_v2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\FirstStep_Banana_v2_D79FB2B7.wem		\Interactive Music Hierarchy\Music\BananaMusic_01_02\SparklingSystem\FirstStep_Banana_v2		2100948
+
