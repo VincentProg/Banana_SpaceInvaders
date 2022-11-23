@@ -6,15 +6,17 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, ILivingEntity
 {
     private PlayerInput playerInput;
     private Controls controls;
 
-    [Header("MOUVEMENT")] [SerializeField] private float m_movementSpeed;
+    [Header("MOUVEMENT")] 
+    public float m_movementSpeed;
     private bool m_isMoving;
     private float m_movementX;
-    [SerializeField] private float m_offsetMovement;
+    private int m_indexMovement;
+    
     [SerializeField] private AnimationCurve m_mouvementCurve;
 
     [Header("ROTATION")] [SerializeField] private float m_rotationIntensity;
@@ -33,6 +35,13 @@ public class PlayerMovement : MonoBehaviour
         controls.Player.PlayerMovement.performed += PlayerMovementInput;
     }
 
+    private void OnDestroy()
+    {
+        controls.Player.PlayerMovement.performed -= PlayerMovementInput;
+        controls.Player.Disable();
+       
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -44,17 +53,22 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerMovementInput(InputAction.CallbackContext p_ctx)
     {
-        int value = (int)p_ctx.ReadValue<float>();
-        if (value != 0)
+        int l_value = (int)p_ctx.ReadValue<float>();
+        if (l_value != 0)
         {
+            m_movementX = l_value;
+            m_indexMovement += l_value;
+            if (Mathf.Abs(m_indexMovement) > 2)
+            {
+                m_indexMovement = m_indexMovement > 0 ? 2 : -2;
+            }
             m_currentTimeMovement = 0;
-            m_movementX = value;
-            m_initialX = transform.position.x;
-            m_targetX = m_initialX + m_offsetMovement * m_movementX;
+            m_initialX = m_targetX;
+            m_targetX = Referencer.Instance.EnemyManagerInstance.OffsetMovement * m_indexMovement;
             m_isMoving = true;
         }
     }
-    
+
     private void Move()
     {
         m_currentTimeMovement += Time.deltaTime * m_movementSpeed;
@@ -70,5 +84,12 @@ public class PlayerMovement : MonoBehaviour
         {
             m_isMoving = false;
         }
+    }
+
+    public void Death()
+    {
+        Debug.Log("Death");
+        PlayerDeathManager.Instance.Death();
+        Destroy(gameObject);
     }
 }

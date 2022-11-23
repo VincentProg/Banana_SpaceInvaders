@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 281107057134175190}
   - component: {fileID: 8716942275294079005}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: EnemyFast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f3da12bbe77c03c46b38ae0c7af633f6, type: 2}
+  - {fileID: 2100000, guid: 603f2d3bdb706514ba7b444f51f0859c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22945666079b02c4aab3cda2927411c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFast: 1
   m_spawnCurve:
     serializedVersion: 2
     m_Curve:
@@ -173,6 +174,9 @@ MonoBehaviour:
   m_speedBullet: 50
   m_delayBetweenShoot: 0.2
   m_bloodParticles: {fileID: 3617732387176708192, guid: 35ef560d65245b64ab6d167082ff617f, type: 3}
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8716942275294079005
 MonoBehaviour:
   m_ObjectHideFlags: 0
