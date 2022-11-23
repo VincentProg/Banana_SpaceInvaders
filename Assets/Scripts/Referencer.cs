@@ -9,7 +9,7 @@ public class Referencer : MonoBehaviour
 
     private PlayerMovement m_player;
     private EnemyManager m_enemymanager;
-    private RythmManager m_rythmManager;
+    // private RythmManager m_rythmManager;
 
     public PlayerMovement PlayerInstance
     {
@@ -35,6 +35,7 @@ public class Referencer : MonoBehaviour
         }
     }
 
+    /*
     public RythmManager RythmManagerInstance
     {
         get
@@ -45,7 +46,7 @@ public class Referencer : MonoBehaviour
             }
             return m_rythmManager;
         }
-    }
+    }*/
     
 
     private void Awake()
