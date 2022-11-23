@@ -11,7 +11,24 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Music_Bus" ID="{A8C80051-5E37-4064-9927-1D93010B2F4B}"/>
-						<Bus Name="SFX_Bus" ID="{9357F257-52D2-408E-A7A6-D53B92C08EEE}"/>
+						<Bus Name="SFX_Bus" ID="{9357F257-52D2-408E-A7A6-D53B92C08EEE}">
+							<ChildrenList>
+								<AuxBus Name="Effect_01" ID="{C87D6ACA-2EF1-4562-944D-452B518CD3B4}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+											<ObjectRef Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+								<AuxBus Name="Effect_02" ID="{8F7B6B86-020A-47DF-92AB-9654E7085400}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
+											<ObjectRef Name="Noise_Gate_Fast_Attack" ID="{747A6B61-E953-474C-8227-672C884DA616}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
 						<Bus Name="UI_Bus" ID="{FD878073-14FC-4FC4-9CBD-91E53CB5298E}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
@@ -20,6 +37,24 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
+						</Bus>
+						<Bus Name="Voices_Bus" ID="{9AF028D1-37C3-42D9-99CF-D83DF707193E}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<AuxBus Name="Monster" ID="{E659388F-344D-4884-B2C0-C306CA4C8BA2}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+											<ObjectRef Name="Monsterize" ID="{99F80B38-1C45-42CE-9BCD-E94F3885DCAA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
 						</Bus>
 					</ChildrenList>
 				</Bus>

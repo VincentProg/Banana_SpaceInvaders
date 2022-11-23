@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{3F38FFD8-7080-8E08-5D76-B765C7EEB6CE}">
+		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{3C6F930B-5992-2C34-C9A6-34C0893ED635}">
 			<ShortName>SB_UI</ShortName>
 			<Path>SB_UI.bnk</Path>
 			<Media>
@@ -38,6 +38,13 @@
 					<CachePath>SFX/Combo_1_10C4C929.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1431265797" Name="Monsterize" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1764480534" Name="Play_Combo_01" DurationType="OneShot" DurationMin="1.8949434" DurationMax="1.8949434">
 					<MediaRefs>
@@ -79,10 +86,34 @@
 				<Bus Id="213475909" Name="SFX_Bus"/>
 				<Bus Id="2680856269" Name="Music_Bus"/>
 				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3493323323" Name="Voices_Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2288170604" Name="Effect_01">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4202347640"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2288170607" Name="Effect_02">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1820854077"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2376328173" Name="Monster">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1431265797"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="690783697" Type="User" Language="SFX" Hash="{A5400944-7F08-EDBE-A0DD-9A6AC095A667}">
+		<SoundBank Id="690783697" Type="User" Language="SFX" Hash="{657BDF32-7C9B-6304-6B1C-98A1042A088B}">
 			<ShortName>SB_Test</ShortName>
 			<Path>SB_Test.bnk</Path>
 			<Media>
@@ -91,6 +122,13 @@
 					<CachePath>SFX/BeepTest_10C4C929.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1431265797" Name="Monsterize" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="3227834082" Name="Play_BeepTest" DurationType="OneShot" DurationMin="0.11210884" DurationMax="0.11210884">
 					<MediaRefs>
@@ -102,16 +140,44 @@
 				<Bus Id="213475909" Name="SFX_Bus"/>
 				<Bus Id="2680856269" Name="Music_Bus"/>
 				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3493323323" Name="Voices_Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2288170604" Name="Effect_01">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4202347640"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2288170607" Name="Effect_02">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1820854077"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2376328173" Name="Monster">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1431265797"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{1A3B53D4-7111-3410-A773-D5E2431F144B}">
+		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{D6A3E95E-6B27-2528-0803-B5D06D975666}">
 			<ShortName>SB_Music</ShortName>
 			<Path>SB_Music.bnk</Path>
 			<Media>
 				<File Id="333443995" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bass_Banana_v3.wav</ShortName>
 					<CachePath>SFX/Bass_Banana_v3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="351182183" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Menu.wav</ShortName>
+					<CachePath>SFX/Music_Menu_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="509581019" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bass_Step2_Banana_v1.wav</ShortName>
@@ -126,6 +192,13 @@
 					<CachePath>SFX/FirstStep_Banana_v2_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1431265797" Name="Monsterize" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="968691197" Name="Play_BananaMusic_01_02" DurationType="Infinite">
 					<MediaRefs>
@@ -143,16 +216,46 @@
 						<MediaRef Id="509581019"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="166541076" Name="Play_MainMenu_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="351182183"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4199445895" Name="Stop_BananaMusic_01_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2968713298" Name="Stop_BassMusic_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2968713301" Name="Stop_BassMusic_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4062428950" Name="Stop_MainMenu_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<Busses>
 				<Bus Id="213475909" Name="SFX_Bus"/>
 				<Bus Id="2680856269" Name="Music_Bus"/>
 				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3493323323" Name="Voices_Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2288170604" Name="Effect_01">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4202347640"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2288170607" Name="Effect_02">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1820854077"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2376328173" Name="Monster">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1431265797"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1677504759" Name="Fade_VolBass02_Step04"/>
 				<GameParameter Id="1977195214" Name="Fade_VolBass_Step03"/>
@@ -163,10 +266,155 @@
 				<GameParameter Id="4041028786" Name="Fade_LowPass_Step02"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F9D431A5-8448-C49E-B6A1-982D16F9F872}">
+		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{E72E29E5-5B7F-E7F2-C88B-3AC62E23B71B}">
+			<ShortName>SB_SFX</ShortName>
+			<Path>SB_SFX.bnk</Path>
+			<Media>
+				<File Id="7756898" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Alien_Mort.wav</ShortName>
+					<CachePath>SFX/Alien_Mort_10C4C929.wem</CachePath>
+				</File>
+				<File Id="75918969" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Idle_Shoot_Chara.wav</ShortName>
+					<CachePath>SFX/Idle_Shoot_Chara_61EAD292.wem</CachePath>
+				</File>
+				<File Id="100767778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Alien_Tir_1.wav</ShortName>
+					<CachePath>SFX/Alien_Tir_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="183629318" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tripes.wav</ShortName>
+					<CachePath>SFX/Tripes_10C4C929.wem</CachePath>
+				</File>
+				<File Id="273832238" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dégats_3.wav</ShortName>
+					<CachePath>SFX/Dégats_3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="376463025" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dégats_1.wav</ShortName>
+					<CachePath>SFX/Dégats_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="820845399" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dégats_2.wav</ShortName>
+					<CachePath>SFX/Dégats_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="836791072" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Alien_Idle_Shoot.wav</ShortName>
+					<CachePath>SFX/Alien_Idle_Shoot_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="896622674" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Alien_Tir_2.wav</ShortName>
+					<CachePath>SFX/Alien_Tir_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1013182437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Chara_Mov.wav</ShortName>
+					<CachePath>SFX/Chara_Mov_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1049349734" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tir.wav</ShortName>
+					<CachePath>SFX/Tir_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1431265797" Name="Monsterize" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="3289687663" Name="Play_Alien_I_Shoot" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="836791072"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2288170604" Name="Effect_01"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2658175869" Name="Play_Alien_R_Mort" DurationType="OneShot" DurationMin="1.0242426" DurationMax="1.1496737">
+					<MediaRefs>
+						<MediaRef Id="7756898"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="566397092" Name="Play_Alien_R_Shoot" DurationType="OneShot" DurationMin="0.82392293" DurationMax="1.6598413">
+					<MediaRefs>
+						<MediaRef Id="100767778"/>
+						<MediaRef Id="896622674"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="26695346" Name="Play_Alien_R_Tripes" DurationType="OneShot" DurationMin="0.64094204" DurationMax="0.80753636">
+					<MediaRefs>
+						<MediaRef Id="183629318"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="944772603" Name="Play_Chara_I_Shoot" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="75918969"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2448513527" Name="Play_Chara_R_Deplacement" DurationType="OneShot" DurationMin="1.4927125" DurationMax="1.6755134">
+					<MediaRefs>
+						<MediaRef Id="1013182437"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="126881520" Name="Play_Chara_R_Shoot" DurationType="OneShot" DurationMin="0.30747166" DurationMax="0.37636182">
+					<MediaRefs>
+						<MediaRef Id="1049349734"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2288170607" Name="Effect_02"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3975151617" Name="Play_Chara_R_TakeDamage" DurationType="OneShot" DurationMin="0.9022902" DurationMax="1.3986168">
+					<MediaRefs>
+						<MediaRef Id="273832238"/>
+						<MediaRef Id="376463025"/>
+						<MediaRef Id="820845399"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="964149281" Name="Stop_Alien_I_Shoot" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2719607225" Name="Stop_Chara_I_Shoot" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<Busses>
+				<Bus Id="213475909" Name="SFX_Bus"/>
+				<Bus Id="2680856269" Name="Music_Bus"/>
+				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3493323323" Name="Voices_Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2288170604" Name="Effect_01">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4202347640"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2288170607" Name="Effect_02">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1820854077"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2376328173" Name="Monster">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1431265797"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{39ED2B5E-2847-468F-2D7A-2B0F4753D41F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="1431265797" Name="Monsterize" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -176,8 +424,32 @@
 				<Bus Id="213475909" Name="SFX_Bus"/>
 				<Bus Id="2680856269" Name="Music_Bus"/>
 				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3493323323" Name="Voices_Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2288170604" Name="Effect_01">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4202347640"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2288170607" Name="Effect_02">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1820854077"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2376328173" Name="Monster">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1431265797"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1677504759" Name="Fade_VolBass02_Step04"/>
 				<GameParameter Id="1977195214" Name="Fade_VolBass_Step03"/>
@@ -302,6 +574,111 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
+		<SoundBank Id="3911025208" Type="User" Language="English(US)" Hash="{BD1166D7-41A3-8407-2394-D3DFE9004EA4}">
+			<ShortName>SB_Voices</ShortName>
+			<Path>English(US)/SB_Voices.bnk</Path>
+			<Media>
+				<File Id="122774027" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Destroy_them_3.wav</ShortName>
+					<CachePath>Voices/English(US)/Destroy_them_3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="125430028" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>perfect_2.wav</ShortName>
+					<CachePath>Voices/English(US)/perfect_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="150038152" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Nice.wav</ShortName>
+					<CachePath>Voices/English(US)/Nice_10C4C929.wem</CachePath>
+				</File>
+				<File Id="219569867" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Keep_going.wav</ShortName>
+					<CachePath>Voices/English(US)/Keep_going_10C4C929.wem</CachePath>
+				</File>
+				<File Id="751572308" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>more_more_2.wav</ShortName>
+					<CachePath>Voices/English(US)/more_more_2_3E0B013D.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1431265797" Name="Monsterize" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="220599745" Name="Play_Destroy_them" DurationType="OneShot" DurationMin="2.5805795" DurationMax="2.5805795">
+					<MediaRefs>
+						<MediaRef Id="122774027"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2376328173" Name="Monster"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="27047026" Name="Play_Keep_Going" DurationType="OneShot" DurationMin="3.374177" DurationMax="3.374177">
+					<MediaRefs>
+						<MediaRef Id="219569867"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2376328173" Name="Monster"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="523954835" Name="Play_More_more" DurationType="OneShot" DurationMin="2.6516168" DurationMax="2.6516168">
+					<MediaRefs>
+						<MediaRef Id="751572308"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2376328173" Name="Monster"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="422082389" Name="Play_Nice" DurationType="OneShot" DurationMin="2.1056893" DurationMax="2.1056893">
+					<MediaRefs>
+						<MediaRef Id="150038152"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2376328173" Name="Monster"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1725302785" Name="Play_Perfect" DurationType="OneShot" DurationMin="3.401132" DurationMax="3.401132">
+					<MediaRefs>
+						<MediaRef Id="125430028"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2376328173" Name="Monster"/>
+					</AuxBusRefs>
+				</Event>
+			</Events>
+			<Busses>
+				<Bus Id="213475909" Name="SFX_Bus"/>
+				<Bus Id="2680856269" Name="Music_Bus"/>
+				<Bus Id="3247222208" Name="UI_Bus"/>
+				<Bus Id="3493323323" Name="Voices_Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2288170604" Name="Effect_01">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4202347640"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2288170607" Name="Effect_02">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1820854077"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2376328173" Name="Monster">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1431265797"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{77EE4174-27A1-1CDF-4408-B64B1FD83B7B}</FileHash>
+	<FileHash>{055E567E-4FC8-D6F1-8257-C4FD56E76D2B}</FileHash>
 </SoundBanksInfo>

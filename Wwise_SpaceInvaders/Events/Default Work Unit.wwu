@@ -15,6 +15,10 @@
 					</ChildrenList>
 				</Event>
 				<Folder Name="Music" ID="{81E6648C-BEA8-44C6-AC94-212FFE2548F2}" ShortID="829128933">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Folder Name="Play" ID="{CBCCD2D8-F16D-4931-95A7-463199B23EC4}" ShortID="240323847">
 							<ChildrenList>
@@ -46,6 +50,17 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="BananaMusic_01_02" ID="{021BEAC2-F6CB-45CA-B907-7B1EC4803AD0}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_MainMenu_Music" ID="{CE940AA8-F420-45D4-9653-5A4D2C115478}">
+									<ChildrenList>
+										<Action Name="" ID="{E86A0A51-C46F-45FD-B0C1-906E66AB1712}" ShortID="523198925">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainMenu_Music" ID="{7D7276E7-A7D3-429A-94E7-67330FA90A63}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -97,11 +112,29 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Stop_MainMenu_Music" ID="{E2EEE36B-BEBA-45D5-A8EA-F0FE69BC472E}">
+									<ChildrenList>
+										<Action Name="" ID="{BE19D6D5-7833-40C6-BFA3-4BD303BF4BE6}" ShortID="234016304">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainMenu_Music" ID="{7D7276E7-A7D3-429A-94E7-67330FA90A63}" WorkUnitID="{0B82B3AC-14E2-48EB-BFE3-9110435CB088}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{D5CB1AF5-EC83-4DE7-92A8-FAD6F99163B3}" ShortID="706051472">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Folder Name="Scoring" ID="{A3155D00-781E-465C-A2BE-42BA1A312287}" ShortID="193313714">
 							<ChildrenList>
@@ -184,6 +217,235 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Nav" ID="{0B94E2FC-6D7E-423B-A352-C49103388881}" ShortID="708933159">
+							<ChildrenList>
+								<Event Name="Play_UI_Valid" ID="{8130AA66-A6FC-4A5D-8962-432D88AE7EC2}">
+									<ChildrenList>
+										<Action Name="" ID="{21618985-B315-4FF4-9290-F42DD72DD172}" ShortID="365883869">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="UI_Valid" ID="{AA127479-C656-4D52-8EE7-E60271856A7E}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_UI_Nav" ID="{CB479CAA-2E4E-4B46-8C06-DC61CD4A3DF0}">
+									<ChildrenList>
+										<Action Name="" ID="{B3603CC1-52FE-4A05-B97F-98F20ABB944A}" ShortID="888096108">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="UI_Nav" ID="{327761EF-2CAA-42FF-975C-A530A4097A58}" WorkUnitID="{97ABAA28-DB12-4771-95BC-6959661A26F6}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SFX" ID="{30A417CD-4745-4893-98B7-DBCF78A021C3}" ShortID="545876722">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Chara" ID="{AF2DF06B-614D-4C7E-A9FA-F57C622E30F0}" ShortID="126720675">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Play_Chara_R_Shoot" ID="{A2F14088-4FE3-4D16-AC4F-0E225E41FF2C}">
+									<ChildrenList>
+										<Action Name="" ID="{24219E04-B179-45FE-8B81-BAE2BF24D7E5}" ShortID="864657255">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chara_R_Shoot" ID="{9536DE5B-CE01-423E-811B-764697E5761A}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Chara_R_TakeDamage" ID="{10CBBB95-A279-4DDD-A5A3-3672E64BB68A}">
+									<ChildrenList>
+										<Action Name="" ID="{E928A6A1-FF23-4D1A-844F-6C248C9EC9A5}" ShortID="95208798">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chara_R_TakeDamage" ID="{47625E51-71D5-485A-B268-444C45BD53C3}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Chara_I_Shoot" ID="{7829F4A3-336F-4711-B522-9490873F9358}">
+									<ChildrenList>
+										<Action Name="" ID="{1C1DCD14-A4CD-4BD9-A85C-749FEE566F7F}" ShortID="981320661">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chara_I_Shoot" ID="{30F31358-50EA-4106-B7A0-0FAF1CCDD744}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Chara_R_Deplacement" ID="{CAC781C2-A007-47B5-B10A-D5E8035D7616}">
+									<ChildrenList>
+										<Action Name="" ID="{48F75743-07F3-40CB-B1DD-59BF01B8B943}" ShortID="455313703">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chara_R_Deplacement" ID="{26ACF000-B268-47BB-AEAE-EA00445B1FAE}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Chara_I_Shoot" ID="{3BBD7980-5590-44D3-9607-21E26C9AA17C}">
+									<ChildrenList>
+										<Action Name="" ID="{7C8FB9AC-2895-4A84-961A-2646C343C05C}" ShortID="872283436">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chara_I_Shoot" ID="{30F31358-50EA-4106-B7A0-0FAF1CCDD744}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Alien" ID="{53697789-5982-414B-8717-4E8F88A00249}" ShortID="519364780">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Play_Alien_I_Shoot" ID="{DB758FC6-2439-429D-94AF-8CDC89D156D4}">
+									<ChildrenList>
+										<Action Name="" ID="{02F090A5-9284-415D-8A1D-2503B16B9193}" ShortID="292790990">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Alien_I_Shoot" ID="{97F392DF-0165-4A5B-9709-08D5DF551E1D}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Alien_R_Shoot" ID="{9B4CED40-E808-4F33-80BF-2DEC6124EC2E}">
+									<ChildrenList>
+										<Action Name="" ID="{6A2BDE08-A048-4BB2-A813-2737FF4AF842}" ShortID="981091083">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Alien_R_Shoot" ID="{345D7F53-D81E-4826-9BD7-63792383024B}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Alien_R_Tripes" ID="{AFBCEFF4-58F7-477C-88D7-64CBFD3E282F}">
+									<ChildrenList>
+										<Action Name="" ID="{109F4E5B-C11B-472D-B06C-851FD17663E8}" ShortID="856599514">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Alien_R_Tripes" ID="{42125855-3DC4-4797-8697-F883F2C23434}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Alien_R_Mort" ID="{1321B6F8-4C40-42B2-8D0B-1703B1D992CE}">
+									<ChildrenList>
+										<Action Name="" ID="{3C66E178-CFE0-4573-9922-DEC968628A5F}" ShortID="108390825">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Alien_R_Mort" ID="{CE5EBBB1-E9BF-49CD-8FE0-CD35435E0BFB}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Alien_I_Shoot" ID="{0F769A04-2415-407A-B387-8B9E7B73379C}">
+									<ChildrenList>
+										<Action Name="" ID="{70C3023D-D2FB-42E5-9F1C-74693AF19AE1}" ShortID="675984112">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Alien_I_Shoot" ID="{97F392DF-0165-4A5B-9709-08D5DF551E1D}" WorkUnitID="{D1AF3C31-D60F-4B00-8B9E-A6E0D32B91AA}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Voices" ID="{81E2248B-41F6-46AC-A447-CC70A5F25299}" ShortID="1029387219">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_More_more" ID="{08130E47-4957-4050-86C6-F38CCFA8477A}">
+							<ChildrenList>
+								<Action Name="" ID="{4C938439-D0E2-445E-8DAB-A3D52BADFF5E}" ShortID="604889412">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="More more" ID="{65AA14F3-98ED-462F-8AA1-A41D071A47D3}" WorkUnitID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Perfect" ID="{E7F223DD-357F-4765-BF5B-981A93FAFD01}">
+							<ChildrenList>
+								<Action Name="" ID="{AC32147D-6179-4E97-ADCF-56739A0AEC29}" ShortID="185006212">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Perfect" ID="{7ED31EFA-F1D6-40D8-A5B0-A374D719AB68}" WorkUnitID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Destroy_them" ID="{AE031DF2-1E9C-4D9A-8C1F-19E6E85D6776}">
+							<ChildrenList>
+								<Action Name="" ID="{1DA59CE3-C4D1-4F15-82DD-CABB825A9FF8}" ShortID="554502703">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Destroy them" ID="{5ECB1E59-DC17-4528-BADD-CCE8D2FB694E}" WorkUnitID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Keep_Going" ID="{90D962AA-2B75-466A-9F07-2B28FAAB1CBC}">
+							<ChildrenList>
+								<Action Name="" ID="{C6B4468C-2076-4E02-9491-DBA8B8E2C0B9}" ShortID="335458436">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Keep_Going" ID="{9FEB4ABC-60DB-45F3-AD6D-4B084A36ED9B}" WorkUnitID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Nice" ID="{7C7D538F-F69B-4591-9C06-E9665B3B9DB3}">
+							<ChildrenList>
+								<Action Name="" ID="{9BF7CA82-6F38-4616-BE3C-47BBCD0A2B62}" ShortID="981580923">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Nice" ID="{B507FDD2-E1EB-46EC-8D86-69F20A4E7023}" WorkUnitID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

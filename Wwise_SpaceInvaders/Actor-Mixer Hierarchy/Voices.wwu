@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Voices" ID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="24"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Folder Name="Combo" ID="{2C7394B9-B36A-4475-B88E-524723D46886}" ShortID="112820422">
+					<ChildrenList>
+						<BlendContainer Name="Keep_Going" ID="{9FEB4ABC-60DB-45F3-AD6D-4B084A36ED9B}" ShortID="778702089">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voices_Bus" ID="{9AF028D1-37C3-42D9-99CF-D83DF707193E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Monster" ID="{E659388F-344D-4884-B2C0-C306CA4C8BA2}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Keep_going" ID="{48AF14F3-F927-486E-8C60-D8A5BE0365EF}" ShortID="30107789">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keep_going" ID="{D59485C3-C374-449D-920E-F195E80BDA33}">
+											<Language>English(US)</Language>
+											<AudioFile>Keep_going.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="219569867"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Keep_going" ID="{D59485C3-C374-449D-920E-F195E80BDA33}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Nice" ID="{B507FDD2-E1EB-46EC-8D86-69F20A4E7023}" ShortID="472546014">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voices_Bus" ID="{9AF028D1-37C3-42D9-99CF-D83DF707193E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Monster" ID="{E659388F-344D-4884-B2C0-C306CA4C8BA2}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Nice" ID="{B28EBFC9-1C8A-4CEE-AA6A-D87CB37FD8D8}" ShortID="1005286733">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Nice" ID="{98FC7107-F564-4719-A24E-C7702B6A6A49}">
+											<Language>English(US)</Language>
+											<AudioFile>Nice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="150038152"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Nice" ID="{98FC7107-F564-4719-A24E-C7702B6A6A49}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Destroy them" ID="{5ECB1E59-DC17-4528-BADD-CCE8D2FB694E}" ShortID="490686293">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voices_Bus" ID="{9AF028D1-37C3-42D9-99CF-D83DF707193E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Monster" ID="{E659388F-344D-4884-B2C0-C306CA4C8BA2}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Destroy_them_3" ID="{84DF8F03-3134-41A2-A526-58BC25F14523}" ShortID="497705715">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Destroy_them_3" ID="{FBCF6878-D5ED-46DC-9EEC-55ABE3428591}">
+											<Language>English(US)</Language>
+											<AudioFile>Destroy_them_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="122774027"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Destroy_them_3" ID="{FBCF6878-D5ED-46DC-9EEC-55ABE3428591}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="More more" ID="{65AA14F3-98ED-462F-8AA1-A41D071A47D3}" ShortID="882978265">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voices_Bus" ID="{9AF028D1-37C3-42D9-99CF-D83DF707193E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Monster" ID="{E659388F-344D-4884-B2C0-C306CA4C8BA2}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="more_more_2" ID="{6C2D2F35-7737-42CD-952F-466217787AB2}" ShortID="812587308">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="more_more_2" ID="{58C97564-8D8D-425D-924E-D4E01644B3DC}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.04319755600815"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.250845213849287"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.48058044806517"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>more_more_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="751572308"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="more_more_2" ID="{58C97564-8D8D-425D-924E-D4E01644B3DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Perfect" ID="{7ED31EFA-F1D6-40D8-A5B0-A374D719AB68}" ShortID="944433778">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voices_Bus" ID="{9AF028D1-37C3-42D9-99CF-D83DF707193E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Monster" ID="{E659388F-344D-4884-B2C0-C306CA4C8BA2}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="perfect_2" ID="{D5CA1DB5-42BA-4E96-8B5E-7533B7722C31}" ShortID="95923467">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="perfect_2" ID="{E11CF2C0-1666-4F9D-84C7-DD460642E1F9}">
+											<Language>English(US)</Language>
+											<AudioFile>perfect_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="125430028"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="perfect_2" ID="{E11CF2C0-1666-4F9D-84C7-DD460642E1F9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,42 @@
+Event	ID	Name			Wwise Object Path	Notes
+	26695346	Play_Alien_R_Tripes			\Default Work Unit\SFX\Alien\Play_Alien_R_Tripes	
+	126881520	Play_Chara_R_Shoot			\Default Work Unit\SFX\Chara\Play_Chara_R_Shoot	
+	566397092	Play_Alien_R_Shoot			\Default Work Unit\SFX\Alien\Play_Alien_R_Shoot	
+	944772603	Play_Chara_I_Shoot			\Default Work Unit\SFX\Chara\Play_Chara_I_Shoot	
+	964149281	Stop_Alien_I_Shoot			\Default Work Unit\SFX\Alien\Stop_Alien_I_Shoot	
+	2448513527	Play_Chara_R_Deplacement			\Default Work Unit\SFX\Chara\Play_Chara_R_Deplacement	
+	2658175869	Play_Alien_R_Mort			\Default Work Unit\SFX\Alien\Play_Alien_R_Mort	
+	2719607225	Stop_Chara_I_Shoot			\Default Work Unit\SFX\Chara\Stop_Chara_I_Shoot	
+	3289687663	Play_Alien_I_Shoot			\Default Work Unit\SFX\Alien\Play_Alien_I_Shoot	
+	3975151617	Play_Chara_R_TakeDamage			\Default Work Unit\SFX\Chara\Play_Chara_R_TakeDamage	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3493323323	Voices_Bus			\Default Work Unit\Master Audio Bus\Voices_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2288170604	Effect_01			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_01	
+	2288170607	Effect_02			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_02	
+	2376328173	Monster			\Default Work Unit\Master Audio Bus\Voices_Bus\Monster	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1431265797	Monsterize	Wwise Pitch Shifter			
+	1820854077	Noise_Gate_Fast_Attack	Wwise Expander			
+	4202347640	Repeat_after_me	Wwise Harmonizer			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	7756898	Alien_Mort	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Alien_Mort_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_R_Mort\Alien_Mort		191516
+	75918969	Idle_Shoot_Chara	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Idle_Shoot_Chara_61EAD292.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_I_Shoot\Idle_Shoot_Chara		823232
+	100767778	Alien_Tir_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Alien_Tir_1_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_R_Shoot\Alien_Tir_1		145436
+	183629318	Tripes	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Tripes_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_R_Tripes\Tripes		127004
+	273832238	Dégats_3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Dégats_3_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_R_TakeDamage\Dégats_3		173084
+	376463025	Dégats_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Dégats_1_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_R_TakeDamage\Dégats_1		246812
+	820845399	Dégats_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Dégats_2_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_R_TakeDamage\Dégats_2		159260
+	836791072	Alien_Idle_Shoot	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Alien_Idle_Shoot_D79FB2B7.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_I_Shoot\Alien_Idle_Shoot		1209696
+	896622674	Alien_Tir_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Alien_Tir_2_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_R_Shoot\Alien_Tir_2		292892
+	1013182437	Chara_Mov	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Chara_Mov_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_R_Deplacement\Chara_Mov		279068
+	1049349734	Tir	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Tir_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_R_Shoot\Tir		108572
+

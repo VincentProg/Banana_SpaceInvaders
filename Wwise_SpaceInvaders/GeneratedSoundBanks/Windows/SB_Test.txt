@@ -5,7 +5,18 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
 	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
 	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3493323323	Voices_Bus			\Default Work Unit\Master Audio Bus\Voices_Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2288170604	Effect_01			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_01	
+	2288170607	Effect_02			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_02	
+	2376328173	Monster			\Default Work Unit\Master Audio Bus\Voices_Bus\Monster	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1431265797	Monsterize	Wwise Pitch Shifter			
+	1820854077	Noise_Gate_Fast_Attack	Wwise Expander			
+	4202347640	Repeat_after_me	Wwise Harmonizer			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	80714746	BeepTest	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\BeepTest_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BeepTest		9984

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="Windows" BasePlatform="Windows">
 	<PluginLibs>
+		<PluginLib LibName="Wwise Expander" LibId="7143427" Type="Effect" DLL="AkExpander" StaticLib="AkExpanderFX"/>
+		<PluginLib LibName="Wwise Pitch Shifter" LibId="8912899" Type="Effect" DLL="AkPitchShifter" StaticLib="AkPitchShifterFX"/>
+		<PluginLib LibName="Wwise Harmonizer" LibId="9043971" Type="Effect" DLL="AkHarmonizer" StaticLib="AkHarmonizerFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{0A13F4BA-B100-584C-1D1C-B9267B7D267A}</FileHash>
+	<FileHash>{EC8D23AC-7C2C-A51E-335D-EDF747A149B6}</FileHash>
 </PluginInfo>

@@ -268,6 +268,92 @@
 						</BlendContainer>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Navigation" ID="{0BB97B32-92AD-440F-A19C-A844BFB67B5E}" ShortID="369067625">
+					<ChildrenList>
+						<BlendContainer Name="UI_Nav" ID="{327761EF-2CAA-42FF-975C-A530A4097A58}" ShortID="169828111">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI_Bus" ID="{FD878073-14FC-4FC4-9CBD-91E53CB5298E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI_Navigation_1" ID="{9243A05D-6B19-450C-B59A-834B5CC15529}" ShortID="1037311348">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Navigation_1" ID="{D275DEFA-59BE-41B5-A189-6D3E933927E8}">
+											<Language>SFX</Language>
+											<AudioFile>UI_Navigation_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="689079844"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Navigation_1" ID="{D275DEFA-59BE-41B5-A189-6D3E933927E8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="UI_Valid" ID="{AA127479-C656-4D52-8EE7-E60271856A7E}" ShortID="6360160">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI_Bus" ID="{FD878073-14FC-4FC4-9CBD-91E53CB5298E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI_Validation" ID="{386467F5-52BE-47D0-A402-03E05C452B78}" ShortID="209783042">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Validation" ID="{4C6816A6-5D0E-4B5D-ABF5-6799B9453449}">
+											<Language>SFX</Language>
+											<AudioFile>UI_Validation.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1013594070"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Validation" ID="{4C6816A6-5D0E-4B5D-ABF5-6799B9453449}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
