@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class Music_Manager : MonoBehaviour
 {
+    [Header ("Music")]
     [SerializeField] private string music01Play;
     [SerializeField] private string bass01Play;
     [SerializeField] private string bass02Play;
+    [SerializeField] private float duration = 1f;
+
+    [Header ("Voices")]
+    [SerializeField] private string voice01Keep;
+    [SerializeField] private string voice02Nice;
+    [SerializeField] private string voice03More;
+    [SerializeField] private string voice04Destroy;
+    [SerializeField] private string voice05Perfect;
+    [SerializeField] private string voiceClose;
 
     /*
     [SerializeField] private string music01Stop;
@@ -15,7 +25,7 @@ public class Music_Manager : MonoBehaviour
 
     private float timer = 0;
     private int currentCombo = -1;
-    [SerializeField] private float duration = 1f;
+    
 
     //VOLUME
     private float currentVolStep01 = 100f;
@@ -27,8 +37,11 @@ public class Music_Manager : MonoBehaviour
     private float currentLPStep02 = 100f;
     private float currentLPBass01 = 100f;
     private float currentLPBass02 = 100f;
-        
 
+    private void OnDisable()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -170,21 +183,27 @@ public class Music_Manager : MonoBehaviour
         {
             case 0:
                 currentCombo = 0;
+                //AkSoundEngine.PostEvent(voiceClose, this.gameObject);
                 break;
             case 1:
                 currentCombo = 1;
+                AkSoundEngine.PostEvent(voice01Keep, this.gameObject);
                 break;
             case 2:
                 currentCombo = 2;
+                AkSoundEngine.PostEvent(voice02Nice, this.gameObject);
                 break;
             case 3:
                 currentCombo = 3;
+                AkSoundEngine.PostEvent(voice03More, this.gameObject);
                 break;
             case 4:
                 currentCombo = 4;
+                AkSoundEngine.PostEvent(voice04Destroy, this.gameObject);
                 break;
             case 5:
                 currentCombo = 5;
+                AkSoundEngine.PostEvent(voice05Perfect, this.gameObject);
                 break;
         }
     }

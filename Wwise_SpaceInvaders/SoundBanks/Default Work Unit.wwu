@@ -77,9 +77,11 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_More_more" ID="{08130E47-4957-4050-86C6-F38CCFA8477A}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_R_Not_Even_Close" ID="{3444AB64-A820-4527-BD73-91A4AFA96AAA}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nice" ID="{7C7D538F-F69B-4591-9C06-E9665B3B9DB3}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Keep_Going" ID="{90D962AA-2B75-466A-9F07-2B28FAAB1CBC}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Perfect" ID="{E7F223DD-357F-4765-BF5B-981A93FAFD01}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_R_Keep_Going" ID="{38BDC925-90DE-4D4E-90CC-F2678DDD7421}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Destroy_them" ID="{AE031DF2-1E9C-4D9A-8C1F-19E6E85D6776}" WorkUnitID="{A86678BF-CED9-4900-B6FA-6639D05D9244}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

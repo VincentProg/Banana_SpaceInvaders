@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{3C6F930B-5992-2C34-C9A6-34C0893ED635}">
+		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{9F4744ED-B5D1-AE5C-E124-3D20BDBB9D67}">
 			<ShortName>SB_UI</ShortName>
 			<Path>SB_UI.bnk</Path>
 			<Media>
@@ -20,10 +20,6 @@
 				<File Id="81372707" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Combo_2.wav</ShortName>
 					<CachePath>SFX/Combo_2_10C4C929.wem</CachePath>
-				</File>
-				<File Id="137529554" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Combo_5.wav</ShortName>
-					<CachePath>SFX/Combo_5_10C4C929.wem</CachePath>
 				</File>
 				<File Id="269742009" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Combo_3.wav</ShortName>
@@ -66,9 +62,9 @@
 						<MediaRef Id="24691141"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1764480530" Name="Play_Combo_05" DurationType="OneShot" DurationMin="4.454943" DurationMax="4.454943">
+				<Event Id="1764480530" Name="Play_Combo_05" DurationType="OneShot" DurationMin="1.9118698" DurationMax="1.9118698">
 					<MediaRefs>
-						<MediaRef Id="137529554"/>
+						<MediaRef Id="24691141"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2278692287" Name="Play_Score_Hit_Jauge" DurationType="OneShot" DurationMin="0.45267573" DurationMax="0.45267573">
@@ -113,7 +109,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="690783697" Type="User" Language="SFX" Hash="{657BDF32-7C9B-6304-6B1C-98A1042A088B}">
+		<SoundBank Id="690783697" Type="User" Language="SFX" Hash="{B78C2B0F-8C22-7B4F-44B2-E63ED5CFC2F4}">
 			<ShortName>SB_Test</ShortName>
 			<Path>SB_Test.bnk</Path>
 			<Media>
@@ -167,7 +163,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{D6A3E95E-6B27-2528-0803-B5D06D975666}">
+		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{EA97C2A6-2BB3-2BC7-72AF-22BD2295A3C3}">
 			<ShortName>SB_Music</ShortName>
 			<Path>SB_Music.bnk</Path>
 			<Media>
@@ -266,7 +262,7 @@
 				<GameParameter Id="4041028786" Name="Fade_LowPass_Step02"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{E72E29E5-5B7F-E7F2-C88B-3AC62E23B71B}">
+		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{F3724536-A238-7FE9-0FCD-AA12D9FDC2B6}">
 			<ShortName>SB_SFX</ShortName>
 			<Path>SB_SFX.bnk</Path>
 			<Media>
@@ -276,7 +272,7 @@
 				</File>
 				<File Id="75918969" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Idle_Shoot_Chara.wav</ShortName>
-					<CachePath>SFX/Idle_Shoot_Chara_61EAD292.wem</CachePath>
+					<CachePath>SFX/Idle_Shoot_Chara_B5CD9596.wem</CachePath>
 				</File>
 				<File Id="100767778" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Alien_Tir_1.wav</ShortName>
@@ -323,7 +319,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3289687663" Name="Play_Alien_I_Shoot" DurationType="Infinite">
+				<Event Id="3289687663" Name="Play_Alien_I_Shoot" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="836791072"/>
 					</MediaRefs>
@@ -347,7 +343,7 @@
 						<MediaRef Id="183629318"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="944772603" Name="Play_Chara_I_Shoot" DurationType="Infinite">
+				<Event Id="944772603" Name="Play_Chara_I_Shoot" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="75918969"/>
 					</MediaRefs>
@@ -406,7 +402,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{39ED2B5E-2847-468F-2D7A-2B0F4753D41F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{004B223E-72AD-3700-84D7-6D384E5F6EDD}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -574,10 +570,14 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3911025208" Type="User" Language="English(US)" Hash="{BD1166D7-41A3-8407-2394-D3DFE9004EA4}">
+		<SoundBank Id="3911025208" Type="User" Language="English(US)" Hash="{20E243CD-AD26-5253-2DA5-328CB150CFB5}">
 			<ShortName>SB_Voices</ShortName>
 			<Path>English(US)/SB_Voices.bnk</Path>
 			<Media>
+				<File Id="46568738" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>not_even_close_2.wav</ShortName>
+					<CachePath>Voices/English(US)/not_even_close_2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="122774027" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Destroy_them_3.wav</ShortName>
 					<CachePath>Voices/English(US)/Destroy_them_3_10C4C929.wem</CachePath>
@@ -594,9 +594,21 @@
 					<ShortName>Keep_going.wav</ShortName>
 					<CachePath>Voices/English(US)/Keep_going_10C4C929.wem</CachePath>
 				</File>
+				<File Id="584660336" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>keep_going_bitch_1.wav</ShortName>
+					<CachePath>Voices/English(US)/keep_going_bitch_1_0450DBE9.wem</CachePath>
+				</File>
 				<File Id="751572308" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>more_more_2.wav</ShortName>
-					<CachePath>Voices/English(US)/more_more_2_3E0B013D.wem</CachePath>
+					<CachePath>Voices/English(US)/more_more_2_3D66D239.wem</CachePath>
+				</File>
+				<File Id="861706829" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>not_even_close_1.wav</ShortName>
+					<CachePath>Voices/English(US)/not_even_close_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="919876254" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Keep_going.wav</ShortName>
+					<CachePath>Voices/English(US)/Keep_going_41E5C7C4.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -647,6 +659,24 @@
 						<AuxBusRef Id="2376328173" Name="Monster"/>
 					</AuxBusRefs>
 				</Event>
+				<Event Id="3585085027" Name="Play_R_Keep_Going" DurationType="OneShot" DurationMin="1.6789232" DurationMax="1.8741612">
+					<MediaRefs>
+						<MediaRef Id="584660336"/>
+						<MediaRef Id="919876254"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2376328173" Name="Monster"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="311441468" Name="Play_R_Not_Even_Close" DurationType="OneShot" DurationMin="2.7708523" DurationMax="3.008694">
+					<MediaRefs>
+						<MediaRef Id="46568738"/>
+						<MediaRef Id="861706829"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2376328173" Name="Monster"/>
+					</AuxBusRefs>
+				</Event>
 			</Events>
 			<Busses>
 				<Bus Id="213475909" Name="SFX_Bus"/>
@@ -680,5 +710,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{055E567E-4FC8-D6F1-8257-C4FD56E76D2B}</FileHash>
+	<FileHash>{F9350A1A-E5F0-916E-7A8B-4B21101D6F74}</FileHash>
 </SoundBanksInfo>

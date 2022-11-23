@@ -201,26 +201,33 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Combo_5" ID="{E4FCB825-E861-4E60-889E-B455B252D5E8}" ShortID="548586851">
+								<Sound Name="Combo_05" ID="{8CC1C4B4-8AEA-4E91-B489-AA75E19B0523}" ShortID="1067401992">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+											<ObjectRef Name="UI_Bus" ID="{FD878073-14FC-4FC4-9CBD-91E53CB5298E}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Combo_5" ID="{DDEA8C84-0FA7-469D-B79C-B88505C0D5F0}">
+										<AudioFileSource Name="Combo_4" ID="{0CCF5B0F-72A1-4FE6-A777-2932CC4C3CFB}">
 											<Language>SFX</Language>
-											<AudioFile>Combo_5.wav</AudioFile>
+											<AudioFile>Combo_4.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="137529554"/>
+												<MediaID ID="24691141"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Combo_5" ID="{DDEA8C84-0FA7-469D-B79C-B88505C0D5F0}" Platform="Linked"/>
+										<ActiveSource Name="Combo_4" ID="{0CCF5B0F-72A1-4FE6-A777-2932CC4C3CFB}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

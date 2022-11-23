@@ -446,6 +446,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_R_Not_Even_Close" ID="{3444AB64-A820-4527-BD73-91A4AFA96AAA}">
+							<ChildrenList>
+								<Action Name="" ID="{350D14B6-5D2E-4DDE-935F-E9607D5EFF2D}" ShortID="977858012">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="R_Not Even Close" ID="{5982A201-56DA-4D8E-BCC2-351C76B31EFF}" WorkUnitID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_R_Keep_Going" ID="{38BDC925-90DE-4D4E-90CC-F2678DDD7421}">
+							<ChildrenList>
+								<Action Name="" ID="{55472688-BA5C-47DF-A88E-0AB9C82F9651}" ShortID="785001006">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="R_Keep_Going" ID="{B169C4EB-2EC5-4EE1-89F7-AB9AC41355FB}" WorkUnitID="{2D1B63FB-6058-43D5-9D81-A724C5F147A1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

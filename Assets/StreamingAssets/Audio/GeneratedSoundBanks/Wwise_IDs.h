@@ -36,6 +36,8 @@ namespace AK
         static const AkUniqueID PLAY_MORE_MORE = 523954835U;
         static const AkUniqueID PLAY_NICE = 422082389U;
         static const AkUniqueID PLAY_PERFECT = 1725302785U;
+        static const AkUniqueID PLAY_R_KEEP_GOING = 3585085027U;
+        static const AkUniqueID PLAY_R_NOT_EVEN_CLOSE = 311441468U;
         static const AkUniqueID PLAY_SCORE_HIT_JAUGE = 2278692287U;
         static const AkUniqueID PLAY_SCORE_HIT_ROND = 3366501106U;
         static const AkUniqueID STOP_ALIEN_I_SHOOT = 964149281U;

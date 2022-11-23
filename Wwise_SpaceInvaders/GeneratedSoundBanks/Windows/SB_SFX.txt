@@ -29,7 +29,7 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7756898	Alien_Mort	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Alien_Mort_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_R_Mort\Alien_Mort		191516
-	75918969	Idle_Shoot_Chara	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Idle_Shoot_Chara_61EAD292.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_I_Shoot\Idle_Shoot_Chara		823232
+	75918969	Idle_Shoot_Chara	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Idle_Shoot_Chara_B5CD9596.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_I_Shoot\Idle_Shoot_Chara		823232
 	100767778	Alien_Tir_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Alien_Tir_1_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_R_Shoot\Alien_Tir_1		145436
 	183629318	Tripes	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Tripes_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Alien\Alien_R_Tripes\Tripes		127004
 	273832238	Dégats_3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Dégats_3_10C4C929.wem		\Actor-Mixer Hierarchy\SFX\Character\Chara_R_TakeDamage\Dégats_3		173084

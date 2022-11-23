@@ -337,7 +337,7 @@
 						</RandomSequenceContainer>
 						<BlendContainer Name="Alien_I_Shoot" ID="{97F392DF-0165-4A5B-9709-08D5DF551E1D}" ShortID="860558271">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>50</Value>
@@ -345,6 +345,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="attenuation" ID="{FB659FC6-BF26-41B0-B0A2-304E8895F231}" WorkUnitID="{55F36114-4CFC-4F7A-A1F9-1B1CBCD62A16}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
 								</Reference>
@@ -566,7 +569,7 @@
 						</RandomSequenceContainer>
 						<BlendContainer Name="Chara_I_Shoot" ID="{30F31358-50EA-4106-B7A0-0FAF1CCDD744}" ShortID="21986394">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-12</Value>
@@ -574,6 +577,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="attenuation" ID="{FB659FC6-BF26-41B0-B0A2-304E8895F231}" WorkUnitID="{55F36114-4CFC-4F7A-A1F9-1B1CBCD62A16}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
 								</Reference>

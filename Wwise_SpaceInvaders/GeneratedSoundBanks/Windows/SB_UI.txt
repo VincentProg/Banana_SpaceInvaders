@@ -25,9 +25,8 @@ Effect plug-ins	ID	Name	Type				Notes
 	4202347640	Repeat_after_me	Wwise Harmonizer			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	24691141	Combo_4	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_4_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_04\Combo_4		357404
+	24691141	Combo_05	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_4_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_05\Combo_05		357404
 	81372707	Combo_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_2_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_02\Combo_2		366620
-	137529554	Combo_5	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_5_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_05\Combo_5		785948
 	269742009	Combo_3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_3_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_03\Combo_3		338972
 	597548237	Score_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Score_1_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Score_Hit_Jauge\Score_1		79948
 	641957728	Combo_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_1_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_01\Combo_1		334364
