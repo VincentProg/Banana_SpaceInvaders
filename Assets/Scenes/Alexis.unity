@@ -6873,7 +6873,7 @@ MonoBehaviour:
   coefJauge: 0.2
   speedJauge: 3
   speedJaugeDisappear: 0.09
-  speedRondJauge: 0.09
+  speedRondJauge: 0.045
   destroySpeedRond: 0.1
   coefCombo: 1
   limitComboMax: 5
