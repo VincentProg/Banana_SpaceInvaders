@@ -133,7 +133,7 @@ Material:
     - _B_LOAD_NORM_TEX: 0
     - _B_LOAD_POS_TWO_TEX: 0
     - _B_UNLOAD_ROT_TEX: 0
-    - _B_autoPlayback: 1
+    - _B_autoPlayback: 0
     - _B_surfaceNormals: 1
     - _B_twoSidedNorms: 1
     - _B_uvFromRG: 0
