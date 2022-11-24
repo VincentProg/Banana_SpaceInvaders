@@ -43,4 +43,9 @@ public class Bullet : MonoBehaviour
         l_entity?.Death();
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
+    }
 }

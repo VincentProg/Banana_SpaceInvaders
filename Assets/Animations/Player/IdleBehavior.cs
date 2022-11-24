@@ -8,6 +8,8 @@ public class IdleBehavior : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.transform.Find("Shield").gameObject.SetActive(false);
+        animator.GetComponent<PlayerMovement>().enabled = true;
+        animator.GetComponent<PlayerShoot>().enabled = true;
         animator.enabled = false;
     }
 

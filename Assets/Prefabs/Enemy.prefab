@@ -278,6 +278,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: anim02
       objectReference: {fileID: 0}
+    - target: {fileID: 1681679158251076594, guid: b63e0607cf4c1e8419e9317ba38cdda6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a98e85edb10270b4ca839f9aae9636b8, type: 2}
+    - target: {fileID: 2644442154153600002, guid: b63e0607cf4c1e8419e9317ba38cdda6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc817ab73cfa1df4f9d9057e727820fd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b63e0607cf4c1e8419e9317ba38cdda6, type: 3}
 --- !u!1 &1458493621468527054 stripped

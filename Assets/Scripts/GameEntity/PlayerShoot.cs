@@ -17,12 +17,13 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private AnimationCurve m_recoilCurve;
     private float m_initialZ;
 
-    [SerializeField] private float m_perfectShootTime, m_goodShootTime;
+    [SerializeField] private float m_PreShootTime;
     
     // Start is called before the first frame update
     void Start()
     {
         m_initialZ = transform.position.z;
+        shootCooldown = Referencer.Instance.RythmManagerInstance.m_delayStep;
     }
 
     // Update is called once per frame
@@ -42,32 +43,12 @@ public class PlayerShoot : MonoBehaviour
         // Shoot once
         if (ctx.performed)
         {
-            float l_timeBeforeBeat = Referencer.Instance.RythmManagerInstance.GetRemainingTimeBeforeBeat();
+            // Charge Shoot
 
-            if (l_timeBeforeBeat <= m_goodShootTime)
-            {
-                if (_timer <= 0)
-                {
-                    Shoot();
-                }
-
-                if (l_timeBeforeBeat <= m_perfectShootTime)
-                {
-                    // Show Perfect Shoot
-                }
-                else
-                {
-                    // Show Good Shoot
-                }
-            }
-            else
-            {
-                //  Shoot failed
-            }
         }
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         Vector3 l_pos = new Vector3(Referencer.Instance.PlayerInstance.IndexMovement *
                        Referencer.Instance.EnemyManagerInstance.OffsetX,
