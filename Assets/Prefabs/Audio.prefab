@@ -265,6 +265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volMaster: 100
   volMusic: 80
-  volSfx: 0
-  volUI: 0
-  volVoices: 0
+  volSfx: 70
+  volUI: 70
+  volVoices: 75

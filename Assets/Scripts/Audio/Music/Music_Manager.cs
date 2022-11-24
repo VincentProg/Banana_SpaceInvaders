@@ -28,9 +28,9 @@ public class Music_Manager : MonoBehaviour
     
 
     //VOLUME
-    private float currentVolStep01 = 100f;
+    private float currentVolStep01 = 0f;
     private float currentVolStep02 = 0f;
-    private float currentVolBass01 = 0f;
+    private float currentVolBass01 = 100f;
     private float currentVolBass02 = 0f;
 
     //LOWPASS
@@ -50,9 +50,9 @@ public class Music_Manager : MonoBehaviour
         AkSoundEngine.PostEvent(bass02Play, this.gameObject);
 
         //VOLUME
-        AkSoundEngine.SetRTPCValue("Fade_Vol_Step01", 100f);
+        AkSoundEngine.SetRTPCValue("Fade_Vol_Step01", 0f);
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step02", 0f);
-        AkSoundEngine.SetRTPCValue("Fade_VolBass_Step03", 0f);
+        AkSoundEngine.SetRTPCValue("Fade_VolBass_Step03", 100f);
         AkSoundEngine.SetRTPCValue("Fade_VolBass02_Step04", 0f);
 
         //LOWPASS
@@ -80,7 +80,7 @@ public class Music_Manager : MonoBehaviour
         currentVolStep02 = LerpRTPC(currentVolStep02, 0f);
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step02", currentVolStep02);
 
-        currentVolBass01 = LerpRTPC(currentVolBass01, 25f);
+        currentVolBass01 = LerpRTPC(currentVolBass01, 100f);
         AkSoundEngine.SetRTPCValue("Fade_VolBass_Step03", currentVolBass01);
 
         currentVolBass02 = LerpRTPC(currentVolBass02, 0f);
