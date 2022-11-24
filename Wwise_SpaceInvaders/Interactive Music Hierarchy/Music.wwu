@@ -425,7 +425,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Bass_Banana" ID="{5DC47B1D-B6F3-42A8-8958-9A49AF130D0B}" ShortID="294538152">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="9717.43764172336"/>
+								<Property Name="EndPosition" Type="Real64" Value="9728.33903935479"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -578,6 +578,196 @@
 											</MusicCue>
 										</Local>
 									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{3F096204-C0D2-4AFA-A112-50DDF7229353}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="502.017696589306"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{5109F557-105D-470C-8281-407D57DC40AD}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="1001.5659073874"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{3EBDE3CB-7C4F-48E3-8A86-BF9C1D163284}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="1500.3048490252"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{9143F2A5-554B-453C-89E3-CC1A27071012}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="2000.40646536693"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{8E87487E-09AA-4270-A3E6-E403239BE2B4}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="2501.8707564126"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{722FDA84-270B-45DE-8C8F-D0E826B71198}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="3001.97237275433"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{3F0AF1DE-1AA1-49DF-8AAB-639D173BE644}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="3500.71131439213"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{01F9B7F3-1534-4D39-BE9B-10C7C0F9C422}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="4000.81293073387"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{D142CB61-AC06-41CC-B218-BBA4409B9D06}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="4500.9145470756"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{7485DF2A-5A17-4726-A42B-51E044AC8900}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="5002.37883812126"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{8CCF92D7-132A-4A13-BE0C-36D8E60C1EC4}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="5501.11777975907"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{2F0BEB70-F8FE-462D-94AF-CA09B20EDF43}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="5999.85672139687"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{469C2D82-90E4-406B-BF2E-FF309DE00C60}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="6503.48130698161"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{D94DD056-5DFA-4082-ABF7-136C2717770A}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="7005.60607010417"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{3CFC74A2-63D3-4C61-BD09-AE3872AE48B1}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="7502.9027105044"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{A491D2AC-123C-41D8-A4F8-610D90E5ED09}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="8000.19935090462"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{2F148066-BFD4-48D2-82A4-495884B1D27E}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="8499.91005266601"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{75F54A8D-1DAD-4CC6-B150-926C1013978E}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="9004.44887714974"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{6E7199E6-D730-4D34-B708-0FC8AE278691}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="9501.74551754997"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
@@ -657,7 +847,6 @@
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
-											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</TransitionList>
@@ -849,10 +1038,8 @@
 							<PropertyList>
 								<Property Name="IsFolder" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList/>
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{8C1EB8D7-62B2-4B43-A74E-E8C1781F37EF}">
-									<ReferenceList/>
 									<TransitionInfo/>
 								</MusicTransition>
 							</ChildrenList>
@@ -975,10 +1162,8 @@
 							<PropertyList>
 								<Property Name="IsFolder" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList/>
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{6E1AEEE4-84D2-4C3B-9D30-167C56B96E96}">
-									<ReferenceList/>
 									<TransitionInfo/>
 								</MusicTransition>
 							</ChildrenList>

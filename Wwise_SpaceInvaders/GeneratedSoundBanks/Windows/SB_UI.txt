@@ -36,5 +36,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	81372707	Combo_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_2_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_02\Combo_2		366620
 	269742009	Combo_3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_3_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_03\Combo_3		338972
 	597548237	Score_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Score_1_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Score_Hit_Jauge\Score_1		79948
-	641957728	Combo_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_1_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_01\Combo_1		334364
+	641957728	Combo_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_1_F0A9930B.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_01\Combo_1		334364
 

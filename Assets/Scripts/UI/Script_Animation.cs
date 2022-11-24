@@ -73,6 +73,10 @@ public class Script_Animation : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private Text textDebug;
+    private Vector3 originPos;
+    private Quaternion originRot;
+    private Vector3 originScale;
+    private Color originColor;
 
     // Start is called before the first frame update
     void Start()
@@ -323,7 +327,7 @@ public class Script_Animation : MonoBehaviour
                     rectTransformObj.localPosition = Vector3.Lerp(initPositionObj, vecEnd, coefB);
                 }
 
-                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; };
+                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; ResetAll(); };
                 break;
         }
     }
@@ -371,7 +375,7 @@ public class Script_Animation : MonoBehaviour
                     rectTransformObj.localRotation = Quaternion.Lerp(qStartB, qEndB, coefB);
                 }
                 
-                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; };
+                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; ResetAll(); };
                 break;
         }
     }
@@ -407,7 +411,7 @@ public class Script_Animation : MonoBehaviour
                     rectTransformObj.localScale = Vector3.Lerp(initScaleObj, vecEnd, coefB);
                 }
 
-                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; };
+                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; ResetAll(); };
                 break;
         }
     }
@@ -515,6 +519,10 @@ public class Script_Animation : MonoBehaviour
             initPositionObj = rectTransformObj.localPosition;
             initRotationObj = rectTransformObj.localRotation.eulerAngles;
             initScaleObj = rectTransformObj.localScale;
+
+            originPos = rectTransformObj.localPosition;
+            originRot = rectTransformObj.localRotation;
+            originScale = rectTransformObj.localScale;
             in3D = false;
         }
         else
@@ -523,6 +531,11 @@ public class Script_Animation : MonoBehaviour
             initPositionObj = transformObj.localPosition;
             initRotationObj = transformObj.localRotation.eulerAngles;
             initScaleObj = transformObj.localScale;
+
+            originPos = transformObj.localPosition;
+            originRot = transformObj.localRotation;
+            originScale = transformObj.localScale;
+
             in3D = true;
         }
 
@@ -532,10 +545,12 @@ public class Script_Animation : MonoBehaviour
         if (myObj.TryGetComponent(out Renderer mat))
         {
             matObj = myObj.GetComponent<Renderer>();
+            originColor = matObj.material.color;
         }
         else if (myObj.TryGetComponent(out Image image))
         {
             imageObj = myObj.GetComponent<Image>();
+            originColor = imageObj.color;
         }
         else if (myObj.TryGetComponent(out TextMeshProUGUI text))
         {
@@ -548,6 +563,7 @@ public class Script_Animation : MonoBehaviour
     public void ValuesOnEnd()
     {
         currentLoop++; coef = 0f; coefEasing = 0f;
+        ResetAll();
     }
     public void SwitchBelongType()
     {
@@ -795,11 +811,33 @@ public class Script_Animation : MonoBehaviour
         }
 
     }
+
+    private void ResetAll()
+    {
+        if (!in3D)
+        {
+            rectTransformObj.localPosition = originPos;
+            rectTransformObj.localRotation = originRot;
+            rectTransformObj.localScale = originScale;
+            //imageObj.color = originColor;
+        }
+        else
+        {
+            transformObj.localPosition = originPos;
+            transformObj.localRotation = originRot;
+            transformObj.localScale = originScale;
+            //matObj.material.color = originColor;
+            Debug.Log("e");
+        }
+    }
     IEnumerator WaitLaunch()
     {
+        
         etat = false;
         coef = 0f; coefEasing = 0f;
+        currentLoop = 0;
         yield return new WaitForSeconds(beginDuration);
+        ResetAll();
         etat = true;
     }
     #endregion

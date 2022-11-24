@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 public class On_Beat : MonoBehaviour
 {
-    [SerializeField] private UnityEvent myEvent;
-    [SerializeField] private float durationBetweenAnim = 1f;
+    [SerializeField] private UnityEvent[] myEvent;
+    public AK.Wwise.Event getMarkerOnMusic;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(WaitBeat());
+        getMarkerOnMusic.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncUserCue, PrintThis);
     }
 
     // Update is called once per frame
@@ -18,10 +18,13 @@ public class On_Beat : MonoBehaviour
         
     }
 
-    IEnumerator WaitBeat()
+    
+    public void PrintThis(object in_cookie, AkCallbackType in_type, object in_info)
     {
-        yield return new WaitForSeconds(durationBetweenAnim);
-        myEvent.Invoke();
-        StartCoroutine(WaitBeat());
+        print("Vamos");
+        for(int i =0; i < myEvent.Length; i++)
+        {
+            myEvent[i].Invoke();
+        }
     }
 }

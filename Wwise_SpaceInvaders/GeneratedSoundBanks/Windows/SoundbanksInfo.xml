@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{1E54506F-1F5B-3CF0-CF7B-DE30A1F6FF55}">
+		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{6EC39E85-AABC-3710-203C-EC00B1152DA3}">
 			<ShortName>SB_UI</ShortName>
 			<Path>SB_UI.bnk</Path>
 			<Media>
@@ -31,7 +31,7 @@
 				</File>
 				<File Id="641957728" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Combo_1.wav</ShortName>
-					<CachePath>SFX/Combo_1_10C4C929.wem</CachePath>
+					<CachePath>SFX/Combo_1_F0A9930B.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -177,7 +177,7 @@
 				<GameParameter Id="4056684167" Name="MASTER"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{7349F16B-373E-52CE-E86B-1926BE950ADF}">
+		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{2A7AEFC4-1EF7-67DE-019E-787232A775F8}">
 			<ShortName>SB_Music</ShortName>
 			<Path>SB_Music.bnk</Path>
 			<Media>
@@ -748,5 +748,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{29A1E3F8-B520-07E8-F73C-5BE333E5526A}</FileHash>
+	<FileHash>{101660D7-C003-6DD4-F59A-96C5EE2C6DEA}</FileHash>
 </SoundBanksInfo>
