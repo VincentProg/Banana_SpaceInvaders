@@ -470,8 +470,10 @@ MonoBehaviour:
   comboTextValue: {fileID: 7264503439672105359}
   coefJauge: 0.2
   speedJauge: 3
-  speedJaugeDisappear: 0.09
-  speedRondJauge: 0.045
+  initialSpeedJaugeDisappear: 0
+  currentSpeedJaugeDisappear: 0
+  initialSpeedRondJauge: 0
+  currentSpeedRondJauge: 0
   destroySpeedRond: 0.1
   coefCombo: 1
   limitComboMax: 5
@@ -6290,7 +6292,7 @@ MonoBehaviour:
   enumAnim: 2
   myObj: {fileID: 7264503440261430126}
   beginDuration: 0
-  duration: 0.5
+  duration: 1
   numberOfLoops: 1
   enumEasing: 6
   myCurve:
@@ -6321,7 +6323,7 @@ MonoBehaviour:
   enumAnim: 2
   myObj: {fileID: 7264503440261430126}
   beginDuration: 0
-  duration: 0.5
+  duration: 1
   numberOfLoops: 1
   enumEasing: 6
   myCurve:
@@ -6819,7 +6821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e250ab0c3414f48a296ade336e1212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enumAnim: 2
+  enumAnim: 0
   myObj: {fileID: 7264503440932283059}
   beginDuration: 0
   duration: 0.2

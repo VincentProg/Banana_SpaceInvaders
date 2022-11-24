@@ -327,7 +327,7 @@ public class Script_Animation : MonoBehaviour
                     rectTransformObj.localPosition = Vector3.Lerp(initPositionObj, vecEnd, coefB);
                 }
 
-                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; };
+                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; ResetAll(); };
                 break;
         }
     }
@@ -375,7 +375,7 @@ public class Script_Animation : MonoBehaviour
                     rectTransformObj.localRotation = Quaternion.Lerp(qStartB, qEndB, coefB);
                 }
                 
-                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; };
+                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; ResetAll(); };
                 break;
         }
     }
@@ -411,7 +411,7 @@ public class Script_Animation : MonoBehaviour
                     rectTransformObj.localScale = Vector3.Lerp(initScaleObj, vecEnd, coefB);
                 }
 
-                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; };
+                if (coefB <= lerpLimitMin) { ValuesOnEnd(); ppValue = 0; ResetAll(); };
                 break;
         }
     }
@@ -563,6 +563,7 @@ public class Script_Animation : MonoBehaviour
     public void ValuesOnEnd()
     {
         currentLoop++; coef = 0f; coefEasing = 0f;
+        ResetAll();
     }
     public void SwitchBelongType()
     {
@@ -813,26 +814,20 @@ public class Script_Animation : MonoBehaviour
 
     private void ResetAll()
     {
-        if (myObj.TryGetComponent(out RectTransform recTrans) == true)
+        if (!in3D)
         {
             rectTransformObj.localPosition = originPos;
             rectTransformObj.localRotation = originRot;
             rectTransformObj.localScale = originScale;
+            //imageObj.color = originColor;
         }
         else
         {
             transformObj.localPosition = originPos;
             transformObj.localRotation = originRot;
             transformObj.localScale = originScale;
-        }
-
-        if (myObj.TryGetComponent(out Renderer mat))
-        {
-            matObj.material.color = originColor;
-        }
-        else if (myObj.TryGetComponent(out Image image))
-        {
-            imageObj.color = originColor;
+            //matObj.material.color = originColor;
+            Debug.Log("e");
         }
     }
     IEnumerator WaitLaunch()
@@ -840,7 +835,7 @@ public class Script_Animation : MonoBehaviour
         
         etat = false;
         coef = 0f; coefEasing = 0f;
-        ResetAll();
+        currentLoop = 0;
         yield return new WaitForSeconds(beginDuration);
         ResetAll();
         etat = true;
