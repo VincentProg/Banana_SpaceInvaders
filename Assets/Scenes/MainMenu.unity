@@ -4051,6 +4051,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RotationSpeed: 2
+  selectSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c2fed04c75254de41863430d3c2a4afa, type: 2}
+  validateSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8e41b88a23aa1ed4fa1f81294c603de8, type: 2}
 --- !u!1 &1869316332
 GameObject:
   m_ObjectHideFlags: 0
