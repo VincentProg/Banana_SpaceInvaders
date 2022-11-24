@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
     private void Start()
     {
         m_offsetMovement = Referencer.Instance.EnemyManagerInstance.OffsetX;
+        Referencer.Instance.RythmManagerInstance.Beat.AddListener(transform.GetComponent<PlayerShoot>().Shoot);
     }
 
     private void OnDestroy()
@@ -95,6 +96,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
     public void Death()
     {
         Debug.Log("Death");
+        Referencer.Instance.RythmManagerInstance.Beat.RemoveListener(transform.GetComponent<PlayerShoot>().Shoot);
         PlayerDeathManager.Instance.Death();
         Destroy(gameObject);
     }

@@ -160,7 +160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4286456976631127836}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6684e5fdb06fda64d9dc374030579340, type: 3}
   m_Name: 
@@ -249,15 +249,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4286456976631127836}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8778a6299da8c114282814a086565fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6221785980683646529, guid: fe04e2d6a7d16fa4599a8d329f01df7d, type: 3}
   bulletSpeed: 50
-  shootCooldown: 0.1
-  m_strengthRecoil: 0.5
+  shootCooldown: 0.4
+  m_strengthRecoil: 1
   m_recoilCurve:
     serializedVersion: 2
     m_Curve:
@@ -291,8 +291,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_perfectShootTime: 0.1
-  m_goodShootTime: 1
+  m_PreShootTime: 0
 --- !u!95 &-1750526508148634308
 Animator:
   serializedVersion: 4
