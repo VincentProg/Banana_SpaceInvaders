@@ -33,7 +33,7 @@ public class EnemyManager : MonoBehaviour
         Referencer.Instance.RythmManagerInstance.Beat.AddListener(Step);
         Referencer.Instance.RythmManagerInstance.FourBeats.AddListener(SpawnEnemies);
         Referencer.Instance.RythmManagerInstance.HeightBeats.AddListener(SpawnFastEnemy);
-        Referencer.Instance.RythmManagerInstance.HeightBeats.AddListener(RandomShoot);
+        Referencer.Instance.RythmManagerInstance.Beat.AddListener(RandomShoot);
         
 
     }
@@ -117,6 +117,7 @@ public class EnemyManager : MonoBehaviour
 
     private void RandomShoot()
     {
+        print("hellooo");
         float l_randX = Random.Range(-1, 2) * m_offsetX;
         RaycastHit l_hit;
         if (Physics.Raycast(new Vector3(l_randX, transform.position.y, -50),
