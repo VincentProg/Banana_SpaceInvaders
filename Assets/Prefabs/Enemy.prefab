@@ -173,7 +173,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_initialDurationMovement: 0.39
   m_bullet: {fileID: 6221785980683646529, guid: 3952a324a70976f4fa8855e5942e59f0, type: 3}
-  m_speedBullet: 50
+  m_speedBullet: -50
   m_delayBetweenShoot: 0.2
   m_bloodParticles: {fileID: 3617732387176708192, guid: 35ef560d65245b64ab6d167082ff617f, type: 3}
   DeathEvent:
