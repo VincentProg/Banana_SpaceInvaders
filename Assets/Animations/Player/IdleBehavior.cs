@@ -7,9 +7,9 @@ public class IdleBehavior : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.transform.Find("Shield").gameObject.SetActive(false);
         animator.GetComponent<PlayerMovement>().enabled = true;
         animator.GetComponent<PlayerShoot>().enabled = true;
+        animator.GetComponent<PlayerMovement>().RemoveShield();
         animator.enabled = false;
     }
 

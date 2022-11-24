@@ -242,6 +242,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  m_shield: {fileID: 5364561033513384674}
+  m_disableShieldDelay: 2
+  m_shieldStartColor: {r: 0.03137255, g: 0.19215687, b: 0.7490196, a: 1}
+  m_shieldEndColor: {r: 0.03137255, g: 0.19215687, b: 0.7490196, a: 0}
 --- !u!114 &4274232245004942489
 MonoBehaviour:
   m_ObjectHideFlags: 0
