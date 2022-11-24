@@ -38,6 +38,7 @@ public class Music_Manager : MonoBehaviour
     private float currentLPBass01 = 100f;
     private float currentLPBass02 = 100f;
 
+   
     private void OnDisable()
     {
         
@@ -53,6 +54,7 @@ public class Music_Manager : MonoBehaviour
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step01", 0f);
         AkSoundEngine.SetRTPCValue("Fade_Vol_Step02", 0f);
         AkSoundEngine.SetRTPCValue("Fade_VolBass_Step03", 100f);
+        
         AkSoundEngine.SetRTPCValue("Fade_VolBass02_Step04", 0f);
 
         //LOWPASS
@@ -62,6 +64,7 @@ public class Music_Manager : MonoBehaviour
 
     }
 
+    
     // Update is called once per frame
     void Update()
     {

@@ -76,6 +76,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Combo_1" ID="{439DDC50-19E2-4C3C-9366-19A82B79BBFF}">
+											<PropertyList>
+												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Combo_1.wav</AudioFile>
 											<MediaIDList>

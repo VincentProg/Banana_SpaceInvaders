@@ -73,6 +73,10 @@ public class Script_Animation : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private Text textDebug;
+    private Vector3 originPos;
+    private Quaternion originRot;
+    private Vector3 originScale;
+    private Color originColor;
 
     // Start is called before the first frame update
     void Start()
@@ -515,6 +519,10 @@ public class Script_Animation : MonoBehaviour
             initPositionObj = rectTransformObj.localPosition;
             initRotationObj = rectTransformObj.localRotation.eulerAngles;
             initScaleObj = rectTransformObj.localScale;
+
+            originPos = rectTransformObj.localPosition;
+            originRot = rectTransformObj.localRotation;
+            originScale = rectTransformObj.localScale;
             in3D = false;
         }
         else
@@ -523,6 +531,11 @@ public class Script_Animation : MonoBehaviour
             initPositionObj = transformObj.localPosition;
             initRotationObj = transformObj.localRotation.eulerAngles;
             initScaleObj = transformObj.localScale;
+
+            originPos = transformObj.localPosition;
+            originRot = transformObj.localRotation;
+            originScale = transformObj.localScale;
+
             in3D = true;
         }
 
@@ -532,10 +545,12 @@ public class Script_Animation : MonoBehaviour
         if (myObj.TryGetComponent(out Renderer mat))
         {
             matObj = myObj.GetComponent<Renderer>();
+            originColor = matObj.material.color;
         }
         else if (myObj.TryGetComponent(out Image image))
         {
             imageObj = myObj.GetComponent<Image>();
+            originColor = imageObj.color;
         }
         else if (myObj.TryGetComponent(out TextMeshProUGUI text))
         {
@@ -795,11 +810,39 @@ public class Script_Animation : MonoBehaviour
         }
 
     }
+
+    private void ResetAll()
+    {
+        if (myObj.TryGetComponent(out RectTransform recTrans) == true)
+        {
+            rectTransformObj.localPosition = originPos;
+            rectTransformObj.localRotation = originRot;
+            rectTransformObj.localScale = originScale;
+        }
+        else
+        {
+            transformObj.localPosition = originPos;
+            transformObj.localRotation = originRot;
+            transformObj.localScale = originScale;
+        }
+
+        if (myObj.TryGetComponent(out Renderer mat))
+        {
+            matObj.material.color = originColor;
+        }
+        else if (myObj.TryGetComponent(out Image image))
+        {
+            imageObj.color = originColor;
+        }
+    }
     IEnumerator WaitLaunch()
     {
+        
         etat = false;
         coef = 0f; coefEasing = 0f;
+        ResetAll();
         yield return new WaitForSeconds(beginDuration);
+        ResetAll();
         etat = true;
     }
     #endregion
