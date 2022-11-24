@@ -281,7 +281,7 @@
 				<GameParameter Id="4056684167" Name="MASTER"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{C4189669-F3B4-4046-CEB3-AB72B9031418}">
+		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{3E5976E0-507B-BC96-007F-508D6A5042B8}">
 			<ShortName>SB_SFX</ShortName>
 			<Path>SB_SFX.bnk</Path>
 			<Media>
@@ -309,6 +309,10 @@
 					<ShortName>Dégats_1.wav</ShortName>
 					<CachePath>SFX/Dégats_1_767BAA0F.wem</CachePath>
 				</File>
+				<File Id="461280515" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Chara_Mov.wav</ShortName>
+					<CachePath>SFX/Chara_Mov_4C49824C.wem</CachePath>
+				</File>
 				<File Id="820845399" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dégats_2.wav</ShortName>
 					<CachePath>SFX/Dégats_2_08E5DBB5.wem</CachePath>
@@ -321,9 +325,13 @@
 					<ShortName>Alien_Tir_2.wav</ShortName>
 					<CachePath>SFX/Alien_Tir_2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="914282225" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Chara_Mov.wav</ShortName>
+					<CachePath>SFX/Chara_Mov_89A3B7DB.wem</CachePath>
+				</File>
 				<File Id="1013182437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Chara_Mov.wav</ShortName>
-					<CachePath>SFX/Chara_Mov_10C4C929.wem</CachePath>
+					<CachePath>SFX/Chara_Mov_31295C2B.wem</CachePath>
 				</File>
 				<File Id="1049349734" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tir.wav</ShortName>
@@ -338,7 +346,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3289687663" Name="Play_Alien_I_Shoot" MaxAttenuation="25" DurationType="Infinite">
+				<Event Id="3289687663" Name="Play_Alien_I_Shoot" MaxAttenuation="50" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="836791072"/>
 					</MediaRefs>
@@ -357,18 +365,21 @@
 						<MediaRef Id="896622674"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="26695346" Name="Play_Alien_R_Tripes" DurationType="OneShot" DurationMin="0.64094204" DurationMax="0.80753636">
+				<Event Id="26695346" Name="Play_Alien_R_Tripes" DurationType="OneShot" DurationMin="0.64094204" DurationMax="1.1496737">
 					<MediaRefs>
+						<MediaRef Id="7756898"/>
 						<MediaRef Id="183629318"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="944772603" Name="Play_Chara_I_Shoot" MaxAttenuation="25" DurationType="Infinite">
+				<Event Id="944772603" Name="Play_Chara_I_Shoot" MaxAttenuation="50" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="75918969"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2448513527" Name="Play_Chara_R_Deplacement" DurationType="OneShot" DurationMin="1.4927125" DurationMax="1.6755134">
+				<Event Id="2448513527" Name="Play_Chara_R_Deplacement" DurationType="OneShot" DurationMin="1.1077898" DurationMax="1.236648">
 					<MediaRefs>
+						<MediaRef Id="461280515"/>
+						<MediaRef Id="914282225"/>
 						<MediaRef Id="1013182437"/>
 					</MediaRefs>
 				</Event>
@@ -601,7 +612,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3911025208" Type="User" Language="English(US)" Hash="{279D7636-C1E3-5375-F662-45C63294DD28}">
+		<SoundBank Id="3911025208" Type="User" Language="English(US)" Hash="{9AFC308C-DAAA-B837-6979-36B5D4E573EB}">
 			<ShortName>SB_Voices</ShortName>
 			<Path>English(US)/SB_Voices.bnk</Path>
 			<Media>
@@ -748,5 +759,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{101660D7-C003-6DD4-F59A-96C5EE2C6DEA}</FileHash>
+	<FileHash>{645DA0CD-9281-47C0-F732-3EBA80463643}</FileHash>
 </SoundBanksInfo>

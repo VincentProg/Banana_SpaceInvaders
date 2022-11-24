@@ -54,6 +54,18 @@ MonoBehaviour:
   voice04Destroy: Play_Destroy_them
   voice05Perfect: Play_Perfect
   voiceClose: Play_R_Not_Even_Close
+  music01Stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8baac36d13cf65740a241e994afa17d4, type: 2}
+  bass01Stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 50c7582921707884193882a79697f18e, type: 2}
+  bass02Stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 21212c5e0e4b84f46acf35030891a73d, type: 2}
 --- !u!1 &2335280716434551510
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volMaster: 100
-  volMusic: 80
-  volSfx: 70
-  volUI: 70
-  volVoices: 75
+  volMusic: 35
+  volSfx: 35
+  volUI: 30
+  volVoices: 30

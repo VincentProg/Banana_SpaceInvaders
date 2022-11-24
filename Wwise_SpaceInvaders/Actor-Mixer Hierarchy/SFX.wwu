@@ -13,7 +13,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-15</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -106,7 +106,58 @@
 										<ActiveSource Name="Tripes" ID="{CBCE5AD5-A3DD-46CC-BDB9-2E8026563C1D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Tripes_04" ID="{4A7AF22C-1BAF-4451-872A-7D6B4D6439F7}" ShortID="249464678">
+								<Sound Name="Alien_Mort" ID="{6D24F245-C847-4E93-958E-43BB76E17986}" ShortID="638778638">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Mort" ID="{F3D4B652-9F88-4123-A91F-885B20F67EB7}">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Mort.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="7756898"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Mort" ID="{F3D4B652-9F88-4123-A91F-885B20F67EB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Alien_Mort_01" ID="{479C512D-E2E4-4418-B58C-E074BCF9A1F7}" ShortID="497474332">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Mort" ID="{A92801A3-B3A1-42C6-AFCF-DF24F57D1157}">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Mort.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="7756898"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Mort" ID="{A92801A3-B3A1-42C6-AFCF-DF24F57D1157}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Alien_Mort_02" ID="{9B669284-F68D-4FC2-8361-C50AD3566057}" ShortID="599352831">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -123,45 +174,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Tripes" ID="{84212324-544E-4723-82A4-984898BDB472}">
+										<AudioFileSource Name="Alien_Mort" ID="{74DE97EC-8839-4EA0-9DC8-C89878E72B92}">
 											<Language>SFX</Language>
-											<AudioFile>Tripes.wav</AudioFile>
+											<AudioFile>Alien_Mort.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="183629318"/>
+												<MediaID ID="7756898"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Tripes" ID="{84212324-544E-4723-82A4-984898BDB472}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tripes_05" ID="{22A3D8AC-FAF9-4F10-8900-E7ADA88D1BB4}" ShortID="330976418">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-200</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E1F8B6C-EE04-4B46-A903-648C18E405E6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tripes" ID="{7C9F3603-4547-4ADC-9B40-81C72AC2FF04}">
-											<Language>SFX</Language>
-											<AudioFile>Tripes.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="183629318"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tripes" ID="{7C9F3603-4547-4ADC-9B40-81C72AC2FF04}" Platform="Linked"/>
+										<ActiveSource Name="Alien_Mort" ID="{74DE97EC-8839-4EA0-9DC8-C89878E72B92}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -345,7 +367,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -396,6 +418,13 @@
 				<Folder Name="Character" ID="{09F526A1-4776-4DFE-B2E9-6499D6D28D5C}" ShortID="51471906">
 					<ChildrenList>
 						<RandomSequenceContainer Name="Chara_R_Deplacement" ID="{26ACF000-B268-47BB-AEAE-EA00445B1FAE}" ShortID="602742537">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF1603CB-126E-4A49-A19D-CF1941D4D9D1}"/>
@@ -416,10 +445,15 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Chara_Mov" ID="{17B74F2A-C635-4DD4-9AAF-C4678A47C5D8}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.162161285495586"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.35187923155726"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Chara_Mov.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1013182437"/>
+												<MediaID ID="461280515"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -445,10 +479,15 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Chara_Mov" ID="{C6181053-1BF6-422C-9E18-887616FD94C0}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.170189071906259"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.34385144514659"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Chara_Mov.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1013182437"/>
+												<MediaID ID="914282225"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -474,6 +513,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Chara_Mov" ID="{55AC230F-60FD-4A95-8F5F-F817682DDEC8}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.1814279728812"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.34866811699299"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Chara_Mov.wav</AudioFile>
 											<MediaIDList>
@@ -491,7 +535,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-16</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -592,7 +636,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -644,7 +688,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-20</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

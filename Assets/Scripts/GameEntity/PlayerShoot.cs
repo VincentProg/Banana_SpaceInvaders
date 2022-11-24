@@ -18,7 +18,8 @@ public class PlayerShoot : MonoBehaviour
     private float m_initialZ;
 
     [SerializeField] private float m_PreShootTime;
-    
+
+    [SerializeField] private AK.Wwise.Event shootSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,12 +45,13 @@ public class PlayerShoot : MonoBehaviour
         if (ctx.performed)
         {
             // Charge Shoot
-
+            
         }
     }
 
     public void Shoot()
     {
+        shootSound.Post(gameObject);
         Vector3 l_pos = new Vector3(Referencer.Instance.PlayerInstance.IndexMovement *
                        Referencer.Instance.EnemyManagerInstance.OffsetX,
                 transform.position.y, transform.position.z + 1);

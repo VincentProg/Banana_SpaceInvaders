@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
 
     private float m_currentTimeMovement;
     private float m_initialX, m_targetX;
-    
+    [SerializeField] private AK.Wwise.Event dashSound;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
         int l_value = (int)p_ctx.ReadValue<float>();
         if (l_value != 0)
         {
+            dashSound.Post(gameObject);
             m_movementX = l_value;
             m_indexMovement += l_value;
             if (Mathf.Abs(m_indexMovement) > 2)
@@ -93,7 +94,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
 
         float l_yRotation = m_rotationCurve.Evaluate(m_currentTimeMovement);
         transform.rotation = Quaternion.Euler(0, 0, l_yRotation * m_rotationIntensity * -m_movementX);
-
+        
         if (m_currentTimeMovement >= 1)
         {
             m_isMoving = false;

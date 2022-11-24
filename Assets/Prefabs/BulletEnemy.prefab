@@ -115,6 +115,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {x: 0, y: 0, z: -1}
   lifeTime: 10
+  bulletIdlePlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e790e3e3b60af62489321ac82d33c0d9, type: 2}
+  bulletIdleStop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fba1372883f72704ba63b48806e8993e, type: 2}
 --- !u!54 &-1670190122445532151
 Rigidbody:
   m_ObjectHideFlags: 0

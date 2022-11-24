@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Music_Manager : MonoBehaviour
 {
@@ -18,11 +19,9 @@ public class Music_Manager : MonoBehaviour
     [SerializeField] private string voice05Perfect;
     [SerializeField] private string voiceClose;
 
-    /*
-    [SerializeField] private string music01Stop;
-    [SerializeField] private string bass01Stop;
-    [SerializeField] private string bass02Stop;*/
-
+    [SerializeField] private AK.Wwise.Event music01Stop;
+    [SerializeField] private AK.Wwise.Event bass01Stop;
+    [SerializeField] private AK.Wwise.Event bass02Stop;
     private float timer = 0;
     private int currentCombo = -1;
     
@@ -41,7 +40,9 @@ public class Music_Manager : MonoBehaviour
    
     private void OnDisable()
     {
-        
+        music01Stop.Post(gameObject);
+        bass01Stop.Post(gameObject);
+        bass02Stop.Post(gameObject);
     }
     // Start is called before the first frame update
     void Start()
