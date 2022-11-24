@@ -10,6 +10,9 @@ public class LoseManager : MonoBehaviour
 
     private EnemyManager enemyManager;
     private int count = 0;
+    public string[] musics;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +30,12 @@ public class LoseManager : MonoBehaviour
     {
         if(count==numberEnemyPastForLose)
         {
-            SceneManager.LoadScene(loseScene,LoadSceneMode.Single) ;
+            /*foreach (string music in musics)
+            {
+                AkSoundEngine.PostEvent(music, this.gameObject);
+            }*/
+
+            SceneManager.LoadScene(loseScene) ;
         }
     }
 
