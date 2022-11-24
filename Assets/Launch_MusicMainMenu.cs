@@ -7,6 +7,10 @@ public class Launch_MusicMainMenu : MonoBehaviour
 {
     [SerializeField] private AK.Wwise.Event musicPlay;
     [SerializeField] private AK.Wwise.Event musicStop;
+
+    [SerializeField] private AK.Wwise.Event selectSound;
+    [SerializeField] private AK.Wwise.Event validateSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +28,15 @@ public class Launch_MusicMainMenu : MonoBehaviour
             
 
         
+    }
+
+    public void SoundOnValidate()
+    {
+        validateSound.Post(gameObject);
+    }
+
+    public void SoundOnSelect()
+    {
+        selectSound.Post(gameObject);
     }
 }

@@ -18,9 +18,6 @@ public class PlaneteInteractor : MonoBehaviour
     private bool needToRotate;
     private int currentRotation = 0;
 
-    [SerializeField] private AK.Wwise.Event selectSound;
-    [SerializeField] private AK.Wwise.Event validateSound;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +29,7 @@ public class PlaneteInteractor : MonoBehaviour
 
     private void OnValidateInput(InputAction.CallbackContext obj)
     {
-        validateSound.Post(gameObject);
+        
 
         if (obj.performed)
         {
@@ -98,7 +95,7 @@ public class PlaneteInteractor : MonoBehaviour
 
     public void OnSelect(SelectEnterEventArgs args)
     {
-        selectSound.Post(gameObject);
+
 
         switch (args.interactableObject.transform.gameObject.name)
         {
