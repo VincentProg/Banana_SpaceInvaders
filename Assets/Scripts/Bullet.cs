@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
     [SerializeField] private Vector3 movement;
     [SerializeField] private float lifeTime;
-
+    [SerializeField] private string deathMonster;
 
     private float _speed;
     private float _timer;
@@ -16,7 +15,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     public void InitBullet(float speed)
@@ -40,6 +39,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ILivingEntity l_entity = other.transform.GetComponent(typeof(ILivingEntity)) as ILivingEntity;
+        
         l_entity?.Death();
         Destroy(gameObject);
     }

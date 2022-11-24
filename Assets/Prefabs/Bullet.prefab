@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {x: 0, y: 0, z: 1}
   lifeTime: 10
+  deathMonster: Play_Alien_R_Mort
 --- !u!54 &-2903128291619290145
 Rigidbody:
   m_ObjectHideFlags: 0

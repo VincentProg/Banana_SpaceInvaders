@@ -178,7 +178,20 @@ MonoBehaviour:
   m_bloodParticles: {fileID: 3617732387176708192, guid: 35ef560d65245b64ab6d167082ff617f, type: 3}
   DeathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  deathStr: Play_Alien_R_Mort
 --- !u!114 &8716942275294079005
 MonoBehaviour:
   m_ObjectHideFlags: 0

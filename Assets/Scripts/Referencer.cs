@@ -9,7 +9,7 @@ public class Referencer : MonoBehaviour
     private PlayerMovement m_player;
     private EnemyManager m_enemymanager;
     private RythmManager m_rythmManager;
-
+    private Scoring m_scoring;
     public PlayerMovement PlayerInstance
     {
         get
@@ -43,6 +43,18 @@ public class Referencer : MonoBehaviour
                 m_rythmManager = FindObjectOfType<RythmManager>();
             }
             return m_rythmManager;
+        }
+    }
+
+    public Scoring ScoringInstance
+    {
+        get
+        {
+            if (m_scoring == null)
+            {
+                m_scoring = FindObjectOfType<Scoring>();
+            }
+            return m_scoring;
         }
     }
     
