@@ -86,6 +86,10 @@ public class EnemyManager : MonoBehaviour
         m_enemies.Add(l_enemy);
     }
 
+    public List<Enemy> GetEnemys()
+    {
+        return m_enemies;
+    }
 
 
     #region Step functions
