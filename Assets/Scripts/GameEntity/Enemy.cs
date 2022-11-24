@@ -50,7 +50,8 @@ public class Enemy : MonoBehaviour, ILivingEntity
     private SpawnGutsManager m_spawnGuts;
     [SerializeField] GameObject m_bloodParticles;
     public EnemyEvent DeathEvent;
-    
+
+
 
     private void Awake()
     {
@@ -160,8 +161,11 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     public void Death()
     {
-     
+
         //m_spawnGuts.StartExplosion();
+        
+        
+        Referencer.Instance.ScoringInstance.AddScoring(50);
         Instantiate(m_bloodParticles, transform.position, quaternion.identity);
         DeathEvent.Invoke(this);
         Destroy(gameObject);

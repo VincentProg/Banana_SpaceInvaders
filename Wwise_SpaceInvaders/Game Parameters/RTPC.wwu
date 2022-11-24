@@ -26,6 +26,15 @@
 						<GameParameter Name="Fade_VolBass02_Step04" ID="{CD3B9F7B-6DF0-4637-8882-061816C249C1}"/>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Bus" ID="{3F6F3215-50F8-49A0-858C-27828538F3E5}" ShortID="264742800">
+					<ChildrenList>
+						<GameParameter Name="MASTER" ID="{6E0B7020-D538-45D9-A4CC-9B5AA27FF65B}"/>
+						<GameParameter Name="SFX" ID="{DD5D825E-D7E0-441D-9243-356C53B1D1FE}"/>
+						<GameParameter Name="UI" ID="{A10FD59B-22D9-4A5B-8C4D-8AD753343F84}"/>
+						<GameParameter Name="VOICES" ID="{B76B2738-98E8-4453-8B78-A0AC87737DBC}"/>
+						<GameParameter Name="MUSIC" ID="{296EE3CD-DC21-4742-A922-B8474CD4FE7F}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

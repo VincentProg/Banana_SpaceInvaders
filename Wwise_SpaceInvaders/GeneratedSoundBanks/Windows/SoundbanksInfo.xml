@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{9F4744ED-B5D1-AE5C-E124-3D20BDBB9D67}">
+		<SoundBank Id="289583631" Type="User" Language="SFX" Hash="{1E54506F-1F5B-3CF0-CF7B-DE30A1F6FF55}">
 			<ShortName>SB_UI</ShortName>
 			<Path>SB_UI.bnk</Path>
 			<Media>
@@ -108,8 +108,15 @@
 					</PluginRefs>
 				</AuxBus>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="1551306167" Name="UI"/>
+				<GameParameter Id="3313685232" Name="VOICES"/>
+				<GameParameter Id="3991942870" Name="MUSIC"/>
+				<GameParameter Id="4056684167" Name="MASTER"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="690783697" Type="User" Language="SFX" Hash="{B78C2B0F-8C22-7B4F-44B2-E63ED5CFC2F4}">
+		<SoundBank Id="690783697" Type="User" Language="SFX" Hash="{B195C9B3-8799-A275-DCD8-ADF73A87A473}">
 			<ShortName>SB_Test</ShortName>
 			<Path>SB_Test.bnk</Path>
 			<Media>
@@ -162,8 +169,15 @@
 					</PluginRefs>
 				</AuxBus>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="1551306167" Name="UI"/>
+				<GameParameter Id="3313685232" Name="VOICES"/>
+				<GameParameter Id="3991942870" Name="MUSIC"/>
+				<GameParameter Id="4056684167" Name="MASTER"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{EA97C2A6-2BB3-2BC7-72AF-22BD2295A3C3}">
+		<SoundBank Id="779753582" Type="User" Language="SFX" Hash="{7349F16B-373E-52CE-E86B-1926BE950ADF}">
 			<ShortName>SB_Music</ShortName>
 			<Path>SB_Music.bnk</Path>
 			<Media>
@@ -253,16 +267,21 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="1551306167" Name="UI"/>
 				<GameParameter Id="1677504759" Name="Fade_VolBass02_Step04"/>
 				<GameParameter Id="1977195214" Name="Fade_VolBass_Step03"/>
 				<GameParameter Id="2836587888" Name="Fade_LowPassBass_Step03"/>
 				<GameParameter Id="3167393820" Name="Fade_Vol_Step02"/>
 				<GameParameter Id="3167393823" Name="Fade_Vol_Step01"/>
 				<GameParameter Id="3308746329" Name="Fade_LowPassBass02_Step04"/>
+				<GameParameter Id="3313685232" Name="VOICES"/>
+				<GameParameter Id="3991942870" Name="MUSIC"/>
 				<GameParameter Id="4041028786" Name="Fade_LowPass_Step02"/>
+				<GameParameter Id="4056684167" Name="MASTER"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{F3724536-A238-7FE9-0FCD-AA12D9FDC2B6}">
+		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{C4189669-F3B4-4046-CEB3-AB72B9031418}">
 			<ShortName>SB_SFX</ShortName>
 			<Path>SB_SFX.bnk</Path>
 			<Media>
@@ -284,15 +303,15 @@
 				</File>
 				<File Id="273832238" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dégats_3.wav</ShortName>
-					<CachePath>SFX/Dégats_3_10C4C929.wem</CachePath>
+					<CachePath>SFX/Dégats_3_E11B7B3F.wem</CachePath>
 				</File>
 				<File Id="376463025" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dégats_1.wav</ShortName>
-					<CachePath>SFX/Dégats_1_10C4C929.wem</CachePath>
+					<CachePath>SFX/Dégats_1_767BAA0F.wem</CachePath>
 				</File>
 				<File Id="820845399" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dégats_2.wav</ShortName>
-					<CachePath>SFX/Dégats_2_10C4C929.wem</CachePath>
+					<CachePath>SFX/Dégats_2_08E5DBB5.wem</CachePath>
 				</File>
 				<File Id="836791072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Alien_Idle_Shoot.wav</ShortName>
@@ -319,7 +338,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3289687663" Name="Play_Alien_I_Shoot" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="3289687663" Name="Play_Alien_I_Shoot" MaxAttenuation="25" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="836791072"/>
 					</MediaRefs>
@@ -343,7 +362,7 @@
 						<MediaRef Id="183629318"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="944772603" Name="Play_Chara_I_Shoot" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="944772603" Name="Play_Chara_I_Shoot" MaxAttenuation="25" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="75918969"/>
 					</MediaRefs>
@@ -361,7 +380,7 @@
 						<AuxBusRef Id="2288170607" Name="Effect_02"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3975151617" Name="Play_Chara_R_TakeDamage" DurationType="OneShot" DurationMin="0.9022902" DurationMax="1.3986168">
+				<Event Id="3975151617" Name="Play_Chara_R_TakeDamage" DurationType="OneShot" DurationMin="0.5825955" DurationMax="0.8512307">
 					<MediaRefs>
 						<MediaRef Id="273832238"/>
 						<MediaRef Id="376463025"/>
@@ -401,8 +420,15 @@
 					</PluginRefs>
 				</AuxBus>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="1551306167" Name="UI"/>
+				<GameParameter Id="3313685232" Name="VOICES"/>
+				<GameParameter Id="3991942870" Name="MUSIC"/>
+				<GameParameter Id="4056684167" Name="MASTER"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{004B223E-72AD-3700-84D7-6D384E5F6EDD}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{38F7CFCA-92BD-CA64-A7E7-35DA754D1913}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -447,13 +473,18 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="1551306167" Name="UI"/>
 				<GameParameter Id="1677504759" Name="Fade_VolBass02_Step04"/>
 				<GameParameter Id="1977195214" Name="Fade_VolBass_Step03"/>
 				<GameParameter Id="2836587888" Name="Fade_LowPassBass_Step03"/>
 				<GameParameter Id="3167393820" Name="Fade_Vol_Step02"/>
 				<GameParameter Id="3167393823" Name="Fade_Vol_Step01"/>
 				<GameParameter Id="3308746329" Name="Fade_LowPassBass02_Step04"/>
+				<GameParameter Id="3313685232" Name="VOICES"/>
+				<GameParameter Id="3991942870" Name="MUSIC"/>
 				<GameParameter Id="4041028786" Name="Fade_LowPass_Step02"/>
+				<GameParameter Id="4056684167" Name="MASTER"/>
 			</GameParameters>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
@@ -570,7 +601,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3911025208" Type="User" Language="English(US)" Hash="{20E243CD-AD26-5253-2DA5-328CB150CFB5}">
+		<SoundBank Id="3911025208" Type="User" Language="English(US)" Hash="{279D7636-C1E3-5375-F662-45C63294DD28}">
 			<ShortName>SB_Voices</ShortName>
 			<Path>English(US)/SB_Voices.bnk</Path>
 			<Media>
@@ -708,7 +739,14 @@
 					</PluginRefs>
 				</AuxBus>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="1551306167" Name="UI"/>
+				<GameParameter Id="3313685232" Name="VOICES"/>
+				<GameParameter Id="3991942870" Name="MUSIC"/>
+				<GameParameter Id="4056684167" Name="MASTER"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F9350A1A-E5F0-916E-7A8B-4B21101D6F74}</FileHash>
+	<FileHash>{29A1E3F8-B520-07E8-F73C-5BE333E5526A}</FileHash>
 </SoundBanksInfo>

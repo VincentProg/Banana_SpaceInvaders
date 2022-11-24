@@ -484,6 +484,7 @@ MonoBehaviour:
   - Play_Combo_03
   - Play_Combo_04
   - Play_Combo_05
+  deathMonster: Play_Alien_R_Tripes
   resetTimer:
     m_PersistentCalls:
       m_Calls:

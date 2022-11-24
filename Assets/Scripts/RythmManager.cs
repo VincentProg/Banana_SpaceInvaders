@@ -39,8 +39,7 @@ public class RythmManager : MonoBehaviour
     private void Update()
     {
         if (!m_isStarted) return;
-        
-        m_currentTime += Time.deltaTime * m_speedRythm;
+        m_currentTime += Time.deltaTime;
         if (m_currentTime > m_delayStep)
         {
             m_currentTime -= m_delayStep;
@@ -56,7 +55,7 @@ public class RythmManager : MonoBehaviour
 
     private void CallBeat()
     {
-        Debug.Log("Beat");
+        Debug.Log("Beat " + m_delayBeat + " - Step " + m_delayStep );
         Beat?.Invoke();
         currentNbrBeat++;
         if (currentNbrBeat % 4 == 0)
@@ -82,7 +81,7 @@ public class RythmManager : MonoBehaviour
         HeightBeats?.Invoke();
     }
 
-    private void SetNewRythm(float p_speedRythm)
+    public void SetNewRythm(float p_speedRythm)
     {
         m_isNewRythm = true;
         m_speedRythm = p_speedRythm;

@@ -343,6 +343,11 @@
 										<Value>50</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -510,6 +515,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Dégats_1" ID="{DF0B85DE-284D-4133-87E8-9463D53AEC05}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.204467833834041"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.94992347802065"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Dégats_1.wav</AudioFile>
 											<MediaIDList>
@@ -532,6 +542,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Dégats_2" ID="{576C103F-763D-40CF-8AE7-4979FE560577}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.217099278289996"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.799694809903657"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Dégats_2.wav</AudioFile>
 											<MediaIDList>
@@ -554,6 +569,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Dégats_3" ID="{BF007155-A63B-4CE8-9B2C-ADC429049EE0}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.12942689089172"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.12942689089172"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Dégats_3.wav</AudioFile>
 											<MediaIDList>

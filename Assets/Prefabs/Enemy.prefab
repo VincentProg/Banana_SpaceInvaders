@@ -178,7 +178,19 @@ MonoBehaviour:
   m_bloodParticles: {fileID: 3617732387176708192, guid: 35ef560d65245b64ab6d167082ff617f, type: 3}
   DeathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8716942275294079005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +204,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guts:
-  - {fileID: 797183476717349374, guid: 732e93f35533e0f448cba6bdc40a98fc, type: 3}
+  - {fileID: 5934978643294119220, guid: 88dfbf343b1dcaf41a9a68a2e3c671ee, type: 3}
+  - {fileID: 2639558094473749771, guid: 4e975e4de8766ae44939f1d776c4c4b2, type: 3}
+  - {fileID: 5640222792988208946, guid: f4a5978095e7c38468adf36e343170e8, type: 3}
+  - {fileID: 2007132959470673627, guid: 1000422e3e6e38e4d8922be6726a5f2d, type: 3}
+  - {fileID: 400218717970080168, guid: 725fd4fc9fbe25542a971e6a204822ea, type: 3}
   nGust: 10
 --- !u!1001 &1800584333237470367
 PrefabInstance:

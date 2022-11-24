@@ -1,6 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3227834082	Play_BeepTest			\Default Work Unit\Play_BeepTest	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\RTPC\Bus\SFX	
+	1551306167	UI			\RTPC\Bus\UI	
+	3313685232	VOICES			\RTPC\Bus\VOICES	
+	3991942870	MUSIC			\RTPC\Bus\MUSIC	
+	4056684167	MASTER			\RTPC\Bus\MASTER	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
 	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
