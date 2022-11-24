@@ -57,6 +57,11 @@ namespace AK
         static const AkUniqueID FADE_VOL_STEP02 = 3167393820U;
         static const AkUniqueID FADE_VOLBASS02_STEP04 = 1677504759U;
         static const AkUniqueID FADE_VOLBASS_STEP03 = 1977195214U;
+        static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID UI = 1551306167U;
+        static const AkUniqueID VOICES = 3313685232U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

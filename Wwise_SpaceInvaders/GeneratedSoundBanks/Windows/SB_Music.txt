@@ -9,13 +9,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	4199445895	Stop_BananaMusic_01_02			\Default Work Unit\Music\Stop\Stop_BananaMusic_01_02	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\RTPC\Bus\SFX	
+	1551306167	UI			\RTPC\Bus\UI	
 	1677504759	Fade_VolBass02_Step04			\RTPC\Step_04_Bass_02\Fade_VolBass02_Step04	
 	1977195214	Fade_VolBass_Step03			\RTPC\Step_03_Bass\Fade_VolBass_Step03	
 	2836587888	Fade_LowPassBass_Step03			\RTPC\Step_03_Bass\Fade_LowPassBass_Step03	
 	3167393820	Fade_Vol_Step02			\RTPC\Step02\Fade_Vol_Step02	
 	3167393823	Fade_Vol_Step01			\RTPC\Step01\Fade_Vol_Step01	
 	3308746329	Fade_LowPassBass02_Step04			\RTPC\Step_04_Bass_02\Fade_LowPassBass02_Step04	
+	3313685232	VOICES			\RTPC\Bus\VOICES	
+	3991942870	MUSIC			\RTPC\Bus\MUSIC	
 	4041028786	Fade_LowPass_Step02			\RTPC\Step02\Fade_LowPass_Step02	
+	4056684167	MASTER			\RTPC\Bus\MASTER	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
