@@ -44,6 +44,24 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Validate"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9683d9d-39d1-4ba3-97de-1a48269a8113"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeMenu"",
+                    ""type"": ""Value"",
+                    ""id"": ""3bf26ea0-336e-449b-b9ea-4add4927a11d"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -167,6 +185,50 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""PlayerShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4a73f3ee-baad-49b0-b3c4-8537de8856df"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Validate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""LeftRight"",
+                    ""id"": ""3bf42c2d-6078-4649-b7cb-77cb8a504c45"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeMenu"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""0a83e50b-36e5-4f09-a581-81b8e9f033dd"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""3e17b897-5b4b-414b-96a2-aacfe2cd6288"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -177,6 +239,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_PlayerMovement = m_Player.FindAction("PlayerMovement", throwIfNotFound: true);
         m_Player_PlayerShoot = m_Player.FindAction("PlayerShoot", throwIfNotFound: true);
+        m_Player_Validate = m_Player.FindAction("Validate", throwIfNotFound: true);
+        m_Player_ChangeMenu = m_Player.FindAction("ChangeMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -238,12 +302,16 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_PlayerMovement;
     private readonly InputAction m_Player_PlayerShoot;
+    private readonly InputAction m_Player_Validate;
+    private readonly InputAction m_Player_ChangeMenu;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
         public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @PlayerMovement => m_Wrapper.m_Player_PlayerMovement;
         public InputAction @PlayerShoot => m_Wrapper.m_Player_PlayerShoot;
+        public InputAction @Validate => m_Wrapper.m_Player_Validate;
+        public InputAction @ChangeMenu => m_Wrapper.m_Player_ChangeMenu;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -259,6 +327,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @PlayerShoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerShoot;
                 @PlayerShoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerShoot;
                 @PlayerShoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerShoot;
+                @Validate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnValidate;
+                @Validate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnValidate;
+                @Validate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnValidate;
+                @ChangeMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeMenu;
+                @ChangeMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeMenu;
+                @ChangeMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeMenu;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -269,6 +343,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @PlayerShoot.started += instance.OnPlayerShoot;
                 @PlayerShoot.performed += instance.OnPlayerShoot;
                 @PlayerShoot.canceled += instance.OnPlayerShoot;
+                @Validate.started += instance.OnValidate;
+                @Validate.performed += instance.OnValidate;
+                @Validate.canceled += instance.OnValidate;
+                @ChangeMenu.started += instance.OnChangeMenu;
+                @ChangeMenu.performed += instance.OnChangeMenu;
+                @ChangeMenu.canceled += instance.OnChangeMenu;
             }
         }
     }
@@ -277,5 +357,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     {
         void OnPlayerMovement(InputAction.CallbackContext context);
         void OnPlayerShoot(InputAction.CallbackContext context);
+        void OnValidate(InputAction.CallbackContext context);
+        void OnChangeMenu(InputAction.CallbackContext context);
     }
 }
