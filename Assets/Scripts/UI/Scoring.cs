@@ -100,12 +100,13 @@ public class Scoring : MonoBehaviour
 
         myObjPart.transform.position = new Vector3(tempV.x,-100,0);*/
 
-        
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //AddScoring(50);
-            SceneManager.LoadScene("Lose");
+            
         }
+        */
         
 
         if (canDisappearRond) { RondJaugeDisappear(); }
@@ -120,12 +121,9 @@ public class Scoring : MonoBehaviour
 
     public void AddScoring(float value)
     {
-        Debug.Log("MORT");
-
         currentScore += value;
         StartCoroutine(WaitScoring());
 
-        //AkSoundEngine.PostEvent(hitSound[0], this.gameObject);
         AkSoundEngine.PostEvent(deathMonster, this.gameObject);
 
         parentJauge.GetComponent<RectTransform>().rotation = new Quaternion(0,0,0,0);

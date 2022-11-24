@@ -262,7 +262,7 @@
 				<GameParameter Id="4041028786" Name="Fade_LowPass_Step02"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{F3724536-A238-7FE9-0FCD-AA12D9FDC2B6}">
+		<SoundBank Id="1006919462" Type="User" Language="SFX" Hash="{8B647D04-68E1-2A0F-F5A7-97C94447600C}">
 			<ShortName>SB_SFX</ShortName>
 			<Path>SB_SFX.bnk</Path>
 			<Media>
@@ -284,15 +284,15 @@
 				</File>
 				<File Id="273832238" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dégats_3.wav</ShortName>
-					<CachePath>SFX/Dégats_3_10C4C929.wem</CachePath>
+					<CachePath>SFX/Dégats_3_E11B7B3F.wem</CachePath>
 				</File>
 				<File Id="376463025" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dégats_1.wav</ShortName>
-					<CachePath>SFX/Dégats_1_10C4C929.wem</CachePath>
+					<CachePath>SFX/Dégats_1_767BAA0F.wem</CachePath>
 				</File>
 				<File Id="820845399" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dégats_2.wav</ShortName>
-					<CachePath>SFX/Dégats_2_10C4C929.wem</CachePath>
+					<CachePath>SFX/Dégats_2_08E5DBB5.wem</CachePath>
 				</File>
 				<File Id="836791072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Alien_Idle_Shoot.wav</ShortName>
@@ -361,7 +361,7 @@
 						<AuxBusRef Id="2288170607" Name="Effect_02"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3975151617" Name="Play_Chara_R_TakeDamage" DurationType="OneShot" DurationMin="0.9022902" DurationMax="1.3986168">
+				<Event Id="3975151617" Name="Play_Chara_R_TakeDamage" DurationType="OneShot" DurationMin="0.5825955" DurationMax="0.8512307">
 					<MediaRefs>
 						<MediaRef Id="273832238"/>
 						<MediaRef Id="376463025"/>
@@ -710,5 +710,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F9350A1A-E5F0-916E-7A8B-4B21101D6F74}</FileHash>
+	<FileHash>{28182F95-C510-A97E-C739-510A9EDB31BE}</FileHash>
 </SoundBanksInfo>
