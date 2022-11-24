@@ -37,8 +37,7 @@ public class Remanent : MonoBehaviour
     {
         active = true;
         while(activeTime>0)
-        {
-            Debug.Log("je spawn");
+        { 
             activeTime -= meshRefreshRate;
 
             if (MeshRenderers == null)

@@ -52,7 +52,7 @@ public class PlayerShoot : MonoBehaviour
     {
         Vector3 l_pos = new Vector3(Referencer.Instance.PlayerInstance.IndexMovement *
                        Referencer.Instance.EnemyManagerInstance.OffsetX,
-                transform.position.y, transform.position.z + 5);
+                transform.position.y, transform.position.z + 1);
         Bullet shootedBullet = Instantiate(bullet, l_pos, Quaternion.Euler(90,0,0));
         shootedBullet.InitBullet(bulletSpeed);
         _timer += shootCooldown;

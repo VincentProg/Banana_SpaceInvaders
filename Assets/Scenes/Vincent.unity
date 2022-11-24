@@ -416,7 +416,7 @@ MonoBehaviour:
       m_Calls: []
   m_BPM: 136
   m_delayBeforeStart: 0
-  m_speedRythm: 1
+  m_speedRythm: 0.25
 --- !u!4 &724944272
 Transform:
   m_ObjectHideFlags: 0
