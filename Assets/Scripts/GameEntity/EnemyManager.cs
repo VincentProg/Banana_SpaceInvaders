@@ -117,7 +117,6 @@ public class EnemyManager : MonoBehaviour
 
     private void RandomShoot()
     {
-        print("hellooo");
         float l_randX = Random.Range(-1, 2) * m_offsetX;
         RaycastHit l_hit;
         if (Physics.Raycast(new Vector3(l_randX, transform.position.y, -50),

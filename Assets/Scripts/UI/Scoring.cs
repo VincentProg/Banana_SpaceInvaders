@@ -40,8 +40,10 @@ public class Scoring : MonoBehaviour
     [Header(" ")]
     [SerializeField] private float coefJauge;
     [SerializeField] private float speedJauge;
-    [SerializeField] private float speedJaugeDisappear;
-    [SerializeField] private float speedRondJauge;
+    [SerializeField] private float initialSpeedJaugeDisappear;
+    [SerializeField] private float currentSpeedJaugeDisappear;
+    [SerializeField] private float initialSpeedRondJauge;
+    [SerializeField] private float currentSpeedRondJauge;
     [SerializeField] private float destroySpeedRond;
 
     [SerializeField] private int coefCombo = 5;
@@ -82,8 +84,9 @@ public class Scoring : MonoBehaviour
     void Start()
     {
         coefRondJauge = (100/limitComboMax)/100;
-
-        originSpeedRondJauge = speedRondJauge;
+        currentSpeedJaugeDisappear = initialSpeedJaugeDisappear;
+        currentSpeedRondJauge = initialSpeedRondJauge;
+      //  originSpeedRondJauge = initialSpeedRondJauge;
 
         width = jaugeStep.GetComponent<RectTransform>().rect.width;
         tempV = jaugeStep.GetComponent<RectTransform>().anchoredPosition;
@@ -162,18 +165,35 @@ public class Scoring : MonoBehaviour
             {
                 case 1: combo1.Invoke();
                     AkSoundEngine.PostEvent(comboSound[0], this.gameObject);
+                    Referencer.Instance.RythmManagerInstance.SetNewRythm(0.25f);
+                    currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 0.25f;
+                    currentSpeedRondJauge = initialSpeedRondJauge * 0.25f;
+                    
                     break;
                 case 2: combo2.Invoke();
                     AkSoundEngine.PostEvent(comboSound[1], this.gameObject);
+                    Referencer.Instance.RythmManagerInstance.SetNewRythm(0.5f);
+                    currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 0.5f;
+                    currentSpeedRondJauge = initialSpeedRondJauge * 0.5f;
                     break;
                 case 3: combo3.Invoke();
                     AkSoundEngine.PostEvent(comboSound[2], this.gameObject);
+                    Referencer.Instance.RythmManagerInstance.SetNewRythm(1);
+                    currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 1;
+                    currentSpeedRondJauge = initialSpeedRondJauge * 1f;
                     break;
                 case 4: combo4.Invoke();
                     AkSoundEngine.PostEvent(comboSound[3], this.gameObject);
+                    Referencer.Instance.RythmManagerInstance.SetNewRythm(2f);
+                    currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 2f;
+                    currentSpeedRondJauge = initialSpeedRondJauge * 2f;
                     break;
                 case 5: combo5.Invoke();
                     AkSoundEngine.PostEvent(comboSound[4], this.gameObject);
+                    Referencer.Instance.RythmManagerInstance.SetNewRythm(4f);
+                    currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 4f;
+                    currentSpeedRondJauge = initialSpeedRondJauge * 4f;
+
                     break;
             }
         }
@@ -253,7 +273,7 @@ public class Scoring : MonoBehaviour
             else
             {
                 fakeJauge.gameObject.SetActive(true);
-                speedRondJauge = destroySpeedRond;
+                currentSpeedRondJauge = destroySpeedRond;
             }
         }
     }
@@ -264,7 +284,7 @@ public class Scoring : MonoBehaviour
         
         float current = currentValueJauge;
        
-        currentValueOnDisappearJauge += (Time.deltaTime * speedJaugeDisappear);
+        currentValueOnDisappearJauge += (Time.deltaTime * currentSpeedJaugeDisappear);
         float coef = current - currentValueOnDisappearJauge;
 
         jaugeStep.fillAmount = coef;
@@ -297,7 +317,7 @@ public class Scoring : MonoBehaviour
     private void RondJaugeDisappear()
     {
         float current = currentValueRondJauge;
-        currentValueOnDisappearRond += (Time.deltaTime * speedRondJauge);
+        currentValueOnDisappearRond += (Time.deltaTime * currentSpeedRondJauge);
         float coef = current - currentValueOnDisappearRond; 
 
         rondJauge.fillAmount = coef;
@@ -359,7 +379,7 @@ public class Scoring : MonoBehaviour
         currentValueRondJauge = 0;
         rondJauge.fillAmount = 0;
         canDisappearRond = false;
-        speedRondJauge = originSpeedRondJauge;
+        currentSpeedRondJauge = initialSpeedRondJauge;
     }
     #endregion
 
