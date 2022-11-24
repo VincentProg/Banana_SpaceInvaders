@@ -2312,6 +2312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4286456976631127839, guid: 1f64097f8a78d5a4b92dbe918a9f852f, type: 3}
+      propertyPath: m_disableShieldDelay
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f64097f8a78d5a4b92dbe918a9f852f, type: 3}
 --- !u!1001 &1586635504

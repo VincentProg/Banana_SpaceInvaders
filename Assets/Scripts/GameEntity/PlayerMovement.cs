@@ -23,9 +23,15 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
     [Header("ROTATION")] [SerializeField] private float m_rotationIntensity;
     [SerializeField] private AnimationCurve m_rotationCurve;
 
+    [Header("SHIELD")] [SerializeField] private GameObject m_shield;
+    [SerializeField] private float m_disableShieldDelay;
+    [SerializeField][ColorUsage(true, false)] private Color m_shieldStartColor;
+    [SerializeField][ColorUsage(true, false)] private Color m_shieldEndColor;
+    private Material m_shieldMaterial;
+
     private float m_currentTimeMovement;
     private float m_initialX, m_targetX;
-
+    
     // Start is called before the first frame update
     private void Awake()
     {
@@ -34,6 +40,7 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
         controls = new Controls();
         controls.Player.Enable();
         controls.Player.PlayerMovement.performed += PlayerMovementInput;
+        m_shieldMaterial = m_shield.GetComponent<MeshRenderer>().material;
     }
 
     private void Start()
@@ -99,5 +106,22 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
         Referencer.Instance.RythmManagerInstance.Beat.RemoveListener(transform.GetComponent<PlayerShoot>().Shoot);
         PlayerDeathManager.Instance.Death();
         Destroy(gameObject);
+    }
+
+    public void RemoveShield()
+    {
+        StartCoroutine(FadeOverTime());
+    }
+
+    IEnumerator FadeOverTime()
+    {
+        for (float t = 0f; t < m_disableShieldDelay; t += Time.deltaTime) {
+            float normalizedTime = t/m_disableShieldDelay;
+            m_shieldMaterial.SetColor("_BaseColor", Color.Lerp(m_shieldStartColor, m_shieldEndColor, normalizedTime));
+            yield return null;
+        }
+        m_shieldMaterial.SetColor("_BaseColor", m_shieldEndColor);
+        
+        m_shield.SetActive(false);
     }
 }
