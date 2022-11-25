@@ -25,8 +25,6 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
 
     [Header("SHIELD")] [SerializeField] private GameObject m_shield;
     [SerializeField] private float m_disableShieldDelay;
-    [SerializeField][ColorUsage(true, false)] private Color m_shieldStartColor;
-    [SerializeField][ColorUsage(true, false)] private Color m_shieldEndColor;
     private Material m_shieldMaterial;
 
     private float m_currentTimeMovement;
@@ -118,10 +116,11 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
     {
         for (float t = 0f; t < m_disableShieldDelay; t += Time.deltaTime) {
             float normalizedTime = t/m_disableShieldDelay;
-            m_shieldMaterial.SetColor("_BaseColor", Color.Lerp(m_shieldStartColor, m_shieldEndColor, normalizedTime));
+            m_shieldMaterial.SetFloat("_dissolve_amount", Mathf.Lerp(1f, 0f, normalizedTime));
+            Debug.Log("ICI");
             yield return null;
         }
-        m_shieldMaterial.SetColor("_BaseColor", m_shieldEndColor);
+        m_shieldMaterial.SetFloat("_dissolve_amount", 0f);
         
         m_shield.SetActive(false);
     }
