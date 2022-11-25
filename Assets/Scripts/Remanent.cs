@@ -47,19 +47,17 @@ public class Remanent : MonoBehaviour
 
             gObj.transform.SetPositionAndRotation(positionToSpawn.position, positionToSpawn.rotation);
             gObj.transform.localScale = gameObject.transform.localScale;
+
             MeshRenderer mr = gObj.AddComponent<MeshRenderer>();
             MeshFilter mf = gObj.AddComponent<MeshFilter>();
 
             gObj.GetComponent<MeshRenderer>().material = mat;
             gObj.GetComponent<MeshFilter>().mesh = gameObject.GetComponent<MeshFilter>().mesh;
             
-            Mesh mesh = new Mesh();
             mf.mesh = gameObject.GetComponent<MeshFilter>().mesh;
             mr.material = mat;
 
-            //mf.mesh = mesh;
-
-            //StartCoroutine(AnimateMaterialFloat(mr.material, 0, shaderVarRate, shaderVarRefreshRate));
+            StartCoroutine(AnimateMaterialFloat(mr.material));
 
             Destroy(gObj, meshDestroyDelay);
             
@@ -68,14 +66,14 @@ public class Remanent : MonoBehaviour
         active = false;
     }
 
-    IEnumerator AnimateMaterialFloat(Material mat,float goal,float rate, float refreshRate)
+    IEnumerator AnimateMaterialFloat(Material mat)
     {
         float valueToAnimte = mat.GetFloat(sharderVarRef);
-        while(valueToAnimte>goal)
+        while(valueToAnimte>0)
         {
-            valueToAnimte -= rate;
+            valueToAnimte -= shaderVarRate;
             mat.SetFloat(sharderVarRef, valueToAnimte);
-            yield return new WaitForSeconds(refreshRate);
+            yield return new WaitForSeconds(shaderVarRefreshRate);
         }
     }
 }

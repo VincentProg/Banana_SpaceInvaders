@@ -15,6 +15,9 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     x: 2249
     y: 302.5
     width: 1206
@@ -25,6 +28,7 @@ MonoBehaviour:
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
+<<<<<<< HEAD
 =======
     x: 0
     y: 43
@@ -37,6 +41,8 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -78,6 +84,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
   - {fileID: 9}
   - {fileID: 3}
   m_Position:
@@ -91,6 +100,7 @@ MonoBehaviour:
   vertical: 0
   controlID: 119
 --- !u!114 &3
+<<<<<<< HEAD
 =======
   - {fileID: 4}
   - {fileID: 6}
@@ -109,6 +119,8 @@ MonoBehaviour:
   m_BottomViewHeight: 20
 --- !u!114 &4
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,6 +138,9 @@ MonoBehaviour:
     x: 921
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     width: 285
     height: 665
   m_MinSize: {x: 276, y: 71}
@@ -136,6 +151,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
+<<<<<<< HEAD
 =======
     width: 1920
     height: 30
@@ -144,6 +160,8 @@ MonoBehaviour:
   m_LastLoadedLayoutName: 
 --- !u!114 &5
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,6 +178,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     y: 0
     width: 228
     height: 394
@@ -171,6 +192,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
+<<<<<<< HEAD
 =======
     y: 977
     width: 1920
@@ -179,6 +201,8 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
 --- !u!114 &6
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,6 +215,9 @@ MonoBehaviour:
   m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
   m_Children: []
   m_Position:
     serializedVersion: 2
@@ -207,6 +234,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &6
+<<<<<<< HEAD
 =======
   m_Children:
   - {fileID: 7}
@@ -223,6 +251,8 @@ MonoBehaviour:
   controlID: 88
 --- !u!114 &7
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 7}
   - {fileID: 2}
   - {fileID: 8}
@@ -243,16 +274,25 @@ MonoBehaviour:
   - {fileID: 8}
   - {fileID: 11}
 >>>>>>> VFX
+=======
+  - {fileID: 7}
+  - {fileID: 2}
+  - {fileID: 8}
+>>>>>>> remanent
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     width: 1206
     height: 715
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
+<<<<<<< HEAD
 =======
     width: 1294
     height: 947
@@ -262,6 +302,8 @@ MonoBehaviour:
   controlID: 89
 --- !u!114 &8
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Children: []
 =======
   m_Children:
@@ -281,11 +324,17 @@ MonoBehaviour:
   - {fileID: 10}
   - {fileID: 2}
 >>>>>>> VFX
+=======
+  m_Children: []
+>>>>>>> remanent
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     width: 1206
     height: 30
   m_MinSize: {x: 0, y: 0}
@@ -294,6 +343,7 @@ MonoBehaviour:
   m_MainToolbar: {fileID: 18}
   m_LastLoadedLayoutName: Default
 --- !u!114 &8
+<<<<<<< HEAD
 =======
     width: 1294
     height: 533
@@ -303,6 +353,8 @@ MonoBehaviour:
   controlID: 90
 --- !u!114 &9
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,12 +371,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     y: 695
     width: 1206
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
 --- !u!114 &9
+<<<<<<< HEAD
 =======
     y: 0
     width: 204
@@ -338,6 +394,8 @@ MonoBehaviour:
   m_LastSelected: 0
 --- !u!114 &10
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,6 +404,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
@@ -375,11 +434,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
 >>>>>>> VFX
+=======
+>>>>>>> remanent
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
   - {fileID: 10}
   - {fileID: 5}
   m_Position:
@@ -393,6 +457,7 @@ MonoBehaviour:
   vertical: 1
   controlID: 92
 --- !u!114 &10
+<<<<<<< HEAD
 =======
   - {fileID: 12}
   - {fileID: 13}
@@ -408,6 +473,8 @@ MonoBehaviour:
   controlID: 17
 --- !u!114 &12
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,6 +494,9 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     width: 921
     height: 394
   m_MinSize: {x: 403, y: 221}
@@ -434,6 +504,7 @@ MonoBehaviour:
   vertical: 0
   controlID: 93
 --- !u!114 &11
+<<<<<<< HEAD
 =======
     width: 417
     height: 414
@@ -472,6 +543,8 @@ MonoBehaviour:
   m_LastSelected: 0
 --- !u!114 &14
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -487,6 +560,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     x: 228
     y: 0
     width: 693
@@ -500,6 +576,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
+<<<<<<< HEAD
 =======
     x: 1294
     y: 0
@@ -514,6 +591,8 @@ MonoBehaviour:
   m_LastSelected: 0
 --- !u!114 &15
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -529,6 +608,9 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     m_Text: Project
     m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
@@ -689,6 +771,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
 --- !u!114 &14
+<<<<<<< HEAD
 =======
     m_Text: Distortion
     m_Image: {fileID: 2800000, guid: 7129268cf102b2f45809905bcb27ce8b, type: 3}
@@ -1416,6 +1499,8 @@ MonoBehaviour:
   m_AssetMaybeDeleted: 0
 --- !u!114 &16
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1436,20 +1521,27 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     x: 2249
     y: 332.5
     width: 227
     height: 373
+<<<<<<< HEAD
 =======
     x: 0
     y: 73
     width: 203
     height: 512
 >>>>>>> VFX
+=======
+>>>>>>> remanent
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
@@ -1459,6 +1551,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 30fbffff
 >>>>>>> VFX
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 42fbffff
+>>>>>>> remanent
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1475,10 +1572,14 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 0}
 =======
         m_ClientGUIView: {fileID: 14}
 >>>>>>> VFX
+=======
+        m_ClientGUIView: {fileID: 0}
+>>>>>>> remanent
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1486,12 +1587,17 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WindowGUID: 4c969a2b90040154d917609493e03593
 --- !u!114 &15
 =======
   m_WindowGUID: c6f1b3c0b851fc84a86bc68abc7cde43
 --- !u!114 &17
 >>>>>>> VFX
+=======
+  m_WindowGUID: 4c969a2b90040154d917609493e03593
+--- !u!114 &15
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1512,6 +1618,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     x: 2477
     y: 332.5
     width: 691
@@ -1519,6 +1628,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
+<<<<<<< HEAD
 =======
     x: 204
     y: 73
@@ -1750,6 +1860,8 @@ MonoBehaviour:
       layout: 4
   m_WindowGUID: 5e29470920ade05469bd29711da3d720
 >>>>>>> VFX
+=======
+>>>>>>> remanent
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
@@ -1760,6 +1872,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
@@ -1768,6 +1881,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.60502434, y: 0.82040864, z: 3.044772}
 >>>>>>> VFX
+=======
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+>>>>>>> remanent
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1814,6 +1932,9 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
@@ -1821,6 +1942,7 @@ MonoBehaviour:
     m_Target: 10
     speed: 2
     m_Value: 10
+<<<<<<< HEAD
 =======
     m_Target: {x: 0.17154545, y: 0.52172035, z: -0.10895093, w: 0.8287465}
     speed: 2
@@ -1830,6 +1952,8 @@ MonoBehaviour:
     speed: 2
     m_Value: 1.2320207
 >>>>>>> VFX
+=======
+>>>>>>> remanent
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1855,10 +1979,14 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &16
 =======
 --- !u!114 &18
 >>>>>>> VFX
+=======
+--- !u!114 &16
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1879,16 +2007,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     x: 507
     y: 94
     width: 1532
     height: 790
+<<<<<<< HEAD
 =======
     x: 679
     y: 73
     width: 613
     height: 541
 >>>>>>> VFX
+=======
+>>>>>>> remanent
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewsNames: []
   m_SerializedViewsValues: []
@@ -1897,10 +2031,14 @@ MonoBehaviour:
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 640, y: 480}
 =======
   m_TargetSize: {x: 613, y: 345}
 >>>>>>> VFX
+=======
+  m_TargetSize: {x: 640, y: 480}
+>>>>>>> remanent
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 0
@@ -1916,16 +2054,22 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     m_HBaseRangeMin: -766
     m_HBaseRangeMax: 766
     m_VBaseRangeMin: -395
     m_VBaseRangeMax: 395
+<<<<<<< HEAD
 =======
     m_HBaseRangeMin: -306.5
     m_HBaseRangeMax: 306.5
     m_VBaseRangeMin: -172.5
     m_VBaseRangeMax: 172.5
 >>>>>>> VFX
+=======
+>>>>>>> remanent
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1943,11 +2087,15 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
       y: 0
       width: 1532
       height: 790
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 766, y: 395}
+<<<<<<< HEAD
 =======
       y: 21
       width: 613
@@ -1955,6 +2103,8 @@ MonoBehaviour:
     m_Scale: {x: 1.092727, y: 1.092727}
     m_Translation: {x: 313.31543, y: 260}
 >>>>>>> VFX
+=======
+>>>>>>> remanent
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1962,6 +2112,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
       x: -766
       y: -395
       width: 1532
@@ -1969,6 +2122,7 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1532, y: 790}
+<<<<<<< HEAD
 =======
       x: -286.72803
       y: -237.93684
@@ -1978,11 +2132,14 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 613, y: 541}
 >>>>>>> VFX
+=======
+>>>>>>> remanent
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &17
 =======
@@ -2127,6 +2284,9 @@ MonoBehaviour:
   m_DirectoriesAreaWidth: 213
 --- !u!114 &20
 >>>>>>> VFX
+=======
+--- !u!114 &17
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2147,12 +2307,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> remanent
     x: 2249
     y: 726.5
     width: 920
     height: 250
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
+<<<<<<< HEAD
 =======
     x: 417
     y: 606
@@ -2164,6 +2328,8 @@ MonoBehaviour:
     m_SaveData: []
 --- !u!114 &21
 >>>>>>> VFX
+=======
+>>>>>>> remanent
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2175,6 +2341,7 @@ MonoBehaviour:
   m_Script: {fileID: 13963, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_DontSaveToLayout: 0
 =======
@@ -2208,3 +2375,6 @@ MonoBehaviour:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
 >>>>>>> VFX
+=======
+  m_DontSaveToLayout: 0
+>>>>>>> remanent

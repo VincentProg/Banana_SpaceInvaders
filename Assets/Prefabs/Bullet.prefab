@@ -155,7 +155,7 @@ MonoBehaviour:
   meshRefreshRate: 0.05
   meshDestroyDelay: 0.5
   positionToSpawn: {fileID: 6871377909161798998}
-  mat: {fileID: 2100000, guid: 24741ea081b61114c836e5030e440bdf, type: 2}
-  sharderVarRef: 
-  shaderVarRate: 0
-  shaderVarRefreshRate: 0
+  mat: {fileID: 2100000, guid: f453e0ddbc8fb554e8b09bf49e904f34, type: 2}
+  sharderVarRef: _Alpha
+  shaderVarRate: 0.05
+  shaderVarRefreshRate: 0.5
