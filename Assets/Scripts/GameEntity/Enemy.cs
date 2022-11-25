@@ -163,9 +163,9 @@ public class Enemy : MonoBehaviour, ILivingEntity
     {
 
         //m_spawnGuts.StartExplosion();
-        
-        
-        Referencer.Instance.ScoringInstance.AddScoring(50);
+
+
+        //Referencer.Instance.ScoringInstance.AddScoring(10);
         Instantiate(m_bloodParticles, transform.position, quaternion.identity);
         DeathEvent.Invoke(this);
         Destroy(gameObject);

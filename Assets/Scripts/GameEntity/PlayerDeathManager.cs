@@ -41,5 +41,6 @@ public class PlayerDeathManager : MonoBehaviour
         // Spawn new at spawn point;
         Instantiate(PlayerSpaceShip, transform.position, Quaternion.identity);
         AkSoundEngine.PostEvent("Play_Chara_R_TakeDamage", this.gameObject);
+        Referencer.Instance.ScoringInstance.ResetOnDeath();
     }
 }
