@@ -44,6 +44,8 @@ Material:
     - _QueueOffset: 0
     - _Scroll_Speed: 0.05
     - _Tint: 0.0025
+    - _dissolve_amount: 1
+    - _dissolve_scale: 50
     m_Colors:
     - _EmissiveColor: {r: 0.93669206, g: 13.347861, b: 44.727043, a: 1}
   m_BuildTextureStacks: []
