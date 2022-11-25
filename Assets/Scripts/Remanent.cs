@@ -35,35 +35,39 @@ public class Remanent : MonoBehaviour
 
     IEnumerator ActiveTrail(float activeTime)
     {
-        active = true;
-        while(activeTime>0)
-        { 
-            activeTime -= meshRefreshRate;
+        if (EffectManager.Instance.IsEffectActive("BulletFX"))
+        {
+            active = true;
+            while (activeTime > 0)
+            {
+                activeTime -= meshRefreshRate;
 
-            if (MeshRenderers == null)
-                MeshRenderers = GetComponentInChildren<MeshRenderer>();
+                if (MeshRenderers == null)
+                    MeshRenderers = GetComponentInChildren<MeshRenderer>();
 
-            GameObject gObj = new GameObject();
+                GameObject gObj = new GameObject();
 
-            gObj.transform.SetPositionAndRotation(positionToSpawn.position, positionToSpawn.rotation);
-            gObj.transform.localScale = gameObject.transform.localScale;
+                gObj.transform.SetPositionAndRotation(positionToSpawn.position, positionToSpawn.rotation);
+                gObj.transform.localScale = gameObject.transform.localScale;
 
-            MeshRenderer mr = gObj.AddComponent<MeshRenderer>();
-            MeshFilter mf = gObj.AddComponent<MeshFilter>();
+                MeshRenderer mr = gObj.AddComponent<MeshRenderer>();
+                MeshFilter mf = gObj.AddComponent<MeshFilter>();
 
-            gObj.GetComponent<MeshRenderer>().material = mat;
-            gObj.GetComponent<MeshFilter>().mesh = gameObject.GetComponent<MeshFilter>().mesh;
-            
-            mf.mesh = gameObject.GetComponent<MeshFilter>().mesh;
-            mr.material = mat;
+                gObj.GetComponent<MeshRenderer>().material = mat;
+                gObj.GetComponent<MeshFilter>().mesh = gameObject.GetComponent<MeshFilter>().mesh;
 
-            StartCoroutine(AnimateMaterialFloat(mr.material));
+                mf.mesh = gameObject.GetComponent<MeshFilter>().mesh;
+                mr.material = mat;
 
-            Destroy(gObj, meshDestroyDelay);
-            
-            yield return new WaitForSeconds(meshRefreshRate);
+                StartCoroutine(AnimateMaterialFloat(mr.material));
+
+                Destroy(gObj, meshDestroyDelay);
+
+                yield return new WaitForSeconds(meshRefreshRate);
+            }
+
+            active = false;
         }
-        active = false;
     }
 
     IEnumerator AnimateMaterialFloat(Material mat)

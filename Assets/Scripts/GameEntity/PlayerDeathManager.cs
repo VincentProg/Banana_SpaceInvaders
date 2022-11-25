@@ -40,9 +40,13 @@ public class PlayerDeathManager : MonoBehaviour
 
     private void OnDeath()
     {
-        GameObject obj  = Instantiate(explotion, transform.position, Quaternion.identity);
-        Haptics.instance.HapticVR(0u, 0.7f, 0.8f);
-        Destroy(obj, 2);
+        if (EffectManager.Instance.IsEffectActive("PlayerFX"))
+        {
+            GameObject obj = Instantiate(explotion, transform.position, Quaternion.identity);
+            Haptics.instance.HapticVR(0u, 0.7f, 0.8f);
+            Destroy(obj, 2);
+        }
+
         // Spawn new at spawn point;
         Instantiate(PlayerSpaceShip, transform.position, Quaternion.identity);
         AkSoundEngine.PostEvent("Play_Chara_R_TakeDamage", this.gameObject);

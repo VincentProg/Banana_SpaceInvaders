@@ -217,3 +217,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5834583645506498783, guid: 0748172911fceed4dad237a9bc54d74e, type: 3}
   m_PrefabInstance: {fileID: 8149525174483447548}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2768251846905014284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6301137949734455024, guid: 0748172911fceed4dad237a9bc54d74e, type: 3}
+  m_PrefabInstance: {fileID: 8149525174483447548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5538643793225992108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768251846905014284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b646a9732e5a244fb6d1a196bcff595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_script: {fileID: 2768251846905014286}
+  m_fxName: BulletFX
+--- !u!96 &2768251846905014286 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 6301137949734455026, guid: 0748172911fceed4dad237a9bc54d74e, type: 3}
+  m_PrefabInstance: {fileID: 8149525174483447548}
+  m_PrefabAsset: {fileID: 0}

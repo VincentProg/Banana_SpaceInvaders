@@ -95,9 +95,12 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
         float l_xValue = Mathf.Lerp(m_initialX, m_targetX, l_yMouvement);
         transform.position = new Vector3(l_xValue, transform.position.y, transform.position.z);
 
-        float l_yRotation = m_rotationCurve.Evaluate(m_currentTimeMovement);
-        transform.rotation = Quaternion.Euler(0, 0, l_yRotation * m_rotationIntensity * -m_movementX);
-        
+        if (EffectManager.Instance.IsEffectActive("PlayerFX"))
+        {
+            float l_yRotation = m_rotationCurve.Evaluate(m_currentTimeMovement);
+            transform.rotation = Quaternion.Euler(0, 0, l_yRotation * m_rotationIntensity * -m_movementX);
+        }
+
         if (m_currentTimeMovement >= 1)
         {
             m_isMoving = false;
@@ -120,9 +123,13 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
     IEnumerator FadeOverTime()
     {
         for (float t = 0f; t < m_disableShieldDelay; t += Time.deltaTime) {
-            float normalizedTime = t/m_disableShieldDelay;
-            m_shieldMaterial.SetFloat("_dissolve_amount", Mathf.Lerp(1f, 0f, normalizedTime));
-            Debug.Log("ICI");
+
+            if (EffectManager.Instance.IsEffectActive("PlayerFX"))
+            {
+                float normalizedTime = t / m_disableShieldDelay;
+                m_shieldMaterial.SetFloat("_dissolve_amount", Mathf.Lerp(1f, 0f, normalizedTime));
+            }
+
             yield return null;
         }
         m_shieldMaterial.SetFloat("_dissolve_amount", 0f);

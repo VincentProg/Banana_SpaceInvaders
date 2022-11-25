@@ -13,7 +13,7 @@ public class EffectManager : MonoBehaviour
         Instance = this;
     }
 
-    private List<string> effectActivated;
+    private List<string> effectActivated = new List<string>();
 
     public void ActivateEffect(string uuid)
     {
