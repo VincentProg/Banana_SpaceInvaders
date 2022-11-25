@@ -157,5 +157,5 @@ MonoBehaviour:
   positionToSpawn: {fileID: 6871377909161798998}
   mat: {fileID: 2100000, guid: 24741ea081b61114c836e5030e440bdf, type: 2}
   sharderVarRef: 
-  shaderVarRate: 0
-  shaderVarRefreshRate: 0
+  shaderVarRate: 0.05
+  shaderVarRefreshRate: 0.5
