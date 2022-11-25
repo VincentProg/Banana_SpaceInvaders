@@ -62,6 +62,42 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PlayerFX"",
+                    ""type"": ""Button"",
+                    ""id"": ""c2b99925-2ca4-42a7-99c1-a2db9a267de5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BulletFX"",
+                    ""type"": ""Button"",
+                    ""id"": ""bacbe414-3c6f-4da4-855c-3539cb0c5d17"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EnemyFX"",
+                    ""type"": ""Button"",
+                    ""id"": ""67536119-ca10-4e29-81dd-77e2f11ea93c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UIFX"",
+                    ""type"": ""Button"",
+                    ""id"": ""32a6642f-062a-4a23-aa71-bb17d78da760"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -229,6 +265,50 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""ChangeMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""79037f63-3110-451a-8907-db8677c4cfc9"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerFX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a2b5e76-b3d6-4282-8506-8349e5b77e12"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BulletFX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""485484eb-de27-4956-8e9f-7d9fd94c70c7"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EnemyFX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf47402c-cf3b-4444-89c5-ab616ce7031f"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UIFX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -241,6 +321,10 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_PlayerShoot = m_Player.FindAction("PlayerShoot", throwIfNotFound: true);
         m_Player_Validate = m_Player.FindAction("Validate", throwIfNotFound: true);
         m_Player_ChangeMenu = m_Player.FindAction("ChangeMenu", throwIfNotFound: true);
+        m_Player_PlayerFX = m_Player.FindAction("PlayerFX", throwIfNotFound: true);
+        m_Player_BulletFX = m_Player.FindAction("BulletFX", throwIfNotFound: true);
+        m_Player_EnemyFX = m_Player.FindAction("EnemyFX", throwIfNotFound: true);
+        m_Player_UIFX = m_Player.FindAction("UIFX", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -304,6 +388,10 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_PlayerShoot;
     private readonly InputAction m_Player_Validate;
     private readonly InputAction m_Player_ChangeMenu;
+    private readonly InputAction m_Player_PlayerFX;
+    private readonly InputAction m_Player_BulletFX;
+    private readonly InputAction m_Player_EnemyFX;
+    private readonly InputAction m_Player_UIFX;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -312,6 +400,10 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @PlayerShoot => m_Wrapper.m_Player_PlayerShoot;
         public InputAction @Validate => m_Wrapper.m_Player_Validate;
         public InputAction @ChangeMenu => m_Wrapper.m_Player_ChangeMenu;
+        public InputAction @PlayerFX => m_Wrapper.m_Player_PlayerFX;
+        public InputAction @BulletFX => m_Wrapper.m_Player_BulletFX;
+        public InputAction @EnemyFX => m_Wrapper.m_Player_EnemyFX;
+        public InputAction @UIFX => m_Wrapper.m_Player_UIFX;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -333,6 +425,18 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @ChangeMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeMenu;
                 @ChangeMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeMenu;
                 @ChangeMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeMenu;
+                @PlayerFX.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerFX;
+                @PlayerFX.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerFX;
+                @PlayerFX.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerFX;
+                @BulletFX.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBulletFX;
+                @BulletFX.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBulletFX;
+                @BulletFX.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBulletFX;
+                @EnemyFX.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnemyFX;
+                @EnemyFX.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnemyFX;
+                @EnemyFX.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnemyFX;
+                @UIFX.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUIFX;
+                @UIFX.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUIFX;
+                @UIFX.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUIFX;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -349,6 +453,18 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @ChangeMenu.started += instance.OnChangeMenu;
                 @ChangeMenu.performed += instance.OnChangeMenu;
                 @ChangeMenu.canceled += instance.OnChangeMenu;
+                @PlayerFX.started += instance.OnPlayerFX;
+                @PlayerFX.performed += instance.OnPlayerFX;
+                @PlayerFX.canceled += instance.OnPlayerFX;
+                @BulletFX.started += instance.OnBulletFX;
+                @BulletFX.performed += instance.OnBulletFX;
+                @BulletFX.canceled += instance.OnBulletFX;
+                @EnemyFX.started += instance.OnEnemyFX;
+                @EnemyFX.performed += instance.OnEnemyFX;
+                @EnemyFX.canceled += instance.OnEnemyFX;
+                @UIFX.started += instance.OnUIFX;
+                @UIFX.performed += instance.OnUIFX;
+                @UIFX.canceled += instance.OnUIFX;
             }
         }
     }
@@ -359,5 +475,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnPlayerShoot(InputAction.CallbackContext context);
         void OnValidate(InputAction.CallbackContext context);
         void OnChangeMenu(InputAction.CallbackContext context);
+        void OnPlayerFX(InputAction.CallbackContext context);
+        void OnBulletFX(InputAction.CallbackContext context);
+        void OnEnemyFX(InputAction.CallbackContext context);
+        void OnUIFX(InputAction.CallbackContext context);
     }
 }

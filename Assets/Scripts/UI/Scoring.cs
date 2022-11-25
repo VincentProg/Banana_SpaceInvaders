@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
-using UnityEditor;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine.SceneManagement;
 
 public class Scoring : MonoBehaviour
@@ -138,6 +136,7 @@ public class Scoring : MonoBehaviour
         {
             ResetJauge();
             CallFeedbackJauge();
+
             canDisappearJauge = false;
             return;
         }
@@ -235,7 +234,7 @@ public class Scoring : MonoBehaviour
 
             jaugeStep.fillAmount = currentValueJauge;
             canDisappearJauge = true;
-
+            
             CallFeedbackJauge();
         }
         else
@@ -342,10 +341,13 @@ public class Scoring : MonoBehaviour
     #region Feedbacks
     private void CallFeedbackJauge()
     {
-        if (!onFullJauge)
+        if (EffectManager.Instance.IsEffectActive("UIFX"))
         {
-            bumpCombo.Invoke();
-            shakeJauge.Invoke();
+            if (!onFullJauge)
+            {
+                bumpCombo.Invoke();
+                shakeJauge.Invoke();
+            }
         }
     }
 

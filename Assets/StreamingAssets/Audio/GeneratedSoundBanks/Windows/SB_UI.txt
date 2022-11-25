@@ -1,0 +1,40 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1764480530	Play_Combo_05			\Default Work Unit\UI\Scoring\Play_Combo_05	
+	1764480531	Play_Combo_04			\Default Work Unit\UI\Scoring\Play_Combo_04	
+	1764480532	Play_Combo_03			\Default Work Unit\UI\Scoring\Play_Combo_03	
+	1764480533	Play_Combo_02			\Default Work Unit\UI\Scoring\Play_Combo_02	
+	1764480534	Play_Combo_01			\Default Work Unit\UI\Scoring\Play_Combo_01	
+	2278692287	Play_Score_Hit_Jauge			\Default Work Unit\UI\Scoring\Play_Score_Hit_Jauge	
+	3366501106	Play_Score_Hit_Rond			\Default Work Unit\UI\Scoring\Play_Score_Hit_Rond	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\RTPC\Bus\SFX	
+	1551306167	UI			\RTPC\Bus\UI	
+	3313685232	VOICES			\RTPC\Bus\VOICES	
+	3991942870	MUSIC			\RTPC\Bus\MUSIC	
+	4056684167	MASTER			\RTPC\Bus\MASTER	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3493323323	Voices_Bus			\Default Work Unit\Master Audio Bus\Voices_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2288170604	Effect_01			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_01	
+	2288170607	Effect_02			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_02	
+	2376328173	Monster			\Default Work Unit\Master Audio Bus\Voices_Bus\Monster	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1431265797	Monsterize	Wwise Pitch Shifter			
+	1820854077	Noise_Gate_Fast_Attack	Wwise Expander			
+	4202347640	Repeat_after_me	Wwise Harmonizer			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	24691141	Combo_05	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_4_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_05\Combo_05		357404
+	81372707	Combo_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_2_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_02\Combo_2		366620
+	269742009	Combo_3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_3_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_03\Combo_3		338972
+	597548237	Score_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Score_1_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SCORING\Score_Hit_Jauge\Score_1		79948
+	641957728	Combo_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\SFX\Combo_1_F0A9930B.wem		\Actor-Mixer Hierarchy\UI\SCORING\Combo_01\Combo_1		334364
+

@@ -1,0 +1,42 @@
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\RTPC\Bus\SFX	
+	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
+	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
+	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
+	1551306167	UI			\RTPC\Bus\UI	
+	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
+	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
+	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	
+	2058049674	Wood			\Factory Acoustic Textures\Textures\Wood	
+	2412606308	Carpet			\Factory Acoustic Textures\Textures\Carpet	
+	2637588553	Tile			\Factory Acoustic Textures\Textures\Tile	
+	2928161104	Curtains			\Factory Acoustic Textures\Textures\Curtains	
+	3195498748	Cork_Tiles			\Factory Acoustic Textures\Textures\Cork_Tiles	
+	3313685232	VOICES			\RTPC\Bus\VOICES	
+	3670307564	Drywall			\Factory Acoustic Textures\Textures\Drywall	
+	3991942870	MUSIC			\RTPC\Bus\MUSIC	
+	4056684167	MASTER			\RTPC\Bus\MASTER	
+	4168643977	Acoustic_Banner			\Factory Acoustic Textures\Textures\Acoustic_Banner	
+	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3493323323	Voices_Bus			\Default Work Unit\Master Audio Bus\Voices_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2288170604	Effect_01			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_01	
+	2288170607	Effect_02			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_02	
+	2376328173	Monster			\Default Work Unit\Master Audio Bus\Voices_Bus\Monster	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1431265797	Monsterize	Wwise Pitch Shifter			
+	1820854077	Noise_Gate_Fast_Attack	Wwise Expander			
+	4202347640	Repeat_after_me	Wwise Harmonizer			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

@@ -1,0 +1,44 @@
+Event	ID	Name			Wwise Object Path	Notes
+	27047026	Play_Keep_Going			\Default Work Unit\Voices\Play_Keep_Going	
+	220599745	Play_Destroy_them			\Default Work Unit\Voices\Play_Destroy_them	
+	311441468	Play_R_Not_Even_Close			\Default Work Unit\Voices\Play_R_Not_Even_Close	
+	422082389	Play_Nice			\Default Work Unit\Voices\Play_Nice	
+	523954835	Play_More_more			\Default Work Unit\Voices\Play_More_more	
+	1725302785	Play_Perfect			\Default Work Unit\Voices\Play_Perfect	
+	3585085027	Play_R_Keep_Going			\Default Work Unit\Voices\Play_R_Keep_Going	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\RTPC\Bus\SFX	
+	1551306167	UI			\RTPC\Bus\UI	
+	3313685232	VOICES			\RTPC\Bus\VOICES	
+	3991942870	MUSIC			\RTPC\Bus\MUSIC	
+	4056684167	MASTER			\RTPC\Bus\MASTER	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3493323323	Voices_Bus			\Default Work Unit\Master Audio Bus\Voices_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2288170604	Effect_01			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_01	
+	2288170607	Effect_02			\Default Work Unit\Master Audio Bus\SFX_Bus\Effect_02	
+	2376328173	Monster			\Default Work Unit\Master Audio Bus\Voices_Bus\Monster	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1431265797	Monsterize	Wwise Pitch Shifter			
+	1820854077	Noise_Gate_Fast_Attack	Wwise Expander			
+	4202347640	Repeat_after_me	Wwise Harmonizer			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46568738	not_even_close_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\not_even_close_2_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Combo\R_Not Even Close\not_even_close_2		447456
+	122774027	Destroy_them_3	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\Destroy_them_3_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Combo\Destroy them\Destroy_them_3		416736
+	125430028	perfect_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\perfect_2_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Combo\Perfect\perfect_2		549216
+	150038152	Nice	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\Nice_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Combo\Nice\Nice		340064
+	219569867	Keep_going	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\Keep_going_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Combo\Keep_Going\Keep_going		544864
+	584660336	keep_going_bitch_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\keep_going_bitch_1_0450DBE9.wem		\Actor-Mixer Hierarchy\Voices\Combo\R_Keep_Going\keep_going_bitch_1		271160
+	751572308	more_more_2	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\more_more_2_3D66D239.wem		\Actor-Mixer Hierarchy\Voices\Combo\More more\more_more_2		428204
+	861706829	not_even_close_1	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\not_even_close_1_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Combo\R_Not Even Close\not_even_close_1		485856
+	919876254	Keep_going	D:\GJ_SpaceInvaders\Banana_SpaceInvaders\Wwise_SpaceInvaders\.cache\Windows\Voices\English(US)\Keep_going_41E5C7C4.wem		\Actor-Mixer Hierarchy\Voices\Combo\R_Keep_Going\Keep_going		302684
+

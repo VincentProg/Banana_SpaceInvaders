@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Julien.unity
     guid: 175bab7611517254c812b6dedd7ba88d
   - enabled: 1
-    path: Assets/Scenes/Victory.unity
-    guid: 78d24595977f3d648840f62b8265d7b8
-  - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: dacc56ccf9d376b4ea9ef6415227992d
   m_configObjects:

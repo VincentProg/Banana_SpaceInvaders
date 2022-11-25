@@ -161,12 +161,13 @@ public class Enemy : MonoBehaviour, ILivingEntity
 
     public void Death()
     {
+        Referencer.Instance.ScoringInstance.AddScoring(10);
+        if (EffectManager.Instance.IsEffectActive("EnemyFX"))
+        {
+            Instantiate(m_bloodParticles, transform.position, quaternion.identity);
+            m_spawnGuts.StartExplosion();
+        }
 
-        //m_spawnGuts.StartExplosion();
-
-
-        //Referencer.Instance.ScoringInstance.AddScoring(10);
-        Instantiate(m_bloodParticles, transform.position, quaternion.identity);
         DeathEvent.Invoke(this);
         Destroy(gameObject);
     }
