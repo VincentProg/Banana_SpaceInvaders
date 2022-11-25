@@ -80,6 +80,11 @@ public class PlayerMovement : MonoBehaviour, ILivingEntity
             m_targetX = m_offsetMovement * m_indexMovement;
             m_isMoving = true;
         }
+
+        if (m_movementX == 1)
+            Haptics.instance.HapticVRRight(0u, 0.3f,0.1f) ;
+        else
+            Haptics.instance.HapticVRLeft(0u, 0.3f, 0.1f);
     }
 
     private void Move()
