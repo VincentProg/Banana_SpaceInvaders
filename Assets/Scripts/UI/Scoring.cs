@@ -15,6 +15,7 @@ public class Scoring : MonoBehaviour
     [SerializeField] private UnityEvent eventOnAdd;
     [SerializeField] private float currentScore;
     [SerializeField] private float durationAppearScore;
+    private float addMoreValueOnCombo = 1f;
 
     [Header("// JAUGE COMBO //")]
     [SerializeField] private GameObject parentJauge;
@@ -125,6 +126,8 @@ public class Scoring : MonoBehaviour
     public void AddScoring(float value)
     {
         currentScore += value;
+        currentScore += addMoreValueOnCombo;
+        
         StartCoroutine(WaitScoring());
 
         AkSoundEngine.PostEvent(deathMonster, this.gameObject);
@@ -168,32 +171,35 @@ public class Scoring : MonoBehaviour
                     Referencer.Instance.RythmManagerInstance.SetNewRythm(0.25f);
                     currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 0.25f;
                     currentSpeedRondJauge = initialSpeedRondJauge * 0.25f;
-                    
+                    addMoreValueOnCombo = 1f;
                     break;
                 case 2: combo2.Invoke();
                     AkSoundEngine.PostEvent(comboSound[1], this.gameObject);
                     Referencer.Instance.RythmManagerInstance.SetNewRythm(0.5f);
                     currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 0.5f;
                     currentSpeedRondJauge = initialSpeedRondJauge * 0.5f;
+                    addMoreValueOnCombo = 2f;
                     break;
                 case 3: combo3.Invoke();
                     AkSoundEngine.PostEvent(comboSound[2], this.gameObject);
                     Referencer.Instance.RythmManagerInstance.SetNewRythm(1);
                     currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 1;
                     currentSpeedRondJauge = initialSpeedRondJauge * 1f;
+                    addMoreValueOnCombo = 3f;
                     break;
                 case 4: combo4.Invoke();
                     AkSoundEngine.PostEvent(comboSound[3], this.gameObject);
                     Referencer.Instance.RythmManagerInstance.SetNewRythm(2f);
                     currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 2f;
                     currentSpeedRondJauge = initialSpeedRondJauge * 2f;
+                    addMoreValueOnCombo = 4f;
                     break;
                 case 5: combo5.Invoke();
                     AkSoundEngine.PostEvent(comboSound[4], this.gameObject);
                     Referencer.Instance.RythmManagerInstance.SetNewRythm(4f);
                     currentSpeedJaugeDisappear = initialSpeedJaugeDisappear * 4f;
                     currentSpeedRondJauge = initialSpeedRondJauge * 4f;
-
+                    addMoreValueOnCombo = 5f;
                     break;
             }
         }
@@ -306,6 +312,8 @@ public class Scoring : MonoBehaviour
             Debug.Log("Jauge");
             ResetRondJauge();
 
+            addMoreValueOnCombo = 0f;
+
             resetTimer.Invoke();
             resetCombo.Invoke();
 
@@ -355,6 +363,7 @@ public class Scoring : MonoBehaviour
         currentValueCombo = 0;
         comboTextValue.text = "0";
         fakeJauge.gameObject.SetActive(false);
+        addMoreValueOnCombo = 0f;
 
         resetTimer.Invoke();
         resetCombo.Invoke();
@@ -379,9 +388,31 @@ public class Scoring : MonoBehaviour
         currentValueRondJauge = 0;
         rondJauge.fillAmount = 0;
         canDisappearRond = false;
+        addMoreValueOnCombo = 0f;
         currentSpeedRondJauge = initialSpeedRondJauge;
     }
     #endregion
+
+    public void ResetOnDeath()
+    {
+        currentValueCombo = 0;
+        comboTextValue.text = "0";
+        fakeJauge.gameObject.SetActive(false);
+        addMoreValueOnCombo = 0f;
+
+        resetTimer.Invoke();
+        resetCombo.Invoke();
+
+        currentValueJauge = 0;
+        jaugeStep.fillAmount = 0;
+        onFullJauge = false;
+
+        currentValueRondJauge = 0;
+        rondJauge.fillAmount = 0;
+        canDisappearRond = false;
+        addMoreValueOnCombo = 0f;
+        currentSpeedRondJauge = initialSpeedRondJauge;
+    }
 
     IEnumerator WaitScoring()
     {
