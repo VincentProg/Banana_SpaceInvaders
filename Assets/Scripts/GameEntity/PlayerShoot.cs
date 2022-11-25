@@ -59,6 +59,7 @@ public class PlayerShoot : MonoBehaviour
         shootedBullet.InitBullet(bulletSpeed);
         _timer += shootCooldown;
         m_isRecoil = true;
+        Haptics.instance.HapticVR(0, 0.5f, 0.5f);
     }
 
     private void Recoil()
