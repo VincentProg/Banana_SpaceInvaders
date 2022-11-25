@@ -7,6 +7,8 @@ public class PlayerDeathManager : MonoBehaviour
     
     public static PlayerDeathManager Instance;
 
+    public GameObject explotion;
+
     [Header("Player Info")]
     [SerializeField] private GameObject PlayerSpaceShip;
     
@@ -38,6 +40,8 @@ public class PlayerDeathManager : MonoBehaviour
 
     private void OnDeath()
     {
+        GameObject obj  = Instantiate(explotion, transform.position, Quaternion.identity);
+        Destroy(obj, 2);
         // Spawn new at spawn point;
         Instantiate(PlayerSpaceShip, transform.position, Quaternion.identity);
         AkSoundEngine.PostEvent("Play_Chara_R_TakeDamage", this.gameObject);
